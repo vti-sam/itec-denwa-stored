@@ -1,0 +1,66 @@
+schema_version: 1
+meta:
+  source: google_sheets
+  sheet: Risks / リスク
+  source_of_truth: google_sheets
+  read_only_export: true
+  generated_at: '2026-06-17T12:26:22+09:00'
+records:
+- id: R-001
+  risk_type: Technical
+  title: 片方のアプリ強制終了またはネット切断時にVoIP通話がハングする可能性
+  description: 通話中の一方がアプリを強制終了（Kill）されたり、ネットワークが切断されたりして、信頼できるCANCEL/BYE/teardownメッセージが送信されない場合、他方は終了通知を受信できず、MVE/PBX側のセッションタイムアウトが発生するまで無音の通話状態が維持される可能性がある。
+  status: Monitor
+  priority: Critical
+  owner: VTI_SAM
+  probability: High
+  impact: High
+  mitigation: モバイルVoIPにおけるOSライフサイクルおよびネットワーク制限であることを明確にする。Android/iOS/MVEのログ突合を強化し、クライアント側のベストエフォートなローカルクリーンアップと、PBX/バックエンド側のタイムアウト/整合性機構を区別する。チケット「VOIP_APL-135」で動作検証の上、モバイルクライアント単体では修正不可能なシステム制限事項として合意済み。
+  contingency: クライアント側での担保が困難な場合、ウォッチドッグやサーバー側でのクリーンアップ、タイムアウトポリシーの適用、または端末オフライン/強制終了時の制限事項としてリリースノートに明記することを提案する。
+  related_items: VoIP, Android, iOS, MVE
+  notes_vi: Cuộc gọi VoIP có thể bị treo khi kill app hoặc mất mạng. Hướng xử lý là ghi nhận đây là giới hạn hệ thống và bổ
+    sung cơ chế timeout phía server/PBX.
+- id: R-002
+  risk_type: Technical
+  title: AudioCodes SDK/PJSIPのスレッドおよびセッションライフサイクルへの極端な感度
+  description: Androidコードでは、保留/転送/切断操作時にPjSipThreadDispatcherの使用およびSDK呼び出し直前でのセッション解決を行う必要があった。これは、誤ったスレッドでの操作、古いセッションラッパー、または不安全なタイミングでの操作がクラッシュや不安定な動作を引き起こす可能性が高いことを示しており、特にJetpack
+    Composeなどの現代的なUIライフサイクルと併用する際に顕著となる。
+  status: Monitor
+  priority: Critical
+  owner: VTI_SAM
+  probability: High
+  impact: High
+  mitigation: PJSIP関連のすべての重要な操作は、合意済みのスレッド/状態境界を経由させること。生のセッションオブジェクトを長時間保持しないこと。sessionId、transferState、callStateを含む詳細なログを出力し、SDK起因のクラッシュ発生時にはベンダー（AudioCodes）へエスカレーションする体制を整える。
+  contingency: SDKのクラッシュが解消されない場合、ネイティブ/スレッドログを添付してAudioCodes/MVEベンダーへエスカレーションするか、リリース時に対象フローの制限や操作の抑止を検討する。
+  related_items: Android, AudioCodes SDK, PJSIP, Jetpack Compose
+  notes_vi: AudioCodes SDK/PJSIP rất nhạy cảm với luồng và session lifecycle, dễ gây crash. Khắc phục bằng cách cô lập thao
+    tác qua boundary thread và ghi log chi tiết để gửi vendor.
+- id: R-003
+  risk_type: Technical
+  title: MVE/PBXの設計がモバイルアプリのライフサイクルに完全対応していない問題
+  description: モバイル端末にはバックグラウンド/強制終了、PushKit/FCM/APNsによるプッシュ通知、ネットワーク切り替え、スリープモードなどの状態が存在する一方、MVE/SIPフローは継続的なREGISTER/INVITE/セッション状態を前提としている。この乖離により、着信不可、ゴースト着信（CallKitの残存）、通話ハング、転送失敗、復旧用再登録（REGISTER）による有効セッションの切断リスクが高まる。
+  status: Completed
+  priority: Critical
+  owner: VTI_SAM
+  probability: High
+  impact: High
+  mitigation: モバイルプラットフォーム固有の制限事項を週次報告書に盛り込む。アプリ強制終了、回線切断、バックグラウンド、プッシュ通知遅延、タイムアウト等のケースにおける期待動作について顧客/ベンダーと合意する。クライアント側で対処可能な範囲
+    và phần cần MVE/backend đảm bảo.
+  contingency: 要求仕様がクライアント側の技術限界を超える場合、MVE/バックエンド側の設計変更を提案するか、シナリオごとの制限事項/代替運用（Workaround）として確定させる。
+  related_items: VoIP, MVE, PBX, PushKit, FCM
+  notes_vi: Thiết kế MVE/PBX chưa tương thích tốt với mobile lifecycle (background, kill app). Cần làm rõ trách nhiệm giữa
+    client và backend/PBX.
+- id: R-004
+  risk_type: Technical
+  title: コール転送/登録/ネットワーク切り替え処理の複数レイヤー依存によるデグレードリスク
+  description: コール転送フローは、SIP REFER/NOTIFY/Replaces、通話中の再登録（re-REGISTER）、ネットワーク切り替え時のガード処理、画面表示ステータス、CallKit/カスタムUIなど、多くの要素が複雑に絡み合っている。一部の変更がセッション保持の失敗を引き起こしたり、他方OSでの動作不良（デグレード）に繋がったりしやすい。
+  status: Completed
+  priority: High
+  owner: VTI_SAM
+  probability: Medium
+  impact: High
+  mitigation: 転送/登録/ネットワーク切り替えに関する変更を行う際は、必ずAndroid/iOSのテストシナリオ作成、SIP/MVEログの取得、およびクロスプラットフォームへの影響確認を事前に実施する。
+  contingency: デグレードが発生した場合は速やかに小規模ロールバックを行い、最優先フローのホットフィックスを分離して対応する。緊急性の低いUI調整やメタデータ最適化は後回しとする。
+  related_items: Android, iOS, transfer, register, network-change
+  notes_vi: Các tính năng transfer/register/network-change liên quan nhiều lớp phức tạp, dễ gây lỗi khi sửa. Cần test kỹ chéo
+    cả Android và iOS.

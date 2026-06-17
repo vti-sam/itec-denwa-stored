@@ -1,0 +1,18 @@
+schema_version: 1
+meta:
+  source: google_sheets
+  sheet: Communications / 連絡管理
+  source_of_truth: google_sheets
+  read_only_export: true
+  generated_at: '2026-06-17T12:26:22+09:00'
+records:
+- id: COMM-001
+  type: Communication Rule
+  title: VoIP電話アプリ開発_週次報告
+  expectations: モバイルVoIPプロジェクトに関する週次進捗、技術課題、リスク/ブロッカー의報告、および顧客/ベンダーへの確認事項の合意。
+  communication_channel: Teams
+  frequency: 毎週
+  format: 週次レポート / Teams会議
+  owner: VTI_SAM
+  notes: 'Link Teams: https://teams.microsoft.com/v2/?meetingjoin=true#/l/meetup-join/19:meeting_MzAzMjMyNjgtODQ2NS00NmZjLWEzZDItOTIwYTBkYzQ0NTNi@thread.v2/0?context=%7b%22Tid%22%3a%22430cce03-8247-4613-a2df-12e18388e116%22%2c%22Oid%22%3a%22b7059257-0678-468a-80c8-5b933a1c1533%22%7d&anon=true&deeplinkId=2680cb81-7d9b-4c05-803c-9241e6b68268'
+  notes_vi: Họp báo cáo tiến độ tuần, chốt các vấn đề kỹ thuật và rủi ro qua kênh Teams.

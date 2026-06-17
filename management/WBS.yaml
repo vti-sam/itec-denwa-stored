@@ -1,0 +1,603 @@
+schema_version: 1
+meta:
+  source: google_sheets
+  sheet: WBS / WBS
+  source_of_truth: google_sheets
+  read_only_export: true
+  generated_at: '2026-06-17T12:26:22+09:00'
+records:
+- id: DENWA-WBS-001
+  vti_backlog_id: ITEC_DENWA_APP-138
+  type: タスク
+  title: Backlogの状況更新
+  description: Backlogの各タスクを実際の対応状況に合わせて更新します。完了、対応中、お客様確認待ちが分かるように整理し、完了したものは日本語コメントを入れて担当者へ戻します。
+  owner: VTI_SAM
+  start_date: 46168
+  end_date: 46168
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: 対象のBacklogタスクが実際の状況に合わせて更新されていること。完了したタスクには、対応内容、影響範囲、結果が分かるコメントがあり、お客様確認に戻されていること。
+  notes: Backlogのステータスは実際の状況に合わせて更新済みです。お客様側で「処理済み／対応中／確認待ち」が確認できる状態です。VOIP_APL-186は片山 剛様、その他は鈴木 克成様にアサインしています。
+  notes_vi: Cập nhật trạng thái các task Backlog theo tình trạng thực tế
+- id: DENWA-WBS-002
+  vti_backlog_id: ITEC_DENWA_APP-139
+  type: 成果物
+  title: 「途中経過報告」への回答資料作成
+  description: お客様の「途中経過報告」に対する回答資料を作成します。各「残課題・提案」について、現象、VTIの対応内容、結果、残っている確認事項を整理します。あわせて、Android/iOSの安定状況、VTI側の改善、今後のBacklog管理方針もまとめます。
+  owner: VTI_SAM
+  start_date: 46168
+  end_date: ''
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: お客様へ提出できる回答資料があること。各「残課題・提案」に対して、どのように対応し、どう解決したかが分かること。結論シートの内容も現状と合っていること。
+  notes: お客様から、残課題・提案ごとに「どのように対応し、どう解決したか」が分かる資料の提出依頼があります。結論には、現状、VTI側の改善、今後の扱い、方針を反映します。合意済み範囲外の内容は追加しません。
+  notes_vi: Báo cáo chi tiết và kết luận sheet phản hồi tài liệu 途中経過報告
+- id: DENWA-WBS-004
+  vti_backlog_id: ITEC_DENWA_APP-140
+  type: 不具合修正
+  title: iPhone SEの画面下部ボタン表示崩れ修正
+  description: iPhone SEで画面下部のボタンがはみ出すレイアウト不具合を修正します。
+  owner: VTI_SAM
+  start_date: 46168
+  end_date: 46168
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: iPhone SEのボタン表示崩れが修正され、バージョン1.0.0 (15)でリリースされていること。
+  notes: 修正が完了し、バージョン1.0.0 (15)でリリース済み。
+  notes_vi: Sửa lỗi UI tràn nút ở phần dưới màn hình trên iPhone SE
+- id: DENWA-WBS-005
+  vti_backlog_id: ITEC_DENWA_APP-141
+  type: 依存関係
+  title: セキュリティ確認とソースレビュー準備
+  description: セキュリティ確認済み項目を整理し、関連資料を準備します。あわせて、日本側でソースコードをレビューできるように、Source CodeまたはGitLabアクセス提供の準備を進めます。
+  owner: VTI_SAM
+  start_date: 46168
+  end_date: ''
+  deadline: 46169
+  status: Completed
+  priority: High
+  definition_of_done: 'セキュリティ項目の資料が完成していること。お客様からグローバルIPを受領後、VTI側でIPをホワイトリスト登録し、担当者宛にGitLabアクセス申請メールを送ること。
+
+    [Secrets Manager完了基準]:
+
+    1. Secrets Manager上にJSON形式の認証情報を含む単一のシークレットを作成すること。
+
+    2. ECS Task Definition Container (Spring Boot)を、シークレットから環境変数へキーをマッピングするように設定すること（secrets: [{name, valueFrom}]を使用）。
+
+    3. Spring Bootコードが@Valueを介して環境変数を使用していること。
+
+    4. コンテナのentrypoint/startupコードが、base64エンコードされたAPNS/SSL Keystore (.p8/.p12)を対応する物理ファイルにデコードしていること。'
+  notes: 鈴木 克成様へ連絡し、片山 剛様をCCに入れてグローバルIPの提供を依頼済みです。VTIのGitLabはローカルサーバーで運用しているため、アクセス付与前にIPのホワイトリスト登録が必要です。現在、お客様からの回答待ちです。
+  notes_vi: Tổng hợp hạng mục bảo mật và chuẩn bị cung cấp Source Code/Git access cho phía Nhật rà soát
+- id: DENWA-WBS-006
+  vti_backlog_id: ITEC_DENWA_APP-136
+  type: スコープ項目
+  title: ユーザー管理のテナント統合確認
+  description: User Managementの範囲で、Web/API上はmobile tenantとSIPP tenantを1つの論理テナントとして扱えるか確認します。実データはそれぞれの物理tenant/schemaに残し、ユーザーごとに正しいschemaへルーティングします。
+  owner: VTI_SAM
+  start_date: 46168
+  end_date: ''
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: Web/APIのUser Managementで、ユーザーを共通の論理テナントとして表示・管理できること。必要な電話帳やリソースを一元管理でき、実データは正しい物理tenant/schemaへルーティングされること。
+  notes: 'お客様からは、管理しやすくするためにmobile tenantとSIPP tenantをまとめて見たい、という要望があります。例として、電話帳の共通表示やリソース共有があります。影響範囲を広げすぎないため、最初はUser Managementに限定して確認します。
+
+
+    -> 影響範囲が大きいため、お客様への再確認が必要です。'
+  notes_vi: Web/API logical tenant merge cho User Management
+- id: DENWA-WBS-008
+  vti_backlog_id: ITEC_DENWA_APP-142
+  type: 不具合修正
+  title: Androidの残課題対応
+  description: Backlogで管理しているAndroid関連の課題について、調査、修正、動作安定化を進めます。
+  owner: VTI_SAM
+  start_date: 46168
+  end_date: ''
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: 対象のAndroid不具合が修正され、動作確認が完了し、Backlogのステータスも更新されていること。
+  notes: '進捗確保のため、Backlog上のAndroid課題を優先して対応します。
+
+
+    Transferの2回目操作については、サンプルアプリ側の挙動も確認しながら、連続Transferをどう制御するかを検討します。'
+  notes_vi: Khắc phục các lỗi Android còn tồn đọng trên Backlog
+- id: DENWA-WBS-009
+  vti_backlog_id: ITEC_DENWA_APP-143
+  type: 不具合修正
+  title: iOSの残課題対応
+  description: Backlogで管理しているiOS関連の課題について、調査、修正、動作安定化を進めます。
+  owner: VTI_SAM
+  start_date: 46168
+  end_date: ''
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: 対象のiOS不具合が修正され、動作確認が完了し、Backlogのステータスも更新されていること。
+  notes: 進捗確保のため、Backlog上のiOS課題を優先して対応します。
+  notes_vi: Khắc phục các lỗi iOS còn tồn đọng trên Backlog
+- id: DENWA-WBS-012
+  customer_task_id: VOIP_APL-188
+  vti_backlog_id: ITEC_DENWA_APP-129
+  type: 不具合修正
+  title: '[Android] 通話中のTransferボタン表示'
+  description: Androidの受電側で、通話中にTransferボタンを表示します。ボタンを押すと第三者を選択して発信する画面へ進み、attended transferの流れを使えるようにします。
+  owner: VTI_SAM
+  start_date: 46170
+  end_date: ''
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: Androidで通話中にTransferボタンが表示され、attended transferのフローが正しく開始できること。
+  notes: お客様BacklogのVOIP_APL-188と同じ内容です。
+  notes_vi: '[Android] Hiển thị nút chuyển cuộc gọi (Transfer button) khi cuộc gọi ở trạng thái 通話中'
+- id: DENWA-WBS-013
+  customer_task_id: VOIP_APL-188
+  vti_backlog_id: ITEC_DENWA_APP-129
+  type: 不具合修正
+  title: '[iOS] 通話中のTransferボタン表示'
+  description: iOSの受電側で、通話中にTransferボタンを表示します。ボタンを押すと第三者を選択して発信する画面へ進み、attended transferの流れを使えるようにします。
+  owner: VTI_SAM
+  start_date: 46170
+  end_date: ''
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: iOSで通話中にTransferボタンが表示され、attended transferのフローが正しく開始できること。
+  notes: お客様BacklogのVOIP_APL-188と同じ内容です。
+  notes_vi: '[iOS] Hiển thị nút chuyển cuộc gọi (Transfer button) khi cuộc gọi ở trạng thái 通話中'
+- id: DENWA-WBS-014
+  customer_task_id: VOIP_APL-186
+  vti_backlog_id: ITEC_DENWA_APP-144
+  type: 成果物
+  title: UAT資料共有と最終確認依頼
+  description: VTI側の内部テスト完了後、お客様が確認テストを行えるように、UAT資料（テストケース、結果、エビデンス）を共有します。資料はVOIP_APL-186へコメント済みで、片山 剛様と鈴木 克成様にも通知済みです。
+  owner: VTI_SAM
+  start_date: 46170
+  end_date: 46170
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: VOIP_APL-186にテスト資料とエビデンスのリンクをコメントし、お客様へ確認依頼ができていること。
+  notes: 'お客様Backlog: VOIP_APL-186。テスト資料とエビデンス: https://drive.google.com/drive/folders/1DDMjBlvUwvbfGZ4snB_KBa7Dcqhf8zEi.
+    2026-05-28にVOIP_APL-186へコメント済みです。片山 剛様、鈴木 克成様もタグ付け済みです。'
+  notes_vi: Cung cấp tài liệu UAT và nhờ KH xác nhận chất lượng lần cuối
+- id: DENWA-WBS-015
+  customer_task_id: VOIP_APL-169
+  vti_backlog_id: ITEC_DENWA_APP-145
+  type: 成果物
+  title: Web/Mobileマニュアルの完成
+  description: お客様へ提出するWeb管理システム用とMobileアプリ用のマニュアルを確認し、完成させます。Web版は完了済みで、Mobile版も新しいTransferフローを反映します。
+  owner: VTI_SAM
+  start_date: 46170
+  end_date: 46171
+  deadline: 46171
+  status: Completed
+  priority: High
+  definition_of_done: Web管理システム用とMobileアプリ用のマニュアルが、お客様へ提出できる状態になっていること。Mobileマニュアルには新しいTransferフローと必要な画像が反映されていること。
+  notes: Web管理システム資料（ITEC様_VoIP電話_Web管理システム_取扱説明書_1.0）とMobileアプリ資料（ITEC様_VoIP電話_モバイルアプリ_取扱説明書_1.0）は、確認と作成が完了しています。
+  notes_vi: Hoàn thiện tài liệu hướng dẫn Web/Mobile app để report KH
+- id: DENWA-WBS-016
+  vti_backlog_id: ITEC_DENWA_APP-131
+  type: タスク
+  title: VPN/GitLabアカウント発行対応
+  description: お客様または関連ベンダーがVTIローカルサーバー上のソースコードを確認できるように、VPNとGitLab VTIアカウントの発行手続きを進めます。
+  owner: VTI_SAM
+  start_date: 46171
+  end_date: ''
+  deadline: 46171
+  status: Completed
+  priority: Medium
+  definition_of_done: VPNアカウントとGitLab VTIアカウントが発行され、お客様または関連ベンダーがVPN経由で接続し、ソースコードをcloneまたは閲覧できること。
+  notes: PM Trangと連携して手続きを進めます。
+  notes_vi: Làm thủ tục cấp VPN và tài khoản GitLab VTI cho khách hàng/vendor phụ
+- id: DENWA-WBS-017
+  customer_task_id: VOIP_APL-155
+  vti_backlog_id: ITEC_DENWA_APP-146
+  type: タスク
+  title: STG環境の固定OTP付きテストアカウント作成
+  description: STG環境で、固定OTP「123456」を使うテスト用アカウントを3件作成します。Tenant ID 111に追加し、Transfer確認とApp Store / Google Playレビュー準備に使用します。
+  owner: VTI_SAM
+  start_date: 46171
+  end_date: 46171
+  deadline: 46175
+  status: Completed
+  priority: Medium
+  definition_of_done: Tenant 111のDBに3件のテストアカウントが作成され、空きSIP番号に紐づき、STG環境で固定OTP「123456」によりログインできること。
+  notes: お客様ドメインのメールアドレスを使用します。既存のIP Group設定を利用するため、Tenant ID 111に追加しています。
+  notes_vi: Tạo tài khoản test tạm thời với OTP cố định trên môi trường test (STG)
+- id: DENWA-WBS-018
+  customer_task_id: VOIP_APL-135
+  vti_backlog_id: ITEC_DENWA_APP-147
+  type: 不具合修正
+  title: '[Android/iOS] アプリ強制終了時におけるVoIPシステムの制限分析'
+  description: B端末が突然強制終了された際にA端末で通話が切れない不具合（VOIP_APL-135）の原因を分析します。Android/iOSのOSライフサイクル制限およびSIPプロトコルに起因する制限であることを確認します。
+  owner: VTI_SAM
+  start_date: 46176
+  end_date: 46176
+  deadline: 46176
+  status: Completed
+  priority: Medium
+  definition_of_done: 技術分析結果がまとまり、BacklogチケットVOIP_APL-135上でお客様へ回答が送信され、確認されていること。
+  risk_id: R-001
+  notes: 詳細な分析を完了し、お客様向けの日本語回答内容を準備済み。
+  notes_vi: '[Android/iOS] Phân tích hạn chế hệ thống VoIP khi kill app'
+- id: DENWA-WBS-019
+  customer_task_id: VOIP_APL-189
+  vti_backlog_id: ITEC_DENWA_APP-148
+  type: 不具合修正
+  title: '[iOS] 通話中のホームボタン押下に伴うプラットフォーム制限の分析 (VOIP_APL-189)'
+  description: 本件は現在フィードバック待ちです。以下の観点から、古い端末でのみ発生し、かつ再現頻度も低いプラットフォームの制限と判断しています。①本挙動は通常とは異なるケースであること、②VTI側で再現不可でありエビデンスも提供済みであること、③修正は可能と評価されるもののユーザーの操作フロー（挙動）変更を伴い、現段階では6月末のリリース準備に多大な影響を及ぼす恐れがあること。以上より、本タスクの一時ペンディングを提案します。
+  owner: VTI_SAM
+  start_date: 46177
+  end_date: 46178
+  deadline: 46178
+  status: Awaiting Customer
+  priority: High
+  definition_of_done: ペンディング提案について、お客様（片山様）からフィードバック・合意が得られること。
+  notes: 6月末リリースに集中するため、本タスクの一時ペンディングを提案。お客様（片山様）からのご回答待ち。
+  notes_vi: '[iOS] Phân tích hạn chế nền tảng liên quan đến nút Home khi gọi (VOIP_APL-189)'
+- id: DENWA-WBS-020
+  vti_backlog_id: ITEC_DENWA_APP-149
+  type: タスク
+  title: 鈴木様要求に基づくセキュリティチェックポイントの調査
+  description: 鈴木様（アイテック）の要求に基づき、システムのセキュリティチェックポイントの調査・確認を実施。先週初めにレポート作成と関連コードの修正を完了しており、現在鈴木様によるレビュー待ち。
+  owner: VTI_SAM
+  start_date: 46174
+  end_date: 46178
+  deadline: 46181
+  status: Awaiting Customer Review
+  priority: High
+  definition_of_done: セキュリティチェックポイントのレポートおよび関連する修正コードについて、鈴木様によるレビューと承認が完了すること。
+  notes: 先週初めにレポート作成および関連コードの修正は完了していましたが、報告が漏れておりました。大変申し訳ございません。現在鈴木様によるレビュー待ちです。
+  notes_vi: Điều tra các hạng mục bảo mật (Security Checkpoint) theo yêu cầu của Suzuki
+- id: DENWA-WBS-021
+  vti_backlog_id: ITEC_DENWA_APP-150
+  type: 確認
+  title: 岡田電機様の提案に基づくMVEおよびAPIの仕様変更の確認
+  description: MVE側から提案されたMVEおよびAPIの仕様（spec）変更内容について関係各所と確認。現在、岡田電機様からの説明・提示待ち。
+  owner: VTI_SAM
+  start_date: 46181
+  end_date: ''
+  deadline: 46185
+  status: Awaiting Customer
+  priority: High
+  definition_of_done: 岡田電機様より仕様変更内容について説明があり、各社間で対応方針と修正範囲が合意されること。
+  notes: MVE提案の仕様変更内容について、岡田電機様にてご説明いただく予定。
+  notes_vi: Xác nhận thay đổi spec trên MVE và API theo đề nghị của Okada Denki
+- id: DENWA-WBS-022
+  vti_backlog_id: ITEC_DENWA_APP-151
+  type: 成果物
+  title: リリース計画策定、WBS構築およびリリースガイド準備（App Store, Google Play, API & インフラ）
+  description: 月末までのリリース計画を策定し、WBSを構築して、App Store、Google Play、API、およびインフラ（インフラ統合）のリリース準備に向けた各社への役割分担を行う。
+  owner: VTI_SAM
+  start_date: 46181
+  end_date: ''
+  deadline: 46183
+  status: Completed
+  priority: High
+  definition_of_done: 'リリース計画についてです。
+
+    リリース計画の作成、WBSの作成、役割分担については完了しています。
+
+    現時点では、全体として計画どおりに進んでいる認識です。
+
+    こちらについては、大きな問題はありません。'
+  notes: '成果物:
+
+    WBS'
+  notes_vi: 'Lập kế hoạch release, xây dựng WBS và chuẩn bị tài liệu Release Guide (App Store, Google Play, API & Infra)
+
+
+    2026年6月30日リリース向けWBS案.xlsx'
+- id: DENWA-WBS-024
+  vti_backlog_id: ITEC_DENWA_APP-152
+  type: 成果物
+  title: Web管理マニュアルの標準化または分離
+  description: Web管理マニュアルの精査・標準化を行い、テナント管理者が安全に利用できるようシステム管理者専用の不要な記述を削除。また、テナント管理者によるSIP Phone端末の登録および設定手順を追加する。
+  owner: VTI_SAM
+  start_date: 46181
+  end_date: ''
+  deadline: 46188
+  status: Completed
+  priority: High
+  definition_of_done: 'Web管理マニュアルについてです。
+
+    こちらは、ロールごとに内容を分けて整理済みです。'
+  notes: '成果物：
+
+
+    Manual'
+  notes_vi: 'Chuẩn hóa hoặc tách biệt Web Manual
+
+
+    Manual
+
+
+    '
+- id: DENWA-WBS-025
+  vti_backlog_id: ITEC_DENWA_APP-137
+  type: タスク
+  title: WEB側のセキュリティ指摘事項の検証
+  description: 'セキュリティレポートに基づき、Staging環境のAdmin Portalにおける以下の10項目のセキュリティリスクを評価・検証する：
+
+    1. ブルートフォース攻撃およびアカウントロックアウト機能の検証。
+
+    2. ログインフォームにおけるSQLインジェクションの検証。
+
+    3. 動的スキーマ名（"${schemaName}"）によるSQLインジェクションリスクの検証。
+
+    4. HTTPセキュリティヘッダー（CSP, X-Frame-Options, HSTS等）の検証。
+
+    5. Admin PortalにおけるXSS（クロスサイトスクリプティング）の検証。
+
+    6. CSRF（クロスサイトリクエストフォージェリ）脆弱性の検証。
+
+    7. JWT/トークン保存方式およびCookie属性（HttpOnly, Secure, SameSite）の検証。
+
+    8. Staging環境の公開範囲およびIPホワイトリスト制御（X-Forwarded-For偽装等）の検証。
+
+    9. API認可制御およびIDOR（不適切なオブジェクト参照）の検証。
+
+    10. 検証結果、エビデンス（PoC、リクエスト/レスポンス）の取りまとめおよびレポートの再分類。'
+  owner: VTI_SAM
+  start_date: 46181
+  end_date: ''
+  deadline: 46192
+  status: Completed
+  priority: High
+  definition_of_done: 'WEB側のセキュリティに対する10項目の指摘について、検証と確認は完了しています。
+
+    検証結果とエビデンスもレポートとして整理済みです'
+  notes: '成果物：
+
+
+    Security'
+- id: DENWA-WBS-026
+  vti_backlog_id: ITEC_DENWA_APP-163
+  type: 成果物
+  title: WebアプリUAT項目書作成（システム管理者・テナント管理者）
+  description: Web管理画面 of UATテスト項目書を作成する。システム管理者向けおよびテナント管理者向けの2つのロール別テスト項目を起草・作成する。
+  owner: VTI_SAM
+  start_date: 46181
+  end_date: ''
+  deadline: 46185
+  status: Completed
+  priority: High
+  definition_of_done: 'WebアプリのUAT項目書についてです。
+
+    こちらも、ロールごとに内容を分けて作成済み'
+  notes: '成果物：
+
+
+    Testcase'
+  notes_vi: Xây dựng tài liệu UAT cho Web App (System Admin & Tenant Admin)
+- id: DENWA-WBS-028
+  type: タスク
+  title: 6月30日のリリース範囲とリリース可否条件を確定する
+  description: 6月30日のリリース範囲とリリース可否条件を確定する
+  owner: 片山 剛
+  start_date: 46183
+  end_date: ''
+  deadline: 46185
+  status: Completed
+  priority: High
+  definition_of_done: '6月30日のリリース範囲とリリース可否条件についてです。
+
+    こちらも整理済みです'
+  notes: '成果物:
+
+    WBS'
+  notes_vi: Xác định phạm vi release ngày 30/06 và điều kiện quyết định release
+- id: DENWA-WBS-029
+  type: タスク
+  title: APIの本番環境を準備する
+  description: APIの本番環境を準備する
+  owner: VTI_SAM
+  start_date: 46183
+  end_date: ''
+  deadline: 46185
+  status: Completed
+  priority: High
+  definition_of_done: 'stg→prd
+
+    準備は完了しています'
+  notes: '成果物:
+
+    Infra'
+  notes_vi: Chuẩn bị môi trường Production cho API
+- id: DENWA-WBS-030
+  type: タスク
+  title: 本番APIの簡易確認を実施する
+  description: 本番APIの簡易確認を実施する
+  owner: VTI_SAM
+  start_date: 46184
+  end_date: ''
+  deadline: 46185
+  status: Completed
+  priority: High
+  definition_of_done: 確認済み
+  notes: '成果物:
+
+    Testcase'
+  notes_vi: Thực hiện xác nhận sơ bộ API trên Production
+- id: DENWA-WBS-031
+  type: タスク
+  title: MVE本番環境の設定を確認する
+  description: MVE本番環境の設定を確認する
+  owner: 野崎 祐也
+  start_date: 46185
+  end_date: ''
+  deadline: 46188
+  status: Completed
+  priority: High
+  definition_of_done: MVE本番がAPI/appと連携可能な状態
+  notes: endpoint/credential/callback/allowlist確認
+  notes_vi: Xác nhận thiết lập môi trường Production của MVE
+- id: DENWA-WBS-032
+  type: タスク
+  title: 本番環境向けSIP Phone設定を準備する
+  description: 本番環境向けSIP Phone設定を準備する
+  owner: 野崎 祐也
+  start_date: 46185
+  end_date: ''
+  deadline: 46190
+  status: Awaiting Customer
+  priority: High
+  definition_of_done: SIP account/電話番号/tenant/IP Group等が本番利用可能
+  notes: 実機確認は岡田/ITEC側
+  notes_vi: Chuẩn bị thiết lập SIP Phone cho môi trường Production
+- id: DENWA-WBS-033
+  type: タスク
+  title: Web ManualにSIP Phone設定手順を追加する
+  description: Web ManualにSIP Phone設定手順を追加する
+  owner: VTI_SAM
+  start_date: 46188
+  end_date: ''
+  deadline: 46190
+  status: Awaiting Customer
+  priority: High
+  definition_of_done: Tenant Admin向け登録・設定手順が確認可能
+  notes: 既存Manual更新に関連
+  notes_vi: Thêm hướng dẫn thiết lập SIP Phone vào Web Manual
+- id: DENWA-WBS-034
+  type: タスク
+  title: mobile app/API/MVEの結合確認を実施する
+  description: mobile app/API/MVEの結合確認を実施する
+  owner: VTI_SAM
+  start_date: 46189
+  end_date: ''
+  deadline: 46191
+  status: Awaiting Customer
+  priority: High
+  definition_of_done: 発信/着信/push/call/transfer/終話の主要フロー確認
+  notes: VTIはapp/API範囲
+  notes_vi: Thực hiện kiểm thử tích hợp Mobile App / API / MVE
+- id: DENWA-WBS-035
+  type: タスク
+  title: 本番環境でSIP Phoneの動作確認を実施する
+  description: 本番環境でSIP Phoneの動作確認を実施する
+  owner: 野崎 祐也
+  start_date: 46190
+  end_date: ''
+  deadline: 46191
+  status: Awaiting Customer
+  priority: High
+  definition_of_done: SIP⇔mobile発着信、終話等が確認できている
+  notes: VTIはlog/API/app調査支援
+  notes_vi: Thực hiện kiểm tra hoạt động của SIP Phone trên môi trường Production
+- id: DENWA-WBS-036
+  vti_backlog_id: ITEC_DENWA_APP-165
+  type: 不具合修正
+  title: UATで発生した不具合を修正し再確認する
+  description: UATで発生した不具合を修正し再確認する
+  owner: VTI_SAM
+  start_date: 46188
+  end_date: ''
+  deadline: 46191
+  status: In Progress
+  priority: High
+  definition_of_done: 重大不具合が解消、残課題はITEC了承済
+  notes: 'UAT_VoIP電話アプリテストケース.xlsx
+
+
+    不具合はほぼすべて解消しました。'
+  notes_vi: 'UAT_VoIP電話アプリテストケース.xlsx
+
+
+    不具合はほぼすべて解消しました。'
+- id: DENWA-WBS-037
+  type: 成果物
+  title: App Store／Google Play提出情報を準備する
+  description: App Store／Google Play提出情報を準備する
+  owner: VTI_SAM
+  start_date: 46189
+  end_date: ''
+  deadline: 46191
+  status: In Progress
+  priority: High
+  definition_of_done: metadata/screenshot/privacy/review note/3アカウント準備
+  notes: reviewerログイン情報明記
+  notes_vi: Chuẩn bị thông tin submit lên App Store / Google Play
+- id: DENWA-WBS-038
+  type: 成果物
+  title: production接続用release candidateを作成する
+  description: production接続用release candidateを作成する
+  owner: VTI_SAM
+  start_date: 46191
+  end_date: ''
+  deadline: 46192
+  status: In Progress
+  priority: High
+  definition_of_done: iOS/Android build導入可、version/signing/prod接続確認
+  notes: iOSはTestFlight確認済
+  notes_vi: Tạo bản build Release Candidate kết nối môi trường Production
+- id: DENWA-WBS-039
+  type: タスク
+  title: App Store／Google Playへ審査提出する
+  description: App Store／Google Playへ審査提出する
+  owner: VTI_SAM
+  start_date: 46192
+  end_date: ''
+  deadline: 46192
+  status: Open
+  priority: High
+  definition_of_done: アプリがストア審査に提出されている
+  notes: 予備日6/22(月)
+  notes_vi: Submit ứng dụng lên App Store / Google Play để duyệt
+- id: DENWA-WBS-040
+  type: タスク
+  title: 審査通過後、ユーザー向けにはまだ公開しない
+  description: 審査通過後、ユーザー向けにはまだ公開しない
+  owner: VTI_SAM
+  start_date: 46195
+  end_date: ''
+  deadline: 46199
+  status: Open
+  priority: High
+  definition_of_done: 審査通過し公開可能な状態
+  notes: 再審査不要(新build不可)
+  notes_vi: Không công khai cho người dùng ngay sau khi duyệt qua
+- id: DENWA-WBS-041
+  type: タスク
+  title: 6月30日に公開するか延期するか最終判断する
+  description: 6月30日に公開するか延期するか最終判断する
+  owner: 鈴木 克成
+  start_date: 46202
+  end_date: ''
+  deadline: 46202
+  status: Open
+  priority: High
+  definition_of_done: 公開実施または延期の判断が明確
+  notes: 重大未解決なら公開しない
+  notes_vi: Đưa ra quyết định cuối cùng về việc release hay hoãn vào ngày 30/06
+- id: DENWA-WBS-042
+  type: タスク
+  title: ユーザー向けにアプリを正式公開する
+  description: ユーザー向けにアプリを正式公開する
+  owner: 鈴木 克成
+  start_date: 46203
+  end_date: ''
+  deadline: 46203
+  status: Open
+  priority: High
+  definition_of_done: ユーザーがStoreから取得・更新できる
+  notes: 公開後prod簡易確認
+  notes_vi: Chính thức phát hành ứng dụng cho người dùng
+- id: DENWA-WBS-043
+  type: タスク
+  title: リリース後監視
+  description: 公開後の不具合・ログを監視する
+  owner: VTI_SAM
+  start_date: 46203
+  end_date: ''
+  deadline: 46206
+  status: Open
+  priority: High
+  definition_of_done: 連絡・調査・hotfix方針が整理されている
+  notes: MVE/SIP is 岡田standby
+  notes_vi: Giám sát lỗi và log sau khi release

@@ -1,0 +1,9 @@
+# Ignore everything at the root level
+/*
+
+# Allow only these folders and files
+!/knowledge/
+!/artifacts/
+!/management/
+!/AGENTS.md
+!/.gitignore

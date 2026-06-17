@@ -1,0 +1,18 @@
+schema_version: 1
+meta:
+  source: google_sheets
+  sheet: Decisions / 決定事項
+  source_of_truth: google_sheets
+  read_only_export: true
+  generated_at: '2026-06-17T12:26:22+09:00'
+records:
+- id: DEC-2026-05-26-TRANSFER-BUTTON-LAYOUT
+  title: コール転送ボタンの配置変更
+  status: Confirmed
+  date: '2026-05-26'
+  context: 従来、コール転送ボタンはオプションメニュー（三点リーダー/電話アクション）内に配置されており、ユーザーが転送操作を行うまでに複数のステップが必要であった。
+  decision: 転送ボタンを通話中（Active Call）画面の下部にあるメイン機能ボタン行へ移動し、青色の円形ボタンとして配置する。
+  reason: ユーザーエクスペリエンス（UX）を最適化し、ワンタップで迅速に転送操作を実行できるようにするため。
+  impact: AndroidおよびiOS双方の通話中画面におけるUI/UXレイアウトの変更。
+  notes_vi: Chuyển nút transfer ra màn hình cuộc gọi chính dưới dạng nút tròn màu xanh dương để tối ưu hóa trải nghiệm người
+    dùng.

@@ -1,0 +1,84 @@
+schema_version: 1
+meta:
+  source: google_sheets
+  sheet: Stakeholders / 関係者
+  source_of_truth: google_sheets
+  read_only_export: true
+  generated_at: '2026-06-17T12:26:22+09:00'
+records:
+- id: SH-001
+  type: Stakeholder
+  name: VTI_SAM
+  email: son.nguyenhong1@vti.com.vn
+  organization: VTI
+  role: VTI側テックリード / BrSE；技術面全般および技術的なコミュニケーションの主担当
+  influence: High
+  interest: High
+  expectations: 技術調整、設計、コーディング、リスク管理、顧客/ベンダーとの仕様確認、および技術報告書作成の主導。
+  communication_strategy: 技術的な相談、課題整理（Triage）、および週次報告における第一窓口。
+  notes_vi: BrSE/Tech Lead phía VTI, phụ trách chính về kỹ thuật và giao tiếp với khách hàng.
+- id: SH-002
+  type: Stakeholder
+  name: 片山 剛
+  email: katayama-ta@itec.hankyu-hanshin.co.jp
+  organization: Itec
+  role: 顧客側QA責任者
+  influence: Medium
+  interest: High
+  expectations: 品質確認、不具合再現の検証、テスト結果の確認、および顧客側受入基準の策定。
+  communication_strategy: 不具合の確認、テストシナリオの合意、またはログなどのエビデンス確認が必要な際に、週次報告やTeamsを介して連携する。
+  notes_vi: QA phía khách hàng, chịu trách nhiệm về test scenario và tiêu chí nghiệm thu.
+- id: SH-003
+  type: Stakeholder
+  name: 鈴木 克成
+  email: suzuki-kn@itec.hankyu-hanshin.co.jp
+  organization: Itec
+  role: 顧客側技術主幹
+  influence: High
+  interest: High
+  expectations: 技術方針の決定、システム制約の提示、技術リスクの評価、およびベンダー調整の意思決定。
+  communication_strategy: 合意が必要な技術事項について、Teamsや週次報告で優先的に協議する。確定事項、前提条件、確認中事項を明確に区別して意思疎通を図る。
+  notes_vi: Phụ trách kỹ thuật phía khách hàng, đưa ra các quyết định kỹ thuật và hệ thống.
+- id: SH-004
+  type: Stakeholder
+  name: 野崎 祐也
+  email: yuuya-nozaki@okadadenki.onmicrosoft.com
+  organization: Okada Denki
+  role: ベンダー（岡田電機）側MVE担当
+  influence: High
+  interest: High
+  expectations: MVE/PBX/AudioCodesの動作仕様の確認支援、SIPログの提供、およびベンダー側技術制限の提示。
+  communication_strategy: MVE、SIPシグナリング（REGISTER/INVITE/REFER/NOTIFY/Replaces）、およびセッションタイムアウトに関連する課題発生時に、エビデンスを添えてエスカレーションおよび調査を依頼する。
+  notes_vi: Phụ trách hệ thống MVE phía vendor, hỗ trợ log SIP và kiểm tra hành vi PBX.
+- id: SH-005
+  type: Stakeholder
+  name: VU Phan Tien
+  email: vu.phantien@vti.com.vn
+  organization: VTI
+  role: VTI側統括責任者（Project Director）
+  influence: High
+  interest: Medium
+  expectations: プロジェクト全体の進捗、リスク、スコープの把握、およびVTI側でのエスカレーション・重要決定のサポート。
+  communication_strategy: スコープ/コスト/スケジュールに影響を及ぼす重大なリスクの発生時、または追加のリソース調整が必要な場合に、サマリーを報告する。
+  notes_vi: Project Director phía VTI, quản lý tổng thể rủi ro và điều phối tài nguyên.
+- id: SH-006
+  type: Stakeholder
+  name: TRANG Nguyen Thi 2
+  email: trang.nguyenthi2@vti.com.vn
+  organization: VTI.D9
+  role: オフショアPM
+  influence: High
+  interest: High
+  expectations: オフショア開発計画の管理、開発メンバーへのタスク割り当て、進捗管理、および報告の調整。
+  communication_strategy: 週次報告やPM定例を通じて開発状況を共有する。メンバー変更やスケジュール調整が必要な場合のエスカレーション先。
+  notes_vi: Project Manager phía offshore, quản lý công việc và phân bổ thành viên trong nhóm.
+- id: SH-007
+  type: Stakeholder
+  name: Nhóm DEV / Test / BA offshore
+  organization: VTI
+  role: オフショア開発メンバー（DEV/QA/BA）；フェーズに応じて流動的にアサイン
+  influence: Medium
+  interest: Medium
+  expectations: 各フェーズの計画に沿った詳細分析、コーディング、テストの実行、ログ収集、および動作検証の実施。
+  communication_strategy: 各フェーズのWBS/Backlogに沿ってタスクを割り当てる。具体的な作業範囲の指示はVTI_SAMおよびオフショアPMから行う。
+  notes_vi: Đội ngũ phát triển và kiểm thử offshore của VTI, thực hiện code và test.
