@@ -3,8 +3,11 @@ title: Dev/PRD Infra Target Architecture
 project: denwa-infra
 type: architecture
 status: confirmed
+verified_at: 2026-06-18
+stale_after: 2026-07-18
 source:
   - Infra structure design document created on 2026-06-12
+  - AWS ECS task definitions, DNS lookup và source config được kiểm tra ngày 2026-06-18
 tags:
   - aws
   - dev
@@ -67,6 +70,7 @@ tags:
   - [9.2 CloudTrail](#92-cloudtrail)
 - [10. その他サービス](#10-その他サービス)
   - [10.1 Amazon SES](#101-amazon-ses)
+  - [10.2 MVE API bên ngoài](#102-mve-api-bên-ngoài)
 - [11. IAM 構成](#11-iam-構成)
   - [11.1 ECS ロール](#111-ecs-ロール)
 - [12. CI/CD 方式](#12-cicd-方式)
@@ -585,6 +589,29 @@ Secret には DB 接続情報、JWT/AES、SES、MVE、SSL keystore、Firebase、
 |---|---|---|---|
 | 1 | ドメイン | apl.purattocall.com | mail / auth records は別途管理する |
 | 2 | 用途 | application email sending | |
+
+### 10.2 MVE API bên ngoài
+
+Backend dùng MVE API để đọc và cập nhật cấu hình account qua INI. Tại thời điểm kiểm tra ngày 2026-06-18, cả STG và PRD đều dùng cùng endpoint `app-mve.purattocall.com`; không có source/config runtime nào tham chiếu `c2.cd-demo-mve.com`.
+
+| Hostname | IPv4 đã xác minh | Trạng thái sử dụng |
+|---|---|---|
+| `app-mve.purattocall.com` | `13.112.245.12` | Target hiện tại của STG và PRD |
+| `c2.cd-demo-mve.com` | `15.168.65.231` | Chưa được tham chiếu trong source/config runtime |
+
+Các API account/INI đang được cấu hình:
+
+- `GET/PUT https://app-mve.purattocall.com/api/v1/files/ini`
+- `GET/PUT https://app-mve.purattocall.com/api/v1/files/ini/incremental`
+
+Chưa có bằng chứng xác định hostname nào tương ứng với MVE số 1 hoặc MVE số 2. Không được suy luận mapping này chỉ từ hostname/IP; cần xác nhận từ đơn vị vận hành MVE.
+
+Điểm kiểm tra vận hành:
+
+- Xác minh DNS bằng `dig +short <hostname> A`.
+- Xác minh target trong các profile runtime qua `mve.file.ini` và `mve.ini.incremental`.
+- Khi chuyển active node, phải xác minh `API-user`, quyền GET/PUT INI API, client certificate mTLS và allowlist cho outbound IP của ECS đã được đồng bộ giữa hai MVE.
+- Thông tin DNS và active node có thể thay đổi; source-check lại sau `stale_after` trước khi khẳng định.
 
 ## 11. IAM 構成
 
