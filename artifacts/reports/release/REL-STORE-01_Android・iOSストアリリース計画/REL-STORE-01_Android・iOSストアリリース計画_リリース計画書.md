@@ -1,219 +1,219 @@
 # REL-STORE-01 Android・iOSストアリリース計画書
 
-Ngày cập nhật: 2026-06-16  
-Dự án: `itec-denwa` / Denwa / `ぷらっとCALL`  
-Phạm vi: chuẩn bị release mobile app Android/iOS lên Google Play và Apple App Store, gắn với API/infra production, MVE, SIP Phone, account test cho reviewer, store review và release production.
+更新日: 2026/06/16
 
-## 1. Kết luận vận hành
+対象プロジェクト: `itec-denwa` / Denwa / `ぷらっとCALL`
 
-- Mốc `2026-06-30` là ngày **public production chính thức**, không phải ngày bắt đầu store review.
-- App phải được submit review trước đó, mục tiêu submit là `2026-06-19`, ngày dự phòng là `2026-06-22`.
-- Sau khi được approve, không upload build mới nếu không bắt buộc; giữ app ở trạng thái có thể public và chỉ public sau quyết định cuối cùng của ITEC vào `2026-06-29` hoặc ngày `2026-06-30`.
-- Version hiển thị cho cả Android/iOS thống nhất về `1.0.0`.
-- Việc đầu tiên trước build RC là hạ/chốt version hiển thị về `1.0.0` ở source Android/iOS và xác nhận lại store metadata.
-- Android `versionCode` và iOS `build number` không phải version hiển thị; chúng vẫn phải tuân thủ quy tắc tăng dần của Google Play/App Store Connect.
+対象範囲: Android / iOS モバイルアプリを Google Play および Apple App Store へ本番公開するためのリリース計画、審査準備、Reviewer向けアカウント、Production API、MVE、SIP Phone連携確認を対象とする。
 
-## 2. Thông tin đã tổng hợp
+## 1. 運用方針
 
-### 2.1. App và môi trường
+- `2026/06/30` は本番公開予定日であり、Store審査開始日ではない。
+- Store審査への提出目標日は `2026/06/19`、予備日は `2026/06/22` とする。
+- Store審査承認後は、重大な不具合対応が必要な場合を除き、新しいビルドを追加アップロードしない。
+- 承認済みビルドは公開可能な状態で保持し、ITECの最終判断後に本番公開する。
+- Android / iOS の表示バージョンは `1.0.0` に統一する。
+- Android `versionCode` および iOS `build number` は表示バージョンではなく、各Storeの増分ルールに従う。
 
-| Hạng mục | Giá trị hiện biết | Ghi chú |
-|---|---|---|
-| Tên app | `ぷらっとCALL` | iOS/Android config đều dùng tên này |
-| Dự án | `itec-denwa` | Workspace hiện tại |
-| Android package production | `jp.co.itec.denwa` | Từ `sources/denwa-android/app/build.gradle.kts` |
-| iOS bundle production | `jp.co.itec.denwa.product` | Từ `Production.xcconfig` |
-| Production API | `https://api.apl.purattocall.com` | Dùng cho Android/iOS production |
-| Production web/admin | `https://apl.purattocall.com` | Theo infra runbook |
-| Firebase Android package production | `jp.co.itec.denwa` | Từ `google-services.json` hiện có |
-| MVE/SIP | Có liên quan trực tiếp release | Cần Okada/ITEC xác nhận cấu hình production |
+## 2. 基本情報
 
-### 2.2. Version mục tiêu
+### 2.1 アプリおよび環境
 
-| Platform | Version hiển thị mục tiêu | Build/version code | Việc cần làm |
-|---|---:|---:|---|
-| Android | `1.0.0` | `versionCode` hiện thấy trong source: `53` | Đổi `VERSION_NAME` về `1.0.0`; giữ hoặc tăng `VERSION_CODE` theo bản đã upload lên Play Console |
-| iOS | `1.0.0` | `CURRENT_PROJECT_VERSION` hiện thấy: `19` | `MARKETING_VERSION` đã là `1.0.0`; xác nhận build number dùng submit |
+| 項目 | 値 | 備考 |
+| --- | --- | --- |
+| アプリ名 | `ぷらっとCALL` | Android / iOS 共通 |
+| プロジェクト | `itec-denwa` | 対象ワークスペース |
+| Android本番パッケージ | `jp.co.itec.denwa` | `sources/denwa-android/app/build.gradle.kts` |
+| iOS本番Bundle ID | `jp.co.itec.denwa.product` | `Production.xcconfig` |
+| Production API | `https://api.apl.purattocall.com` | Android / iOS 本番接続先 |
+| Production Web/Admin | `https://apl.purattocall.com` | インフラ設計書に基づく |
+| Firebase Android package | `jp.co.itec.denwa` | 本番用 `google-services.json` |
+| MVE / SIP Phone | 本番リリースに直接関係あり | ITEC / 岡田電機による設定確認が必要 |
 
-Lưu ý:
+### 2.2 バージョン方針
 
-- Không đặt Android `versionCode` thành `1.0.0` vì Play Console yêu cầu số nguyên.
-- Không đặt iOS build number thành `1.0.0` nếu App Store Connect cần build number dạng tăng dần; `1.0.0` là `MARKETING_VERSION`.
-- Nếu Play Console/App Store đã từng nhận build cao hơn, build number/version code mới phải lớn hơn bản đã upload, kể cả khi version hiển thị là `1.0.0`.
+| プラットフォーム | 表示バージョン | ビルド識別子 | 対応内容 |
+| --- | --- | --- | --- |
+| Android | `1.0.0` | 既知の `versionCode`: `53` | `VERSION_NAME` を `1.0.0` に合わせ、Google Play Console上の既存アップロードより大きい `VERSION_CODE` を使用する。 |
+| iOS | `1.0.0` | 既知の `CURRENT_PROJECT_VERSION`: `19` | `MARKETING_VERSION` は `1.0.0` とし、App Store Connect上の既存ビルドより大きいbuild numberを使用する。 |
 
-### 2.3. Source-of-truth đã dùng
+注意事項:
 
-| Nguồn | Nội dung dùng trong kế hoạch |
-|---|---|
-| `raw/release_wbs_draft_jp_2026-06-10.md` | WBS release 2026-06-30, mốc review/public, vai trò ITEC/VTI/Okada |
-| `management/WBS.yaml` | WBS cache hiện tại: DENWA-WBS-028 đến DENWA-WBS-043 |
-| `knowledge/denwa-android/runbooks/project.md` | Android build/private files/JDK 21 |
-| `knowledge/denwa-android/runbooks/release-debug.md` | Android release config, production behavior |
-| `knowledge/denwa-ios/runbooks/project.md` | iOS project, Xcode/CocoaPods, app name, App Store orientation note |
-| `knowledge/denwa-infra/architecture/ARCH-INFRA-01_インフラ構造設計.md` | Production domain/API routing |
-| `knowledge/denwa-infra/runbooks/prd_backend_secret_recovery_2026-06-13.md` | Production API/frontend status và rủi ro secret/DB |
-| Apple/Google official docs | Checklist submit/reviewer account/access info |
+- Android `versionCode` に `1.0.0` のような文字列は使用できない。Google Play Consoleでは整数値が必要である。
+- iOSのbuild numberはStore内部のビルド識別子であり、表示バージョン `1.0.0` とは別に増分管理する。
+- 既にStoreへ高い番号のビルドが登録済みの場合、表示バージョンが `1.0.0` でも、新しい `versionCode` / build number は既存値より大きくする。
 
-## 3. WBS release đã tổng hợp
+### 2.3 参照情報
 
-| ID | Nhóm | Nội dung | Owner chính | Deadline | Trạng thái hiện biết | Điều kiện hoàn tất |
-|---|---|---|---|---:|---|---|
-| DENWA-WBS-028 | Release planning | Xác định scope release và điều kiện go/no-go ngày 30/06 | 片山 剛 | 2026-06-12 | Completed | Scope và điều kiện release đã được tổng hợp xong; output: WBS |
-| DENWA-WBS-029 | API/infra | Chuẩn bị API production | VTI-SAM | 2026-06-12 | Completed | `stg` -> `prd`; chuẩn bị đã hoàn tất; output: Infra |
-| DENWA-WBS-030 | API/infra | Kiểm tra nhanh API production | VTI-SAM | 2026-06-12 | Completed | Đã xác nhận; output: Testcase |
-| DENWA-WBS-031 | MVE | Xác nhận MVE production | 野崎 祐也 | 2026-06-15 | Completed | MVE production liên kết được với API/app |
-| DENWA-WBS-032 | SIP Phone | Chuẩn bị SIP Phone production | 野崎 祐也 | 2026-06-17 | Awaiting Customer | SIP account, số điện thoại, tenant/SIPP tenant, IP Group sẵn sàng |
-| DENWA-WBS-033 | Document | Bổ sung hướng dẫn SIP Phone vào Web Manual | VTI-SAM | 2026-06-17 | Awaiting Customer | Tenant Admin có tài liệu đăng ký/cấu hình SIP Phone |
-| DENWA-WBS-034 | Integration | Kiểm tra tích hợp mobile app/API/MVE | VTI-SAM | 2026-06-18 | Awaiting Customer | Gọi đi/gọi đến/push/call/transfer/kết thúc cuộc gọi pass |
-| DENWA-WBS-035 | SIP Phone check | Kiểm tra SIP Phone trên production | 野崎 祐也 | 2026-06-18 | Awaiting Customer | SIP Phone <-> mobile call và kết thúc cuộc gọi pass |
-| DENWA-WBS-036 | UAT/bugfix | Sửa lỗi UAT và xác nhận lại | VTI-SAM | 2026-06-18 | In Progress | Lỗi nghiêm trọng đã xử lý, tồn đọng được ITEC chấp thuận; ghi chú hiện tại: hầu hết lỗi đã được giải quyết |
-| DENWA-WBS-037 | Store prep | Chuẩn bị App Store/Google Play submission info | VTI-SAM | 2026-06-18 | In Progress | Metadata, screenshot, privacy, review note, 3 account test sẵn sàng |
-| DENWA-WBS-038 | Mobile app | Tạo release candidate kết nối production | VTI-SAM | 2026-06-19 | In Progress | Android/iOS install được, version/signing/prod connection đã xác nhận |
-| DENWA-WBS-039 | Store review | Submit App Store/Google Play review | VTI-SAM | 2026-06-19 | Open | App ở trạng thái submitted/in review; ngày dự phòng 2026-06-22 |
-| DENWA-WBS-040 | Hold after approval | Sau approve, chưa public cho user | VTI-SAM | 2026-06-26 | Open | Store approve và app sẵn sàng public, không upload build mới |
-| DENWA-WBS-041 | Final decision | Quyết định public hoặc hoãn | 鈴木 克成 | 2026-06-29 | Open | Có quyết định rõ bằng văn bản; nếu còn lỗi nghiêm trọng thì không public |
-| DENWA-WBS-042 | Production release | Public app cho user | 鈴木 克成 | 2026-06-30 | Open | User tải/cập nhật được từ store; sau public kiểm tra nhanh production |
-| DENWA-WBS-043 | Monitoring | Theo dõi sau release | VTI-SAM | 2026-07-03 | Open | Có log monitor, hướng xử lý issue/hotfix; MVE/SIP cần Okada standby |
+| 参照元 | 計画で使用する内容 |
+| --- | --- |
+| `raw/release_wbs_draft_jp_2026-06-10.md` | 2026/06/30 本番公開、審査・公開マイルストーン、ITEC / VTI / 岡田電機の役割 |
+| `management/WBS.yaml` | DENWA-WBS-028 から DENWA-WBS-043 までのWBS状況 |
+| `knowledge/denwa-android/runbooks/project.md` | Androidビルド条件、private file、JDK 21 |
+| `knowledge/denwa-android/runbooks/release-debug.md` | Androidリリース設定と本番挙動 |
+| `knowledge/denwa-ios/runbooks/project.md` | iOSプロジェクト、Xcode / CocoaPods、アプリ名、App Store審査注意点 |
+| `knowledge/denwa-infra/architecture/ARCH-INFRA-01_インフラ構造設計.md` | Production domain / API routing |
+| `knowledge/denwa-infra/runbooks/prd_backend_secret_recovery_2026-06-13.md` | Production API / frontend 状況、secret / DBリスク |
+| Apple / Google 公式ドキュメント | Store提出、Reviewer account、App access information |
 
-## 4. Checklist release tổng thể
+## 3. リリースWBS
 
-### 4.1. Bước 0 - Chốt/hạ version về 1.0.0
+| ID | 分類 | 内容 | 主担当 | 期限 | 現状 | 完了条件 |
+| --- | --- | --- | --- | --- | --- | --- |
+| DENWA-WBS-028 | Release planning | 6/30リリース範囲およびGo/No-Go条件を確定する | 片山 剛 | 2026/06/12 | Completed | リリース範囲と判断条件が整理済みであること |
+| DENWA-WBS-029 | API/Infra | Production APIを準備する | VTI-SAM | 2026/06/12 | Completed | `stg` から `prd` への準備が完了していること |
+| DENWA-WBS-030 | API/Infra | Production APIを簡易確認する | VTI-SAM | 2026/06/12 | Completed | API疎通確認が完了していること |
+| DENWA-WBS-031 | MVE | MVE本番環境を確認する | 野崎 祐也 | 2026/06/15 | Completed | MVE本番環境がAPI / アプリと連携可能であること |
+| DENWA-WBS-032 | SIP Phone | SIP Phone本番環境を準備する | 野崎 祐也 | 2026/06/17 | Awaiting Customer | SIP account、電話番号、tenant、IP Groupが利用可能であること |
+| DENWA-WBS-033 | Document | SIP Phone手順をWeb Manualへ追加する | VTI-SAM | 2026/06/17 | Awaiting Customer | Tenant AdminがSIP Phone登録・設定手順を参照できること |
+| DENWA-WBS-034 | Integration | Mobile app / API / MVE連携を確認する | VTI-SAM | 2026/06/18 | Awaiting Customer | 発信、着信、push、transfer、終話がPassすること |
+| DENWA-WBS-035 | SIP Phone check | SIP Phone本番確認を実施する | 野崎 祐也 | 2026/06/18 | Awaiting Customer | SIP Phoneとmobile間の通話・終話がPassすること |
+| DENWA-WBS-036 | UAT/Bugfix | UAT不具合を修正し再確認する | VTI-SAM | 2026/06/18 | In Progress | 重大不具合が解消、またはITECがリリース可否を判断済みであること |
+| DENWA-WBS-037 | Store prep | Store提出情報を準備する | VTI-SAM | 2026/06/18 | In Progress | Metadata、screenshot、privacy、review note、test accountが準備済みであること |
+| DENWA-WBS-038 | Mobile app | Production接続のRCビルドを作成する | VTI-SAM | 2026/06/19 | In Progress | Android / iOSがインストール可能で、version / signing / production接続が確認済みであること |
+| DENWA-WBS-039 | Store review | Store審査へ提出する | VTI-SAM | 2026/06/19 | Open | Appがsubmitted / in reviewの状態であること |
+| DENWA-WBS-040 | Hold after approval | 承認後、即時公開せず待機する | VTI-SAM | 2026/06/26 | Open | Store承認済みで、公開可能状態を維持していること |
+| DENWA-WBS-041 | Final decision | 公開または延期を判断する | 鈴木 克成 | 2026/06/29 | Open | 書面で公開可否が確定していること |
+| DENWA-WBS-042 | Production release | ユーザー向けに本番公開する | 鈴木 克成 | 2026/06/30 | Open | Storeからインストールまたは更新でき、本番スモーク確認が完了していること |
+| DENWA-WBS-043 | Monitoring | リリース後監視を行う | VTI-SAM | 2026/07/03 | Open | Crash、API、call、push、reviewの状況を監視し、issue対応方針が明確であること |
 
-- [ ] Android: sửa `DenwaVersion.VERSION_NAME` về `1.0.0`.
-- [ ] Android: xác nhận `VERSION_CODE` là số nguyên lớn hơn mọi bản đã upload lên Play Console.
-- [ ] Android: build output/release note không còn hiển thị `0.0.x` hoặc suffix không mong muốn cho production.
-- [ ] iOS: xác nhận `MARKETING_VERSION = 1.0.0` cho target app chính.
-- [ ] iOS: xác nhận `CURRENT_PROJECT_VERSION`/build number lớn hơn mọi build đã upload lên App Store Connect.
-- [ ] Store metadata: version release hiển thị là `1.0.0` cho cả Google Play và App Store.
-- [ ] QA/test evidence đặt tên theo `1.0.0` để tránh nhầm với bản dev/staging.
+## 4. 全体チェックリスト
 
-### 4.2. Điều kiện trước khi build RC
+### 4.1 バージョン確定
 
-- [ ] Scope release ngày `2026-06-30` đã được ITEC xác nhận.
-- [ ] Danh sách ticket/bugfix trong release đã chốt.
-- [ ] Các lỗi UAT blocker đã fix hoặc có văn bản ITEC đồng ý release sau.
-- [ ] Production API `https://api.apl.purattocall.com` sẵn sàng.
-- [ ] Production web/admin `https://apl.purattocall.com` truy cập được.
-- [ ] Secret/runtime production không trỏ nhầm staging nếu release thật.
-- [ ] Firebase/APNs/push production đã xác nhận.
-- [ ] MVE production endpoint/credential/callback/allowlist được Okada xác nhận.
-- [ ] SIP Phone production account/số điện thoại/tenant/IP Group được Okada hoặc ITEC xác nhận.
-- [ ] 3 account test đã tạo, login được, có dữ liệu test đủ cho reviewer.
-- [ ] Account test không bị OTP/2FA/email verification chặn; nếu bắt buộc OTP thì có fixed OTP reusable.
+- [ ] Android `DenwaVersion.VERSION_NAME` を `1.0.0` に設定する。
+- [ ] Android `VERSION_CODE` がGoogle Play Consoleへ過去にアップロード済みの値より大きいことを確認する。
+- [ ] Androidのbuild artifact / release noteに旧バージョンやdebug suffixが残っていないことを確認する。
+- [ ] iOS targetの `MARKETING_VERSION` が `1.0.0` であることを確認する。
+- [ ] iOS `CURRENT_PROJECT_VERSION` / build number がApp Store Connect上の既存値より大きいことを確認する。
+- [ ] Google PlayおよびApp Storeの表示バージョンが `1.0.0` であることを確認する。
+- [ ] QA / test evidenceは `1.0.0` と紐づく名前で保存し、旧ビルドと混同しないようにする。
 
-### 4.3. Android build checklist
+### 4.2 RCビルド前提条件
 
-- [ ] Dùng source đúng branch/tag release.
-- [ ] Dùng JDK 21 cho Gradle command trên máy local.
-- [ ] `applicationId = jp.co.itec.denwa`.
-- [ ] App name production là `ぷらっとCALL`.
-- [ ] `VERSION_NAME = 1.0.0`.
-- [ ] `VERSION_CODE` hợp lệ và tăng dần.
-- [ ] Build type release dùng `env_production.json`.
-- [ ] `APPLICATION_ENDPOINT` và `SOCKET_ENDPOINT` là `https://api.apl.purattocall.com`.
-- [ ] `CALL_PUSH_FCM = true` theo production config hiện tại.
-- [ ] Release signed bằng production key, không dùng debug/staging key.
-- [ ] AAB release tạo thành công.
-- [ ] Mapping/Proguard/R8 mapping được lưu để debug crash.
-- [ ] Cài thử build release trên thiết bị thật.
-- [ ] Smoke test login, call, push, transfer, messaging/contact nếu thuộc scope.
-- [ ] Upload internal testing/production draft theo quyền Play Console.
+- [ ] `2026/06/30` の本番公開範囲がITECにより確認済みである。
+- [ ] リリース対象ticketおよびbugfix一覧が確定している。
+- [ ] UAT blockerは解消済み、またはITECが残課題を把握したうえでリリース可否を判断済みである。
+- [ ] Production API `https://api.apl.purattocall.com` が利用可能である。
+- [ ] Production Web/Admin `https://apl.purattocall.com` が利用可能である。
+- [ ] 本番secret / runtime設定が検証環境を参照していないことを確認する。
+- [ ] Firebase / APNs / push production設定が確認済みである。
+- [ ] MVE本番endpoint、credential、callback、allowlistが岡田電機により確認済みである。
+- [ ] SIP Phone本番account、電話番号、tenant、IP GroupがITECまたは岡田電機により確認済みである。
+- [ ] Reviewer用test account 3件が作成済みで、主要操作に十分なテストデータを持つ。
+- [ ] Reviewer用accountはOTP / 2FA / email verificationで詰まらない。必要な場合は再利用可能な固定OTPを使用できる。
 
-### 4.4. iOS build checklist
+### 4.3 Android build
 
-- [ ] Mở `Denwa.xcworkspace`, không build trực tiếp `.xcodeproj`.
-- [ ] Dùng configuration `Release` với `Production.xcconfig`.
-- [ ] App name production là `ぷらっとCALL`.
-- [ ] `APP_BUNDLE_ID = jp.co.itec.denwa.product`.
-- [ ] `ROOT_URL = https://api.apl.purattocall.com`.
-- [ ] `MARKETING_VERSION = 1.0.0`.
-- [ ] `CURRENT_PROJECT_VERSION`/build number hợp lệ và tăng dần.
-- [ ] Signing/capabilities/provisioning profile production hợp lệ.
-- [ ] PushKit/APNs/CallKit entitlement đúng production.
-- [ ] Archive release thành công.
-- [ ] Upload App Store Connect thành công và build processed.
-- [ ] dSYM/symbol được lưu hoặc upload crash tool nếu có.
-- [ ] TestFlight/smoke test pass nếu dùng TestFlight để xác nhận RC.
-- [ ] Kiểm tra lại lỗi App Store orientation/iPad multitasking không tái phát.
+- [ ] Release対象branch / tag / commitからビルドする。
+- [ ] GradleコマンドはJDK 21で実行する。
+- [ ] `applicationId = jp.co.itec.denwa` である。
+- [ ] 本番アプリ名が `ぷらっとCALL` である。
+- [ ] `VERSION_NAME = 1.0.0` である。
+- [ ] `VERSION_CODE` が整数かつ増分ルールを満たしている。
+- [ ] Release build typeが `env_production.json` を使用する。
+- [ ] `APPLICATION_ENDPOINT` および `SOCKET_ENDPOINT` が `https://api.apl.purattocall.com` である。
+- [ ] `CALL_PUSH_FCM = true` が本番設定として妥当である。
+- [ ] Release signingにproduction keyを使用し、debug / staging keyを使用しない。
+- [ ] AAB releaseを正常に作成する。
+- [ ] Mapping / Proguard / R8 mappingを保存する。
+- [ ] 実機へrelease buildをインストールし、スモークテストを実施する。
+- [ ] Login、call、push、transfer、messaging / contactを対象範囲に応じて確認する。
+- [ ] Play Console権限に応じてinternal testingまたはproduction draftへアップロードする。
 
-### 4.5. QA smoke test trước submit
+### 4.4 iOS build
 
-| ID | Test | Android | iOS | Điều kiện pass |
-|---|---|---:|---:|---|
-| QA-01 | Cài mới app production RC | [ ] | [ ] | Launch không crash |
-| QA-02 | Update từ bản cũ nếu có | [ ] | [ ] | Không mất trạng thái bất thường |
-| QA-03 | Login bằng Account 1 | [ ] | [ ] | Login thành công |
-| QA-04 | Login bằng Account 2 | [ ] | [ ] | Login thành công |
-| QA-05 | Login bằng Account 3 | [ ] | [ ] | Login thành công |
-| QA-06 | Tenant/user info | [ ] | [ ] | Dữ liệu đúng tenant test |
-| QA-07 | Gọi mobile -> mobile | [ ] | [ ] | Gọi/nhận/kết thúc ổn định |
-| QA-08 | Gọi SIP Phone -> mobile | [ ] | [ ] | Push/call UI hoạt động |
-| QA-09 | Gọi mobile -> SIP Phone | [ ] | [ ] | Kết nối và kết thúc được |
-| QA-10 | Transfer call | [ ] | [ ] | Transfer thành công hoặc theo spec đã chốt |
-| QA-11 | Push khi foreground/background/kill | [ ] | [ ] | Không có blocker |
-| QA-12 | Missed call/voice message nếu thuộc scope | [ ] | [ ] | Notification/log đúng |
-| QA-13 | Chat/message nếu thuộc scope | [ ] | [ ] | Gửi/nhận/sync cơ bản pass |
-| QA-14 | Logout/login lại | [ ] | [ ] | Session ổn định |
-| QA-15 | Permission camera/mic/photo/notification | [ ] | [ ] | Prompt và behavior đúng |
-| QA-16 | Crash/error log | [ ] | [ ] | Không có crash blocker |
+- [ ] `Denwa.xcworkspace` を開き、`.xcodeproj` から直接ビルドしない。
+- [ ] `Release` configurationと `Production.xcconfig` を使用する。
+- [ ] 本番アプリ名が `ぷらっとCALL` である。
+- [ ] `APP_BUNDLE_ID = jp.co.itec.denwa.product` である。
+- [ ] `ROOT_URL = https://api.apl.purattocall.com` である。
+- [ ] `MARKETING_VERSION = 1.0.0` である。
+- [ ] `CURRENT_PROJECT_VERSION` / build number が増分ルールを満たしている。
+- [ ] Signing、capabilities、provisioning profileがproductionとして有効である。
+- [ ] PushKit / APNs / CallKit entitlementがproduction向けに正しく設定されている。
+- [ ] Archiveを正常に作成する。
+- [ ] App Store Connectへのuploadが正常終了し、build processed状態になる。
+- [ ] dSYM / symbolを保存またはcrash toolへアップロードする。
+- [ ] TestFlightを使用する場合、RCスモークテストがPassすることを確認する。
+- [ ] App Store審査で指摘されたorientation / iPad multitaskingの問題が再発していないことを確認する。
 
-## 5. Store submission checklist
+### 4.5 提出前スモークテスト
 
-### 5.1. Google Play
+| ID | テスト | Android | iOS | Pass条件 |
+| --- | --- | --- | --- | --- |
+| QA-01 | Production RCの新規インストール | [ ] | [ ] | 起動時にcrashしない |
+| QA-02 | 旧版からの更新 | [ ] | [ ] | 異常な状態消失がない |
+| QA-03 | Account 1ログイン | [ ] | [ ] | ログイン成功 |
+| QA-04 | Account 2ログイン | [ ] | [ ] | ログイン成功 |
+| QA-05 | Account 3ログイン | [ ] | [ ] | ログイン成功 |
+| QA-06 | Tenant / user情報確認 | [ ] | [ ] | test tenantのデータが表示される |
+| QA-07 | mobile -> mobile通話 | [ ] | [ ] | 発信・着信・終話が安定する |
+| QA-08 | SIP Phone -> mobile通話 | [ ] | [ ] | push / call UIが動作する |
+| QA-09 | mobile -> SIP Phone通話 | [ ] | [ ] | 接続および終話ができる |
+| QA-10 | Transfer call | [ ] | [ ] | 仕様どおりtransferできる |
+| QA-11 | foreground / background / kill時のpush | [ ] | [ ] | blockerがない |
+| QA-12 | missed call / voice message | [ ] | [ ] | 対象範囲の場合、通知・ログが正しい |
+| QA-13 | chat / message | [ ] | [ ] | 対象範囲の場合、送受信・syncがPassする |
+| QA-14 | Logout / re-login | [ ] | [ ] | sessionが安定する |
+| QA-15 | camera / mic / photo / notification permission | [ ] | [ ] | promptと挙動が正しい |
+| QA-16 | crash / error log | [ ] | [ ] | blocker級crashがない |
 
-- [ ] App package đúng `jp.co.itec.denwa`.
-- [ ] Upload AAB release `1.0.0`.
-- [ ] `versionCode` lớn hơn bản đã upload trước đó.
-- [ ] Release notes/changelog đã được KH duyệt.
-- [ ] Store listing metadata/screenshot/video đã được KH duyệt.
-- [ ] Privacy Policy URL truy cập được.
-- [ ] Data safety khai báo đúng hành vi app và SDK.
-- [ ] App content/sign-in details đã điền đầy đủ.
-- [ ] Account test reusable, luôn truy cập được, không hết hạn mật khẩu.
-- [ ] Nếu app có OTP/2FA, account review có bypass hoặc fixed OTP reusable.
-- [ ] Content rating hoàn tất.
-- [ ] Target audience/ads/declaration liên quan hoàn tất nếu có.
-- [ ] Release mode đã chọn: managed publishing/manual rollout nếu muốn approve trước nhưng chưa public.
-- [ ] Rollout production: 100% hoặc staged rollout theo quyết định ITEC.
+## 5. Store提出チェックリスト
 
-### 5.2. App Store Connect
+### 5.1 Google Play
 
-- [ ] App version tạo là `1.0.0`.
-- [ ] Chọn đúng build `1.0.0`/build number đã upload.
-- [ ] App Review Information đã điền contact/account/reviewer notes.
-- [ ] Notes for Review mô tả rõ app cần login và các flow cần test.
-- [ ] Screenshot/metadata không còn required item.
-- [ ] Privacy Nutrition khai báo đúng dữ liệu app thu thập/sử dụng.
-- [ ] Tracking/IDFA/ATT declaration hoàn tất nếu có.
-- [ ] Export compliance hoàn tất nếu App Store Connect hỏi.
-- [ ] Release option chọn manual release nếu muốn approve trước rồi public ngày `2026-06-30`.
-- [ ] Không upload build mới sau khi approve trừ khi có blocker bắt buộc.
+- [ ] App packageが `jp.co.itec.denwa` である。
+- [ ] AAB release `1.0.0` をアップロードする。
+- [ ] `versionCode` が過去にアップロード済みの値より大きい。
+- [ ] Release notes / changelogが顧客承認済みである。
+- [ ] Store listing metadata / screenshot / videoが顧客承認済みである。
+- [ ] Privacy Policy URLへアクセスできる。
+- [ ] Data safetyがアプリおよびSDKの挙動に合っている。
+- [ ] App content / sign-in detailsを入力済みである。
+- [ ] Reviewer accountは再利用可能で、期限切れやpassword expirationがない。
+- [ ] OTP / 2FAがある場合、reviewer向けにbypassまたは固定OTPを用意する。
+- [ ] Content ratingを完了する。
+- [ ] Target audience、ads、declarationなど必要項目を完了する。
+- [ ] 承認後すぐ公開しない場合、managed publishingまたはmanual rollout方針を確認する。
+- [ ] Rollout percentageはITECの判断に従う。
 
-## 6. Account test cho reviewer
+### 5.2 App Store Connect
 
-Password reviewer đã được ghi trực tiếp vào file nháp này theo xác nhận của User. Nếu chia sẻ file ra ngoài phạm vi store submission/KH review, cần rà lại quyền truy cập trước.
+- [ ] App version `1.0.0` を作成する。
+- [ ] アップロード済みの正しいbuildを選択する。
+- [ ] App Review Informationにcontact、account、reviewer notesを入力する。
+- [ ] Notes for Reviewにloginが必要なことと確認すべきflowを明記する。
+- [ ] Screenshot / metadataに未入力のrequired itemがない。
+- [ ] Privacy Nutritionが収集・利用データと一致している。
+- [ ] Tracking / IDFA / ATT declarationを必要に応じて完了する。
+- [ ] Export complianceへの回答を完了する。
+- [ ] 承認後に `2026/06/30` まで公開しない場合、manual releaseを選択する。
+- [ ] 承認後は重大blockerがない限り新しいbuildをアップロードしない。
 
-VTI đã chuẩn bị 3 account test tạm thời cho store review, đăng ký trong tenant test của iTEC là `111`. Cả 3 account dùng fixed OTP `123456`. Lý do chuẩn bị đủ 3 account là Transfer test cần tối thiểu 3 active accounts.
+## 6. Store reviewer用テストアカウント
 
-| Account | Platform | Username/Email | Password | Tenant/Role | Fixed OTP | Dữ liệu test | Ghi chú |
-|---|---|---|---|---|---|---|---|
-| Account 1 | Android/iOS | `account1@itec.hankyu-hanshin.co.jp` | `iTec@123456` | Tenant `111` / review account | `123456` | Cần kiểm tra trước submit | Dùng cho login/main flow |
-| Account 2 | Android/iOS | `account2@itec.hankyu-hanshin.co.jp` | `iTec@123456` | Tenant `111` / review account | `123456` | Cần kiểm tra trước submit | Dùng cho call/push/transfer |
-| Account 3 | Android/iOS | `account3@itec.hankyu-hanshin.co.jp` | `iTec@123456` | Tenant `111` / review account | `123456` | Cần kiểm tra trước submit | Dùng cho transfer/reviewer dự phòng |
+Store審査用として、iTECのtenant test `111` に3件の一時アカウントを用意する。Transfer testでは最低3件のactive accountが必要なため、3件を準備対象とする。固定OTPは `123456` とする。
 
-Checklist account:
+| Account | Platform | Username / Email | Password | Tenant / Role | Fixed OTP | 用途 |
+| --- | --- | --- | --- | --- | --- | --- |
+| Account 1 | Android / iOS | `account1@itec.hankyu-hanshin.co.jp` | `iTec@123456` | Tenant `111` / review account | `123456` | login / main flow |
+| Account 2 | Android / iOS | `account2@itec.hankyu-hanshin.co.jp` | `iTec@123456` | Tenant `111` / review account | `123456` | call / push / transfer |
+| Account 3 | Android / iOS | `account3@itec.hankyu-hanshin.co.jp` | `iTec@123456` | Tenant `111` / review account | `123456` | transfer / backup |
 
-- [ ] Cả 3 account login được trên Android RC.
-- [ ] Cả 3 account login được trên iOS RC.
-- [ ] Account không bị khóa, hết hạn password hoặc giới hạn IP/vị trí.
-- [ ] OTP/2FA/email verification đã tắt hoặc có mã fixed/reusable.
-- [ ] Dữ liệu test không chứa dữ liệu thật/nhạy cảm.
-- [ ] Có ít nhất 2 account có thể gọi cho nhau nếu reviewer cần test call.
-- [ ] Có SIP Phone/account liên quan nếu reviewer cần test luồng SIP Phone.
+確認項目:
 
-## 7. Reviewer notes đề xuất
+- [ ] 3件すべてAndroid RCでログインできる。
+- [ ] 3件すべてiOS RCでログインできる。
+- [ ] Account lock、password expiration、IP / location制限がない。
+- [ ] OTP / 2FA / email verificationは無効化、または固定OTPで通過できる。
+- [ ] テストデータに実データや機密情報を含めない。
+- [ ] Reviewerがcallを確認する場合に備え、少なくとも2件のaccount間で通話できる。
+- [ ] SIP Phone flow確認が必要な場合、関連するSIP Phone / accountを準備する。
 
-### 7.1. App Store Connect - Notes for Review
+## 7. Reviewer notes
+
+### 7.1 App Store Connect - Notes for Review
 
 ```text
 Hello App Review Team,
@@ -257,7 +257,7 @@ Notes:
 - If you need additional information, please contact us through App Store Connect.
 ```
 
-### 7.2. Google Play Console - App Access Instructions
+### 7.2 Google Play Console - App Access Instructions
 
 ```text
 The app requires sign-in to access its main VoIP calling and messaging features.
@@ -297,160 +297,155 @@ Additional notes:
 - If access fails, please contact us through Play Console.
 ```
 
-## 8. Nội dung request KH/ITEC xác nhận
+## 8. ITEC確認依頼事項
 
-Đây là bản tiếng Việt để User review trước. Chỉ dịch sang tiếng Nhật sau khi User đồng ý.
+リリース候補版のビルドおよびStore審査提出前に、以下をITECへ確認する。
+
+### 8.1 リリース情報
+
+- App: `ぷらっとCALL`
+- Android package name: `jp.co.itec.denwa`
+- iOS bundle ID: `jp.co.itec.denwa.product`
+- Store表示バージョン: `1.0.0`
+- Reviewer検証環境: Production
+- Production API: `https://api.apl.purattocall.com`
+- 審査提出予定日: `2026/06/19`
+- 審査提出予備日: `2026/06/22`
+- 本番公開予定日: `2026/06/30`
+- 推奨公開方式: 承認後すぐ公開しないmanual release / managed publishing
+
+### 8.2 Scope / changelog
+
+- Storeに表示するrelease note / changelogが顧客承認済みであること。
+- 6/30公開対象に含める機能と含めない機能が明確であること。
+- 残課題がある場合、公開可否判断への影響が明確であること。
+
+### 8.3 Reviewer account
+
+- 3件のreviewer accountがAndroid / iOSの両方でログインできること。
+- Fixed OTP `123456` が審査中に利用できること。
+- Accountがpassword expiration、account lock、IP制限、メール確認待ちで止まらないこと。
+- Reviewerが主要flowを確認できるテストデータが用意されていること。
+
+### 8.4 Production / MVE / SIP Phone
+
+- Production APIが利用可能であること。
+- MVE本番endpoint、credential、callback、allowlistが正しく設定されていること。
+- SIP Phone本番account、電話番号、tenant、IP Groupが確認可能であること。
+- 主な確認flowは発信、着信、push / call、transfer、終話、SIP Phone <-> mobileとする。
+
+### 8.5 Store metadata / privacy
+
+- App name、description、screenshot / videoが承認済みであること。
+- Privacy Policy URLが有効であること。
+- Google Play Data Safetyが正しいこと。
+- App Store Privacy Nutrition / Trackingが正しいこと。
+- microphone、notification、contact、photo、camera、locationなどのpermission説明が実装と一致していること。
+
+## 9. 運用タイムライン
+
+| 日付 | マイルストーン | 必要な成果物 |
+| --- | --- | --- |
+| 2026/06/12 | Scope / Go-No-Go条件、Production API確定 | リリース範囲およびProduction API ready |
+| 2026/06/15 | MVE本番確認 | MVE本番がアプリ / APIと連携可能 |
+| 2026/06/17 | SIP Phone + manual | SIP Phone本番環境およびTenant Admin向け手順 |
+| 2026/06/18 | Integration / UAT / Store prep | 主要flow Pass、metadata / review note / account準備完了 |
+| 2026/06/19 | Version 1.0.0 RC + Store提出 | Android / iOS RC、upload、Store提出 |
+| 2026/06/22 | 提出予備日 | 6/19に提出できない場合の予備日 |
+| 2026/06/26 | Approve-ready | App承認済み、またはreview issue対応中 |
+| 2026/06/29 | Final Go/No-Go | ITECが公開または延期を判断 |
+| 2026/06/30 | Production release | Google Play / App Storeで本番公開 |
+| 2026/07/01 - 2026/07/03 | Monitoring | Crash、error、API、call、push、review状況を監視 |
+
+## 10. 本番公開日チェックリスト
+
+- [ ] Android / iOSともStore審査が承認済みである。
+- [ ] 承認後に新しいbuildをアップロードしていない。
+- [ ] ITECが `2026/06/30` 公開を文書で承認している。
+- [ ] MVE / SIP Phoneに問題が発生した場合、岡田電機 / ITECが確認可能である。
+- [ ] VTIがapp / API / logを監視できる。
+- [ ] Manual release / managed publishingの手順に従い本番公開する。
+- [ ] Store listingに `ぷらっとCALL` version `1.0.0` が表示される。
+- [ ] AndroidでStoreから新規インストールまたは更新できる。
+- [ ] iOSでStoreから新規インストールまたは更新できる。
+- [ ] Test accountでログインできる。
+- [ ] 発信、着信、push / callの主要flowを確認する。
+- [ ] 公開時刻、version / build、作業者、スモークテスト結果を記録する。
+
+## 11. リリース後監視
+
+| 分類 | 監視内容 | 推奨担当 |
+| --- | --- | --- |
+| App crash | Crash-free、fatal / non-fatal error | VTI |
+| API | Login、tenant / user、call / push API、error rate | VTI |
+| MVE / SIP | Register、call、transfer、end call | 岡田電機 / ITEC、VTIはlog確認を支援 |
+| Store | Review、rating、reject follow-up | ITEC / VTI |
+| Support | User report、issue triage、hotfix / backlog判断 | ITEC / VTI |
+
+Hotfix判断の主な条件:
+
+- Launch、login、callでblocker級crashが発生する。
+- Productionでログインできない。
+- Push / callが多数端末で動作しない。
+- SIP Phone / MVE本番環境がmobileと連携できない。
+- Store metadata / privacyに重大な誤りがある。
+
+## 12. 状態報告テンプレート
+
+### 12.1 Store提出後
 
 ```text
-Kính gửi anh/chị,
+ぷらっとCALL version 1.0.0 をStore審査へ提出しました。
 
-Bên em đang chuẩn bị release ứng dụng ぷらっとCALL version 1.0.0 lên Google Play và App Store. Nhờ anh/chị xác nhận giúp các nội dung dưới đây trước khi bên em build RC và submit store review.
+- Android: version 1.0.0 / versionCode [VERSION_CODE] / status [status]
+- iOS: version 1.0.0 / build [BUILD_NUMBER] / status [status]
+- 提出日時: [date/time]
+- Release mode: manual release / managed publishing
 
-1. Thông tin release
-- App: ぷらっとCALL
-- Android package name: jp.co.itec.denwa
-- iOS bundle ID: jp.co.itec.denwa.product
-- Version hiển thị trên store: 1.0.0
-- Môi trường reviewer sẽ test: Production
-- Production API: https://api.apl.purattocall.com
-- Dự kiến submit review: 2026-06-19
-- Ngày dự phòng submit nếu chưa kịp: 2026-06-22
-- Dự kiến public production: 2026-06-30 sau khi ITEC xác nhận cuối cùng
-- Release mode đề xuất: manual release/managed publishing để approve trước nhưng chưa public ngay
-
-2. Scope/changelog
-Nhờ anh/chị xác nhận nội dung release note/changelog hiển thị trên store cho version 1.0.0:
-[điền changelog]
-
-3. Account test cho store reviewer
-Bên em đã chuẩn bị 3 account test tạm thời để cung cấp cho Apple/Google reviewer. Các account này được đăng ký vào tenant test của iTEC là `111` và dùng fixed OTP `123456`:
-- Account 1: account1@itec.hankyu-hanshin.co.jp / Tenant ID 111 / fixed OTP 123456
-- Account 2: account2@itec.hankyu-hanshin.co.jp / Tenant ID 111 / fixed OTP 123456
-- Account 3: account3@itec.hankyu-hanshin.co.jp / Tenant ID 111 / fixed OTP 123456
-- Password chung: iTec@123456
-
-Transfer test cần tối thiểu 3 active accounts, nên bên em chuẩn bị đủ 3 account để reviewer có thể kiểm tra luồng này khi cần. Nhờ anh/chị xác nhận các account này login được trên cả Android/iOS, không bị chặn bởi OTP/2FA/email verification ngoài fixed OTP nêu trên, không hết hạn mật khẩu, và có dữ liệu test đủ để reviewer thao tác flow chính.
-
-4. Production/MVE/SIP Phone
-Nhờ anh/chị xác nhận:
-- API production đã sẵn sàng.
-- MVE production đã có endpoint/credential/callback/allowlist đúng.
-- SIP Phone production đã có account/số điện thoại/tenant/IP Group để kiểm tra.
-- Các flow chính cần xác nhận gồm gọi đi, gọi đến, push/call, transfer, kết thúc cuộc gọi, SIP Phone <-> mobile nếu thuộc phạm vi review.
-
-5. Store metadata và privacy
-Nhờ anh/chị xác nhận:
-- App name, mô tả, screenshot/video.
-- Privacy Policy URL.
-- Google Play Data Safety.
-- App Store Privacy Nutrition/Tracking.
-- Permission liên quan microphone, notification, contact/photo/camera/location nếu có.
-
-Sau khi nhận xác nhận, bên em sẽ hạ/chốt version 1.0.0, build RC production, smoke test, upload và submit review theo kế hoạch.
+審査状況を継続確認します。Apple / Googleから質問またはrejectがあった場合は、内容を確認して速やかに報告します。
 ```
 
-## 9. Timeline vận hành
-
-| Ngày | Mốc | Output cần có |
-|---:|---|---|
-| 2026-06-12 | Chốt scope/go-no-go criteria, API production | Scope release và API production ready |
-| 2026-06-15 | MVE production | MVE production có thể liên kết app/API |
-| 2026-06-17 | SIP Phone + manual | SIP Phone production và hướng dẫn Tenant Admin |
-| 2026-06-18 | Integration/UAT/store prep | Flow chính pass, store metadata/review note/account test sẵn sàng |
-| 2026-06-19 | Version 1.0.0 RC + submit review | Android/iOS RC production, upload và submit store |
-| 2026-06-22 | Ngày dự phòng submit | Dùng nếu 6/19 chưa kịp |
-| 2026-06-26 | Approve-ready | App đã approve hoặc đang xử lý nốt review issue |
-| 2026-06-29 | Final go/no-go | ITEC quyết định public hoặc hoãn |
-| 2026-06-30 | Production release | App public trên Google Play/App Store |
-| 2026-07-01 đến 2026-07-03 | Monitoring | Crash/error/API/call/push/review được theo dõi |
-
-## 10. Checklist ngày public production
-
-- [ ] Store review đã approve cả Android và iOS.
-- [ ] Không upload build mới sau approve.
-- [ ] ITEC xác nhận bằng văn bản public ngày `2026-06-30`.
-- [ ] Okada/ITEC sẵn sàng hỗ trợ MVE/SIP Phone nếu phát sinh lỗi.
-- [ ] VTI sẵn sàng monitor app/API/log.
-- [ ] Public/release production theo cơ chế manual release/managed publishing.
-- [ ] Kiểm tra store listing hiển thị đúng app `ぷらっとCALL` version `1.0.0`.
-- [ ] Cài mới/cập nhật app từ store trên Android.
-- [ ] Cài mới/cập nhật app từ store trên iOS.
-- [ ] Login bằng account test.
-- [ ] Kiểm tra gọi đi/gọi đến/push/call flow chính.
-- [ ] Ghi lại thời gian public, version/build, người thao tác, kết quả smoke test.
-
-## 11. Theo dõi sau release
-
-| Nhóm | Nội dung monitor | Owner đề xuất |
-|---|---|---|
-| App crash | Crash-free, fatal/non-fatal mới | VTI |
-| API | Login, tenant/user, call/push API, error rate | VTI |
-| MVE/SIP | Register/call/transfer/end call | Okada/ITEC, VTI hỗ trợ log |
-| Store | Review/rating/reject follow-up nếu có | ITEC/VTI |
-| Support | User report, issue phân loại hotfix/backlog | ITEC/VTI |
-
-Hotfix trigger:
-
-- App crash blocker sau launch/login/call.
-- Không login được production.
-- Push/call không hoạt động trên phần lớn thiết bị.
-- SIP Phone/MVE production không liên kết được với mobile.
-- Store metadata/privacy bị phản ánh sai nghiêm trọng.
-
-## 12. Nội dung báo cáo trạng thái
-
-### Sau khi submit
+### 12.2 Store承認後
 
 ```text
-Bên em đã submit bản ぷらっとCALL version 1.0.0 lên store.
-
-- Android: version 1.0.0 / versionCode [VERSION_CODE] - trạng thái [status]
-- iOS: version 1.0.0 / build [BUILD_NUMBER] - trạng thái [status]
-- Thời gian submit: [ngày/giờ]
-- Release mode: manual release/managed publishing
-
-Bên em sẽ tiếp tục theo dõi trạng thái review. Nếu Apple/Google có câu hỏi hoặc reject, bên em sẽ phân tích và báo lại ngay.
-```
-
-### Sau khi approve
-
-```text
-Bản ぷらっとCALL version 1.0.0 đã được approve.
+ぷらっとCALL version 1.0.0 がStore審査で承認されました。
 
 - Android: [status]
 - iOS: [status]
 
-Theo kế hoạch, app chưa public cho user ngay sau approve. Nhờ anh/chị xác nhận thời điểm public production dự kiến 2026-06-30. Sau khi nhận confirm, bên em sẽ tiến hành public và kiểm tra lại app trên store.
+計画どおり、承認直後にはユーザー向け公開を行いません。
+2026/06/30の本番公開タイミングについて、最終確認をお願いします。
+確認後、公開操作とStore上の簡易確認を実施します。
 ```
 
-### Sau khi public
+### 12.3 本番公開後
 
 ```text
-Bên em đã public production bản ぷらっとCALL version 1.0.0 và kiểm tra nhanh trên store.
+ぷらっとCALL version 1.0.0 を本番公開し、Store上で簡易確認を実施しました。
 
 - Android: [store link/status/rollout %]
 - iOS: [store link/status]
-- Thời gian public: [ngày/giờ]
-- Kết quả kiểm tra nhanh: app tải/cập nhật được, login được bằng account test, flow chính hoạt động.
+- 公開日時: [date/time]
+- 簡易確認結果: Storeからインストールまたは更新可能、test accountでログイン可能、主要flowは正常動作
 
-Bên em sẽ tiếp tục monitor crash/error/API/call/push/review trong 24-72 giờ sau release.
+公開後24-72時間はcrash / error / API / call / push / review状況を継続監視します。
 ```
 
-## 13. Rủi ro chính
+## 13. 主要リスク
 
-| Rủi ro | Dấu hiệu | Cách xử lý |
-|---|---|---|
-| Version chưa hạ/chốt đúng `1.0.0` | Store/build artifact còn `0.0.x` hoặc build cũ | Kiểm tra source, build artifact, store draft trước upload |
-| Android `versionCode` không tăng | Play Console upload fail | Kiểm tra bản đã upload trước khi build/upload |
-| iOS build number không tăng | App Store Connect không nhận/select build | Tăng build number nhưng giữ version `1.0.0` |
-| Reviewer không login được | Reject/hỏi thêm account | Dùng reusable credentials, fixed OTP, test trước submit |
-| Production API/secret trỏ nhầm staging | Reviewer thấy dữ liệu sai hoặc login lỗi | Verify endpoint/env/secret trước RC |
-| MVE/SIP Phone chưa sẵn sàng | Call/push/transfer lỗi | Chốt trách nhiệm Okada/ITEC, chuẩn bị standby release day |
-| Privacy/Data Safety sai | Required action/reject | Đối chiếu SDK/permission/data collection trước submit |
-| Upload build mới sau approve | Có thể phải review lại | Chỉ upload build mới nếu blocker bắt buộc |
-| Review kéo dài | Không kịp public 6/30 | Submit sớm, dùng ngày dự phòng 6/22, phản hồi review trong ngày |
+| リスク | 兆候 | 対応方針 |
+| --- | --- | --- |
+| 表示バージョンが `1.0.0` に揃っていない | Store / build artifactに旧バージョンが残る | source、build artifact、Store draftをupload前に確認する |
+| Android `versionCode` が増分されていない | Play Consoleへのuploadが失敗する | 既存upload値を確認してからbuild / uploadする |
+| iOS build numberが増分されていない | App Store Connectでbuildを選択できない | 表示バージョンは維持し、build numberのみ増分する |
+| Reviewerがログインできない | Storeから問い合わせまたはrejectが来る | 再利用可能なcredentials、fixed OTP、提出前ログイン確認を行う |
+| Production API / secretが検証環境を参照している | Reviewerが誤ったデータを見る、またはlogin失敗 | RC前にendpoint、env、secretを確認する |
+| MVE / SIP Phoneが未準備 | call / push / transferが失敗する | 岡田電機 / ITECの担当と公開日standbyを決める |
+| Privacy / Data Safetyが実装と不一致 | Required actionまたはrejectになる | SDK、permission、data collectionを提出前に照合する |
+| 承認後に新buildを追加する | 再審査が必要になる可能性がある | 重大blocker以外では承認済みbuildを維持する |
+| Store審査が長期化する | 6/30公開に間に合わない | 早期提出、6/22予備日、審査問い合わせへの当日対応を行う |
 
-## 14. Tài liệu tham khảo chính thức
+## 14. 公式参考資料
 
 - Apple - Submit an app: https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-app/
 - Apple - Overview of submitting for review: https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/overview-of-submitting-for-review/

@@ -5,6 +5,7 @@
 - Report bundle folder dùng dạng `<document_id>_<document_title>/`, trong đó `<document_id>` là mã tài liệu ổn định và `<document_title>` là tên tài liệu tiếng Nhật.
 - Folder chứa trực tiếp một tài liệu chính phải trùng basename với file chính, hoặc dùng tên cụm tài liệu tiếng Nhật khi bundle chứa nhiều file cùng một cụm nghĩa.
 - File tài liệu chính phải dùng basename dạng `<document_id>_<document_title>_<document_kind>`, trong đó `<document_title>` và `<document_kind>` là tiếng Nhật; mã tài liệu, mã model, mã thiết bị hoặc thuật ngữ chuẩn đã được source-of-truth định nghĩa có thể giữ nguyên.
+- Nội dung tài liệu chính thức gửi khách hàng phải viết tiếng Nhật tự nhiên. Không để tiếng Việt, note làm việc, hoặc marker nội bộ trong Markdown/Excel, trừ khi bundle/file thể hiện rõ đó là bản dịch như `ベトナム語版`.
 - Mã tài liệu phải thể hiện loại tài liệu trước, sau đó mới đến phạm vi/domain; không dùng mã sản phẩm hoặc domain thay cho loại tài liệu.
 - Mã tài liệu cấp file dùng dạng `<doc_type>-<domain>-<seq2>` hoặc `<doc_type>-<phase>-<domain>-<seq2>` khi loại tài liệu cần phase. `seq2` là số thứ tự 2 chữ số trong cùng nhóm.
 - Mã tài liệu cấp bundle dùng cùng quy tắc nhưng có thể bỏ domain khi bundle gom nhiều tài liệu con cùng loại và cùng title nhóm.

@@ -1,5 +1,5 @@
 ---
-title: Dev/PRD Infra Target Architecture
+title: Dev/PRDインフラターゲット構成
 project: denwa-infra
 type: architecture
 status: confirmed
@@ -7,7 +7,7 @@ verified_at: 2026-06-18
 stale_after: 2026-07-18
 source:
   - Infra structure design document created on 2026-06-12
-  - AWS ECS task definitions, DNS lookup và source config được kiểm tra ngày 2026-06-18
+  - 2026/06/18にAWS ECS task definition、DNS lookup、source configを確認
 tags:
   - aws
   - dev
@@ -70,12 +70,11 @@ tags:
   - [9.2 CloudTrail](#92-cloudtrail)
 - [10. その他サービス](#10-その他サービス)
   - [10.1 Amazon SES](#101-amazon-ses)
-  - [10.2 MVE API bên ngoài](#102-mve-api-bên-ngoài)
+  - [10.2 外部MVE API](#102-外部mve-api)
 - [11. IAM 構成](#11-iam-構成)
   - [11.1 ECS ロール](#111-ecs-ロール)
 - [12. CI/CD 方式](#12-cicd-方式)
   - [12.1 デプロイプロセス](#121-デプロイプロセス)
-  - [12.2 環境ポリシー](#122-環境ポリシー)
   - [12.2 環境ポリシー](#122-環境ポリシー)
 
 ## 1. イントロダクション
@@ -590,28 +589,28 @@ Secret には DB 接続情報、JWT/AES、SES、MVE、SSL keystore、Firebase、
 | 1 | ドメイン | apl.purattocall.com | mail / auth records は別途管理する |
 | 2 | 用途 | application email sending | |
 
-### 10.2 MVE API bên ngoài
+### 10.2 外部MVE API
 
-Backend dùng MVE API để đọc và cập nhật cấu hình account qua INI. Tại thời điểm kiểm tra ngày 2026-06-18, cả STG và PRD đều dùng cùng endpoint `app-mve.purattocall.com`; không có source/config runtime nào tham chiếu `c2.cd-demo-mve.com`.
+BackendはMVE APIを利用し、INI経由でアカウント構成を参照・更新する。2026/06/18時点の確認では、STGおよびPRDはいずれも `app-mve.purattocall.com` を利用しており、`c2.cd-demo-mve.com` を参照するsource / runtime configは確認されていない。
 
-| Hostname | IPv4 đã xác minh | Trạng thái sử dụng |
+| Hostname | 確認済みIPv4 | 利用状況 |
 |---|---|---|
-| `app-mve.purattocall.com` | `13.112.245.12` | Target hiện tại của STG và PRD |
-| `c2.cd-demo-mve.com` | `15.168.65.231` | Chưa được tham chiếu trong source/config runtime |
+| `app-mve.purattocall.com` | `13.112.245.12` | STG / PRDの現行target |
+| `c2.cd-demo-mve.com` | `15.168.65.231` | source / runtime configからの参照は未確認 |
 
-Các API account/INI đang được cấu hình:
+現在構成されているaccount / INI APIは以下の通りである。
 
 - `GET/PUT https://app-mve.purattocall.com/api/v1/files/ini`
 - `GET/PUT https://app-mve.purattocall.com/api/v1/files/ini/incremental`
 
-Chưa có bằng chứng xác định hostname nào tương ứng với MVE số 1 hoặc MVE số 2. Không được suy luận mapping này chỉ từ hostname/IP; cần xác nhận từ đơn vị vận hành MVE.
+どちらのhostnameがMVE 1号機またはMVE 2号機に対応するかを特定できる証跡は現時点で確認されていない。hostname / IPのみから対応関係を推測せず、MVE運用担当へ確認する必要がある。
 
-Điểm kiểm tra vận hành:
+運用時の確認観点:
 
-- Xác minh DNS bằng `dig +short <hostname> A`.
-- Xác minh target trong các profile runtime qua `mve.file.ini` và `mve.ini.incremental`.
-- Khi chuyển active node, phải xác minh `API-user`, quyền GET/PUT INI API, client certificate mTLS và allowlist cho outbound IP của ECS đã được đồng bộ giữa hai MVE.
-- Thông tin DNS và active node có thể thay đổi; source-check lại sau `stale_after` trước khi khẳng định.
+- `dig +short <hostname> A` でDNS解決結果を確認する。
+- `mve.file.ini` および `mve.ini.incremental` により、runtime profile上のtargetを確認する。
+- active nodeを切り替える場合、`API-user`、GET/PUT INI API権限、client certificate mTLS、ECS outbound IP allowlistが両MVE間で同期されていることを確認する。
+- DNSおよびactive node情報は変更される可能性があるため、`stale_after` を過ぎて判断する場合は再確認する。
 
 ## 11. IAM 構成
 

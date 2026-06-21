@@ -15,8 +15,8 @@
 | システム管理者 | ログイン・セキュリティ | AUTH-04 | H | パスワード変更成功 | api | - | /auth/admin/login-with-role | planned |
 | システム管理者 | ログイン・セキュリティ | AUTH-05 | M | パスワード変更失敗 — 新しいパスワードが条件を満たさない | api | - | /auth/admin/* | planned |
 | システム管理者 | ログイン・セキュリティ | AUTH-06 | H | メールOTPによるパスワード復旧 | api_with_stub | mail capture, DB OTP/mail capture | /auth/admin/* | planned |
-| システム管理者 | ログイン・セキュリティ | AUTH-07 | M | Nhập OTP sai 5 lần liên tiếp khi quên mật khẩu | api_with_stub | mail capture, DB OTP/mail capture, DB timestamp | /auth/admin/* | planned |
-| システム管理者 | ログイン・セキュリティ | AUTH-08 | M | Tiếp tục lấy lại mật khẩu sau khi đã nhập mã OTP sai 5 lần liên tiếp và chưa hết thời gian khóa | api_with_stub | mail capture, DB OTP/mail capture | /auth/admin/* | planned |
+| システム管理者 | ログイン・セキュリティ | AUTH-07 | M | パスワード再設定時にOTPを5回連続で誤入力する | api_with_stub | mail capture, DB OTP/mail capture, DB timestamp | /auth/admin/* | planned |
+| システム管理者 | ログイン・セキュリティ | AUTH-08 | M | OTPを5回誤入力した後、ロック時間内に再度パスワード再設定を試行する | api_with_stub | mail capture, DB OTP/mail capture | /auth/admin/* | planned |
 | システム管理者 | ログイン・セキュリティ | AUTH-09 | M | 5回連続ログイン失敗 | api_with_stub | mail capture | /auth/admin/* | planned |
 | システム管理者 | テナント管理 | SA-T01 | H | 新規テナント作成 — 固定電話を利用するテナント | api | - | /auth/admin/* | planned |
 | システム管理者 | テナント管理 | SA-T02 | H | 新規テナント作成 — 固定電話を利用しない | api | - | /auth/admin/* | planned |
@@ -57,7 +57,7 @@
 | テナント管理者 | ログイン・セキュリティ | AUTH-04 | M | パスワード変更失敗 — 新しいパスワードが条件を満たさない | api | - | /auth/admin/* | planned |
 | テナント管理者 | ログイン・セキュリティ | AUTH-05 | H | メールOTPによるパスワード復旧 | api_with_stub | mail capture, DB OTP/mail capture | /auth/admin/* | planned |
 | テナント管理者 | ログイン・セキュリティ | AUTH-06 | M | 5回連続ログイン失敗 | api_with_stub | mail capture | /auth/admin/* | planned |
-| テナント管理者 | ログイン・セキュリティ | AUTH-10 | M | Nhập sai mã OTP 5 lần liên tiếp | api_with_stub | DB OTP/mail capture | /auth/admin/* | planned |
+| テナント管理者 | ログイン・セキュリティ | AUTH-10 | M | OTPを5回連続で誤入力する | api_with_stub | DB OTP/mail capture | /auth/admin/* | planned |
 | テナント管理者 | ユーザー管理 | TA-U01 | M | 一覧表示 ユーザー 後 ログイン | api | - | /auth/admin/* | planned |
 | テナント管理者 | ユーザー管理 | TA-U02 | M | メールアドレスでユーザーを検索 | api_with_stub | mail capture | /tenant/* | planned |
 | テナント管理者 | ユーザー管理 | TA-U03 | M | 氏名でユーザーを検索 | api | - | /tenant/* | planned |

@@ -137,9 +137,9 @@ tags:
 ### 3.3 スキーマ隔離および認証前の SQL インジェクション防止
 
 *   **設計方針:** テナント間のデータ隔離のために `SET search_path TO "<tenantId>_schema"` を実行する際、認証前の動的 SQL 組み立てに悪意のある記述が注入されるリスクを防ぐため、以下の3層防御を施す。
-    1.  **バリデーションの集中管理:** `TenantContext.setCurrentTenant()` にて `tenantId` の形式（文字列 `"master"` hoặc3〜4桁の数値）を厳格にチェック。
+    1.  **バリデーションの集中管理:** `TenantContext.setCurrentTenant()` にて `tenantId` の形式（文字列 `"master"` または3〜4桁の数値）を厳格にチェック。
     2.  **インターセプターでの遮断:** MyBatis インターセプターにおいて、SQL 実行直前に正規表現 `^(master|[0-9]{3,4})_schema$` を用いて再検証。
-    3.  **DTO アノテーション:** DTO クラスのプロパティに `@Pattern` を付y, 入力時点で検証。
+    3.  **DTO アノテーション:** DTO クラスのプロパティに `@Pattern` を付与し、入力時点で検証。
 *   **ソースコードの実装状況:**
     ```java
     // TenantContext.java
