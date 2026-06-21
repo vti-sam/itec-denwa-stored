@@ -1,0 +1,409 @@
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.fusesource.jansi.internal.JansiLoader in an unnamed module (file:/Users/vti-sam/.m2/wrapper/dists/apache-maven-3.9.9/3477a4f1/lib/jansi-2.4.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper (file:/Users/vti-sam/.m2/wrapper/dists/apache-maven-3.9.9/3477a4f1/lib/guava-33.2.1-jre.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< jp.co.itec:denwa >--------------------------
+[INFO] Building denwa-api 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The artifact org.hibernate:hibernate-validator:jar:8.0.1.Final has been relocated to org.hibernate.validator:hibernate-validator:jar:8.0.1.Final
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ denwa ---
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] Copying 27 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ denwa ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ denwa ---
+[INFO] Copying 3 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ denwa ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ denwa ---
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ denwa ---
+[INFO] 
+[INFO] --- spring-boot:3.4.3:repackage (repackage) @ denwa ---
+[INFO] Replacing main artifact /Users/vti-sam/pm-control/itec-denwa/sources/denwa-api/target/denwa-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /Users/vti-sam/pm-control/itec-denwa/sources/denwa-api/target/denwa-0.0.1-SNAPSHOT.jar.original
+[INFO] 
+[INFO] --- failsafe:3.5.2:integration-test (default) @ denwa ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running jp.co.itec.denwa.it.AuthIpWhitelistDeniedIT
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+13:45:08.841 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+13:45:08.844 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+13:45:08.884 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 2.0.5
+13:45:09.814 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with Environment variables, system properties and defaults. Resolved dockerHost=unix:///Users/vti-sam/.colima/default/docker.sock
+13:45:09.816 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+13:45:09.843 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.5.2
+  API Version: 1.54
+  Operating System: Ubuntu 24.04.4 LTS
+  Total Memory: 3901 MB
+13:45:09.846 [main] WARN org.testcontainers.utility.ResourceReaper -- 
+********************************************************************************
+Ryuk has been disabled. This can cause unexpected behavior in your environment.
+********************************************************************************
+13:45:09.849 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+13:45:09.849 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+13:45:09.953 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+13:45:10.124 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: 6e0f136966f1499a2e358bdc67695919fe2b94209c79b54f2bd949beae5d53d1
+13:45:10.874 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT0.921412S
+13:45:10.878 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:32802/denwa_api_it?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2026-06-20T13:45:11.391+09:00  INFO 80653 --- [denwa-api] [           main] j.c.i.denwa.it.AuthIpWhitelistDeniedIT   : Starting AuthIpWhitelistDeniedIT using Java 25.0.1 with PID 80653 (started by vti-sam in /Users/vti-sam/pm-control/itec-denwa/sources/denwa-api)
+2026-06-20T13:45:11.392+09:00  INFO 80653 --- [denwa-api] [           main] j.c.i.denwa.it.AuthIpWhitelistDeniedIT   : The following 1 profile is active: "test"
+2026-06-20T13:45:12.998+09:00  INFO 80653 --- [denwa-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-20T13:45:13.000+09:00  INFO 80653 --- [denwa-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-20T13:45:13.066+09:00  INFO 80653 --- [denwa-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.apache.tomcat.jni.Library in an unnamed module (file:/Users/vti-sam/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.36/tomcat-embed-core-10.1.36.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+2026-06-20T13:45:14.247+09:00  INFO 80653 --- [denwa-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-06-20T13:45:14.258+09:00  INFO 80653 --- [denwa-api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T13:45:14.258+09:00  INFO 80653 --- [denwa-api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-06-20T13:45:14.314+09:00  INFO 80653 --- [denwa-api] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-20T13:45:14.314+09:00  INFO 80653 --- [denwa-api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2890 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/Users/vti-sam/.m2/repository/io/netty/netty-common/4.1.118.Final/netty-common-4.1.118.Final.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+2026-06-20T13:45:16.449+09:00  WARN 80653 --- [denwa-api] [           main] i.n.r.d.DnsServerAddressStreamProviders  : Can not find io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider in the classpath, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'
+2026-06-20T13:45:16.754+09:00  INFO 80653 --- [denwa-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 51671 (http) with context path '/'
+2026-06-20T13:45:17.059+09:00  INFO 80653 --- [denwa-api] [           main] j.c.i.denwa.it.AuthIpWhitelistDeniedIT   : Started AuthIpWhitelistDeniedIT in 6.126 seconds (process running for 9.544)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build what is described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (/Users/vti-sam/.m2/repository/net/bytebuddy/byte-buddy-agent/1.15.11/byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+2026-06-20T13:45:18.207+09:00  INFO 80653 --- [denwa-api] [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-20T13:45:18.208+09:00  INFO 80653 --- [denwa-api] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-20T13:45:18.310+09:00  INFO 80653 --- [denwa-api] [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 101 ms
+2026-06-20T13:45:18.391+09:00  INFO 80653 --- [denwa-api] [o-auto-1-exec-1] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2026-06-20T13:45:18.391+09:00  WARN 80653 --- [denwa-api] [o-auto-1-exec-1] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.10 s -- in jp.co.itec.denwa.it.AuthIpWhitelistDeniedIT
+[INFO] Running jp.co.itec.denwa.it.VoipWebApiRegressionIT
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2026-06-20T13:45:19.632+09:00  INFO 80653 --- [denwa-api] [           main] j.c.i.denwa.it.VoipWebApiRegressionIT    : Starting VoipWebApiRegressionIT using Java 25.0.1 with PID 80653 (started by vti-sam in /Users/vti-sam/pm-control/itec-denwa/sources/denwa-api)
+2026-06-20T13:45:19.634+09:00  INFO 80653 --- [denwa-api] [           main] j.c.i.denwa.it.VoipWebApiRegressionIT    : The following 1 profile is active: "test"
+2026-06-20T13:45:20.083+09:00  INFO 80653 --- [denwa-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-06-20T13:45:20.083+09:00  INFO 80653 --- [denwa-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-06-20T13:45:20.122+09:00  INFO 80653 --- [denwa-api] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 Redis repository interfaces.
+2026-06-20T13:45:20.348+09:00  INFO 80653 --- [denwa-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-06-20T13:45:20.350+09:00  INFO 80653 --- [denwa-api] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T13:45:20.350+09:00  INFO 80653 --- [denwa-api] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-06-20T13:45:20.378+09:00  INFO 80653 --- [denwa-api] [           main] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2026-06-20T13:45:20.379+09:00  INFO 80653 --- [denwa-api] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 738 ms
+Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
+2026-06-20T13:45:21.397+09:00  INFO 80653 --- [denwa-api] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 51676 (http) with context path '/'
+2026-06-20T13:45:21.589+09:00  INFO 80653 --- [denwa-api] [           main] j.c.i.denwa.it.VoipWebApiRegressionIT    : Started VoipWebApiRegressionIT in 2.036 seconds (process running for 14.075)
+2026-06-20T13:45:21.970+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-20T13:45:21.971+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-20T13:45:22.017+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 46 ms
+2026-06-20T13:45:22.054+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name customAuthenticationProvider
+2026-06-20T13:45:22.055+09:00  WARN 80653 --- [denwa-api] [o-auto-2-exec-1] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-06-20T13:45:23.546+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-6] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:23.794+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:24.553+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-6] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:24.582+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:25.780+09:00  INFO 80653 --- [denwa-api] [-auto-2-exec-10] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to mveadmin@example.test
+2026-06-20T13:45:25.809+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to mveadmin@example.test
+2026-06-20T13:45:26.173+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to mveadmin@example.test
+2026-06-20T13:45:26.184+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to mveadmin@example.test
+2026-06-20T13:45:29.790+09:00 ERROR 80653 --- [denwa-api] [o-auto-2-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: org.postgresql.util.PSQLException: ERROR: relation "admin" does not exist
+  Position: 969
+### The error may exist in file [/Users/vti-sam/pm-control/itec-denwa/sources/denwa-api/target/classes/jp/co/itec/denwa/mapper/admin/AdminMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: SELECT                 admin_uuid AS adminUuid,                 admin_name AS adminName,                 admin_password AS adminPassword,                 admin_full_name AS adminFullName,                 admin_full_name_kana AS adminFullNameKana,                 role,                 last_login_time AS lastLoginTime,                 admin_tel AS adminTel,                 refresh_token AS refreshToken,                 refresh_token_expiry_time AS refreshTokenExpiryTime,                 login_failure_count AS loginFailureCount,                 reset_password_failure_count AS resetPasswordFailureCount,                 lock_reset_password_time AS lockResetPasswordTime,                 created_by AS createdBy,                 created_date AS createdDate,                 last_modified_by AS lastModifiedBy,                 last_modified_date AS lastModifiedDate,                 delete_flag AS deleteFlag,                 version_no AS versionNo             FROM admin             WHERE admin_name = ?         AND delete_flag = '0'
+### Cause: org.postgresql.util.PSQLException: ERROR: relation "admin" does not exist
+  Position: 969
+; bad SQL grammar []] with root cause
+
+org.postgresql.util.PSQLException: ERROR: relation "admin" does not exist
+  Position: 969
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:180) ~[postgresql-42.7.5.jar:42.7.5]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:80) ~[mybatis-3.5.14.jar:3.5.14]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.5.14.jar:3.5.14]
+	at jdk.proxy2/jdk.proxy2.$Proxy226.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:65) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:336) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:158) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:110) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:90) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:75) ~[mybatis-3.5.14.jar:3.5.14]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at jdk.proxy2/jdk.proxy2.$Proxy142.selectOne(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160) ~[mybatis-spring-3.0.3.jar:3.0.3]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141) ~[mybatis-3.5.14.jar:3.5.14]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86) ~[mybatis-3.5.14.jar:3.5.14]
+	at jdk.proxy2/jdk.proxy2.$Proxy143.getAdminInfo(Unknown Source) ~[na:na]
+	at jp.co.itec.denwa.service.admin.AdminService.getAdminInfo(AdminService.java:108) ~[classes/:na]
+	at jp.co.itec.denwa.security.WebUserDetailsService.loadUserByUsername(WebUserDetailsService.java:38) ~[classes/:na]
+	at jp.co.itec.denwa.security.CustomAuthenticationProvider.authenticate(CustomAuthenticationProvider.java:110) ~[classes/:na]
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182) ~[spring-security-core-6.4.3.jar:6.4.3]
+	at jp.co.itec.denwa.service.auth.AuthService.tenantAdminLogin(AuthService.java:501) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.3.jar:6.2.3]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:723) ~[spring-aop-6.2.3.jar:6.2.3]
+	at jp.co.itec.denwa.service.auth.AuthService$$SpringCGLIB$$0.tenantAdminLogin(<generated>) ~[classes/:na]
+	at jp.co.itec.denwa.controller.auth.AuthController.loginAdminWithRole(AuthController.java:149) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at jp.co.itec.denwa.security.LoginRateLimitFilter.doFilterInternal(LoginRateLimitFilter.java:67) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.servlet.resource.ResourceUrlEncodingFilter.doFilter(ResourceUrlEncodingFilter.java:66) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at jp.co.itec.denwa.security.jwt.JwtFilter.doFilterInternal(JwtFilter.java:197) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.3.jar:6.4.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+
+2026-06-20T13:45:29.852+09:00 ERROR 80653 --- [denwa-api] [o-auto-2-exec-9] j.c.i.d.s.RestAuthenticationEntryPoint   : Full authentication is required to access this resource
+2026-06-20T13:45:30.134+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-6] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:30.160+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:30.475+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:30.481+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:32.176+09:00 ERROR 80653 --- [denwa-api] [pool-6-thread-1] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930732176
+2026-06-20T13:45:33.911+09:00 ERROR 80653 --- [denwa-api] [pool-6-thread-1] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930733911
+2026-06-20T13:45:36.534+09:00  INFO 80653 --- [denwa-api] [-auto-2-exec-10] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:36.788+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:36.807+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:36.959+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-3] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:37.192+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-7] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:37.368+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-8] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:37.481+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:37.502+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:37.699+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-3] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:38.417+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-6] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:38.618+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-7] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:38.956+09:00  INFO 80653 --- [denwa-api] [-auto-2-exec-10] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:39.176+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:39.375+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-5] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:39.544+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-9] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:39.700+09:00 ERROR 80653 --- [denwa-api] [pool-6-thread-1] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930739700
+2026-06-20T13:45:40.419+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:40.654+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-4] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:40.841+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-8] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:41.029+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-6] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:41.189+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-3] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:41.369+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-7] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:41.513+09:00  INFO 80653 --- [denwa-api] [-auto-2-exec-10] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:41.708+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:41.823+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-4] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to registered-user@example.test
+2026-06-20T13:45:41.860+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to registered-user@example.test
+2026-06-20T13:45:42.074+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-5] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:42.188+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-8] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to waiting-user@example.test
+2026-06-20T13:45:42.193+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to waiting-user@example.test
+2026-06-20T13:45:42.364+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-9] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:42.655+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:42.808+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-4] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:42.985+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-9] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:43.086+09:00 ERROR 80653 --- [denwa-api] [pool-6-thread-1] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930743086
+2026-06-20T13:45:43.784+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:43.980+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-4] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:44.153+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-8] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:44.318+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-6] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:44.500+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-3] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:44.679+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-7] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:44.851+09:00  INFO 80653 --- [denwa-api] [-auto-2-exec-10] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:45.028+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:45.194+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-5] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:45.638+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:46.145+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:46.838+09:00 ERROR 80653 --- [denwa-api] [pool-6-thread-1] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930746837
+2026-06-20T13:45:47.652+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-4] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:48.001+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-8] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:49.193+09:00 ERROR 80653 --- [denwa-api] [o-auto-2-exec-2] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930749192
+2026-06-20T13:45:49.233+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:49.234+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to multi-admin@example.test
+2026-06-20T13:45:49.288+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:49.288+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to multi-admin@example.test
+2026-06-20T13:45:49.598+09:00 ERROR 80653 --- [denwa-api] [o-auto-2-exec-7] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930749598
+2026-06-20T13:45:49.611+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-7] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:49.613+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-7] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to multi-admin@example.test
+2026-06-20T13:45:49.622+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to multi-admin@example.test
+2026-06-20T13:45:49.622+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:52.522+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-8] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:52.532+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to tenant-admin@example.test
+2026-06-20T13:45:52.929+09:00 ERROR 80653 --- [denwa-api] [o-auto-2-exec-1] j.co.itec.denwa.util.common.INIHandler   : THIS IS LOG CALL MVE in createTempIniFile...1781930752929
+2026-06-20T13:45:52.939+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:52.940+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-1] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to multi-admin@example.test
+2026-06-20T13:45:52.945+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to multi-admin@example.test
+2026-06-20T13:45:52.947+09:00  INFO 80653 --- [denwa-api] [-notification-1] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to sysadmin@example.test
+2026-06-20T13:45:53.086+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-2] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+2026-06-20T13:45:53.178+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-4] j.c.i.denwa.service.email.EmailService   : Start sendMailTemplate to registered-user@example.test
+2026-06-20T13:45:53.182+09:00  INFO 80653 --- [denwa-api] [-notification-2] j.c.i.denwa.service.email.EmailService   : End sendMailTemplate to registered-user@example.test
+2026-06-20T13:45:53.341+09:00  INFO 80653 --- [denwa-api] [o-auto-2-exec-5] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+[INFO] Tests run: 104, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.86 s -- in jp.co.itec.denwa.it.VoipWebApiRegressionIT
+[INFO] Running jp.co.itec.denwa.it.AuthApiIT
+2026-06-20T13:45:53.902+09:00  INFO 80653 --- [denwa-api] [-auto-2-exec-10] j.c.itec.denwa.service.auth.AuthService  : Store-review account detected, issuing fixed 2FA OTP without email | username=tenant-admin@example.test
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.702 s -- in jp.co.itec.denwa.it.AuthApiIT
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 110, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- failsafe:3.5.2:verify (default) @ denwa ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  53.276 s
+[INFO] Finished at: 2026-06-20T13:45:55+09:00
+[INFO] ------------------------------------------------------------------------

@@ -4,7 +4,7 @@ meta:
   sheet: WBS / WBS
   source_of_truth: google_sheets
   read_only_export: true
-  generated_at: '2026-06-17T12:26:22+09:00'
+  generated_at: '2026-06-21T09:06:01+09:00'
 records:
 - id: DENWA-WBS-001
   vti_backlog_id: ITEC_DENWA_APP-138
@@ -12,9 +12,9 @@ records:
   title: Backlogの状況更新
   description: Backlogの各タスクを実際の対応状況に合わせて更新します。完了、対応中、お客様確認待ちが分かるように整理し、完了したものは日本語コメントを入れて担当者へ戻します。
   owner: VTI_SAM
-  start_date: 46168
-  end_date: 46168
-  deadline: 46171
+  start_date: '2026-05-26'
+  end_date: '2026-05-26'
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: 対象のBacklogタスクが実際の状況に合わせて更新されていること。完了したタスクには、対応内容、影響範囲、結果が分かるコメントがあり、お客様確認に戻されていること。
@@ -26,9 +26,9 @@ records:
   title: 「途中経過報告」への回答資料作成
   description: お客様の「途中経過報告」に対する回答資料を作成します。各「残課題・提案」について、現象、VTIの対応内容、結果、残っている確認事項を整理します。あわせて、Android/iOSの安定状況、VTI側の改善、今後のBacklog管理方針もまとめます。
   owner: VTI_SAM
-  start_date: 46168
+  start_date: '2026-05-26'
   end_date: ''
-  deadline: 46171
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: お客様へ提出できる回答資料があること。各「残課題・提案」に対して、どのように対応し、どう解決したかが分かること。結論シートの内容も現状と合っていること。
@@ -40,9 +40,9 @@ records:
   title: iPhone SEの画面下部ボタン表示崩れ修正
   description: iPhone SEで画面下部のボタンがはみ出すレイアウト不具合を修正します。
   owner: VTI_SAM
-  start_date: 46168
-  end_date: 46168
-  deadline: 46171
+  start_date: '2026-05-26'
+  end_date: '2026-05-26'
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: iPhone SEのボタン表示崩れが修正され、バージョン1.0.0 (15)でリリースされていること。
@@ -54,9 +54,9 @@ records:
   title: セキュリティ確認とソースレビュー準備
   description: セキュリティ確認済み項目を整理し、関連資料を準備します。あわせて、日本側でソースコードをレビューできるように、Source CodeまたはGitLabアクセス提供の準備を進めます。
   owner: VTI_SAM
-  start_date: 46168
+  start_date: '2026-05-26'
   end_date: ''
-  deadline: 46169
+  deadline: '2026-05-27'
   status: Completed
   priority: High
   definition_of_done: 'セキュリティ項目の資料が完成していること。お客様からグローバルIPを受領後、VTI側でIPをホワイトリスト登録し、担当者宛にGitLabアクセス申請メールを送ること。
@@ -78,9 +78,9 @@ records:
   title: ユーザー管理のテナント統合確認
   description: User Managementの範囲で、Web/API上はmobile tenantとSIPP tenantを1つの論理テナントとして扱えるか確認します。実データはそれぞれの物理tenant/schemaに残し、ユーザーごとに正しいschemaへルーティングします。
   owner: VTI_SAM
-  start_date: 46168
+  start_date: '2026-05-26'
   end_date: ''
-  deadline: 46171
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: Web/APIのUser Managementで、ユーザーを共通の論理テナントとして表示・管理できること。必要な電話帳やリソースを一元管理でき、実データは正しい物理tenant/schemaへルーティングされること。
@@ -95,9 +95,9 @@ records:
   title: Androidの残課題対応
   description: Backlogで管理しているAndroid関連の課題について、調査、修正、動作安定化を進めます。
   owner: VTI_SAM
-  start_date: 46168
+  start_date: '2026-05-26'
   end_date: ''
-  deadline: 46171
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: 対象のAndroid不具合が修正され、動作確認が完了し、Backlogのステータスも更新されていること。
@@ -112,9 +112,9 @@ records:
   title: iOSの残課題対応
   description: Backlogで管理しているiOS関連の課題について、調査、修正、動作安定化を進めます。
   owner: VTI_SAM
-  start_date: 46168
+  start_date: '2026-05-26'
   end_date: ''
-  deadline: 46171
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: 対象のiOS不具合が修正され、動作確認が完了し、Backlogのステータスも更新されていること。
@@ -127,9 +127,9 @@ records:
   title: '[Android] 通話中のTransferボタン表示'
   description: Androidの受電側で、通話中にTransferボタンを表示します。ボタンを押すと第三者を選択して発信する画面へ進み、attended transferの流れを使えるようにします。
   owner: VTI_SAM
-  start_date: 46170
+  start_date: '2026-05-28'
   end_date: ''
-  deadline: 46171
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: Androidで通話中にTransferボタンが表示され、attended transferのフローが正しく開始できること。
@@ -142,9 +142,9 @@ records:
   title: '[iOS] 通話中のTransferボタン表示'
   description: iOSの受電側で、通話中にTransferボタンを表示します。ボタンを押すと第三者を選択して発信する画面へ進み、attended transferの流れを使えるようにします。
   owner: VTI_SAM
-  start_date: 46170
+  start_date: '2026-05-28'
   end_date: ''
-  deadline: 46171
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: iOSで通話中にTransferボタンが表示され、attended transferのフローが正しく開始できること。
@@ -157,9 +157,9 @@ records:
   title: UAT資料共有と最終確認依頼
   description: VTI側の内部テスト完了後、お客様が確認テストを行えるように、UAT資料（テストケース、結果、エビデンス）を共有します。資料はVOIP_APL-186へコメント済みで、片山 剛様と鈴木 克成様にも通知済みです。
   owner: VTI_SAM
-  start_date: 46170
-  end_date: 46170
-  deadline: 46171
+  start_date: '2026-05-28'
+  end_date: '2026-05-28'
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: VOIP_APL-186にテスト資料とエビデンスのリンクをコメントし、お客様へ確認依頼ができていること。
@@ -173,9 +173,9 @@ records:
   title: Web/Mobileマニュアルの完成
   description: お客様へ提出するWeb管理システム用とMobileアプリ用のマニュアルを確認し、完成させます。Web版は完了済みで、Mobile版も新しいTransferフローを反映します。
   owner: VTI_SAM
-  start_date: 46170
-  end_date: 46171
-  deadline: 46171
+  start_date: '2026-05-28'
+  end_date: '2026-05-29'
+  deadline: '2026-05-29'
   status: Completed
   priority: High
   definition_of_done: Web管理システム用とMobileアプリ用のマニュアルが、お客様へ提出できる状態になっていること。Mobileマニュアルには新しいTransferフローと必要な画像が反映されていること。
@@ -187,9 +187,9 @@ records:
   title: VPN/GitLabアカウント発行対応
   description: お客様または関連ベンダーがVTIローカルサーバー上のソースコードを確認できるように、VPNとGitLab VTIアカウントの発行手続きを進めます。
   owner: VTI_SAM
-  start_date: 46171
+  start_date: '2026-05-29'
   end_date: ''
-  deadline: 46171
+  deadline: '2026-05-29'
   status: Completed
   priority: Medium
   definition_of_done: VPNアカウントとGitLab VTIアカウントが発行され、お客様または関連ベンダーがVPN経由で接続し、ソースコードをcloneまたは閲覧できること。
@@ -202,9 +202,9 @@ records:
   title: STG環境の固定OTP付きテストアカウント作成
   description: STG環境で、固定OTP「123456」を使うテスト用アカウントを3件作成します。Tenant ID 111に追加し、Transfer確認とApp Store / Google Playレビュー準備に使用します。
   owner: VTI_SAM
-  start_date: 46171
-  end_date: 46171
-  deadline: 46175
+  start_date: '2026-05-29'
+  end_date: '2026-05-29'
+  deadline: '2026-06-02'
   status: Completed
   priority: Medium
   definition_of_done: Tenant 111のDBに3件のテストアカウントが作成され、空きSIP番号に紐づき、STG環境で固定OTP「123456」によりログインできること。
@@ -217,9 +217,9 @@ records:
   title: '[Android/iOS] アプリ強制終了時におけるVoIPシステムの制限分析'
   description: B端末が突然強制終了された際にA端末で通話が切れない不具合（VOIP_APL-135）の原因を分析します。Android/iOSのOSライフサイクル制限およびSIPプロトコルに起因する制限であることを確認します。
   owner: VTI_SAM
-  start_date: 46176
-  end_date: 46176
-  deadline: 46176
+  start_date: '2026-06-03'
+  end_date: '2026-06-03'
+  deadline: '2026-06-03'
   status: Completed
   priority: Medium
   definition_of_done: 技術分析結果がまとまり、BacklogチケットVOIP_APL-135上でお客様へ回答が送信され、確認されていること。
@@ -233,9 +233,9 @@ records:
   title: '[iOS] 通話中のホームボタン押下に伴うプラットフォーム制限の分析 (VOIP_APL-189)'
   description: 本件は現在フィードバック待ちです。以下の観点から、古い端末でのみ発生し、かつ再現頻度も低いプラットフォームの制限と判断しています。①本挙動は通常とは異なるケースであること、②VTI側で再現不可でありエビデンスも提供済みであること、③修正は可能と評価されるもののユーザーの操作フロー（挙動）変更を伴い、現段階では6月末のリリース準備に多大な影響を及ぼす恐れがあること。以上より、本タスクの一時ペンディングを提案します。
   owner: VTI_SAM
-  start_date: 46177
-  end_date: 46178
-  deadline: 46178
+  start_date: '2026-06-04'
+  end_date: '2026-06-05'
+  deadline: '2026-06-05'
   status: Awaiting Customer
   priority: High
   definition_of_done: ペンディング提案について、お客様（片山様）からフィードバック・合意が得られること。
@@ -247,9 +247,9 @@ records:
   title: 鈴木様要求に基づくセキュリティチェックポイントの調査
   description: 鈴木様（アイテック）の要求に基づき、システムのセキュリティチェックポイントの調査・確認を実施。先週初めにレポート作成と関連コードの修正を完了しており、現在鈴木様によるレビュー待ち。
   owner: VTI_SAM
-  start_date: 46174
-  end_date: 46178
-  deadline: 46181
+  start_date: '2026-06-01'
+  end_date: '2026-06-05'
+  deadline: '2026-06-08'
   status: Awaiting Customer Review
   priority: High
   definition_of_done: セキュリティチェックポイントのレポートおよび関連する修正コードについて、鈴木様によるレビューと承認が完了すること。
@@ -261,9 +261,9 @@ records:
   title: 岡田電機様の提案に基づくMVEおよびAPIの仕様変更の確認
   description: MVE側から提案されたMVEおよびAPIの仕様（spec）変更内容について関係各所と確認。現在、岡田電機様からの説明・提示待ち。
   owner: VTI_SAM
-  start_date: 46181
+  start_date: '2026-06-08'
   end_date: ''
-  deadline: 46185
+  deadline: '2026-06-12'
   status: Awaiting Customer
   priority: High
   definition_of_done: 岡田電機様より仕様変更内容について説明があり、各社間で対応方針と修正範囲が合意されること。
@@ -275,9 +275,9 @@ records:
   title: リリース計画策定、WBS構築およびリリースガイド準備（App Store, Google Play, API & インフラ）
   description: 月末までのリリース計画を策定し、WBSを構築して、App Store、Google Play、API、およびインフラ（インフラ統合）のリリース準備に向けた各社への役割分担を行う。
   owner: VTI_SAM
-  start_date: 46181
+  start_date: '2026-06-08'
   end_date: ''
-  deadline: 46183
+  deadline: '2026-06-10'
   status: Completed
   priority: High
   definition_of_done: 'リリース計画についてです。
@@ -300,9 +300,9 @@ records:
   title: Web管理マニュアルの標準化または分離
   description: Web管理マニュアルの精査・標準化を行い、テナント管理者が安全に利用できるようシステム管理者専用の不要な記述を削除。また、テナント管理者によるSIP Phone端末の登録および設定手順を追加する。
   owner: VTI_SAM
-  start_date: 46181
+  start_date: '2026-06-08'
   end_date: ''
-  deadline: 46188
+  deadline: '2026-06-15'
   status: Completed
   priority: High
   definition_of_done: 'Web管理マニュアルについてです。
@@ -345,9 +345,9 @@ records:
 
     10. 検証結果、エビデンス（PoC、リクエスト/レスポンス）の取りまとめおよびレポートの再分類。'
   owner: VTI_SAM
-  start_date: 46181
+  start_date: '2026-06-08'
   end_date: ''
-  deadline: 46192
+  deadline: '2026-06-19'
   status: Completed
   priority: High
   definition_of_done: 'WEB側のセキュリティに対する10項目の指摘について、検証と確認は完了しています。
@@ -363,9 +363,9 @@ records:
   title: WebアプリUAT項目書作成（システム管理者・テナント管理者）
   description: Web管理画面 of UATテスト項目書を作成する。システム管理者向けおよびテナント管理者向けの2つのロール別テスト項目を起草・作成する。
   owner: VTI_SAM
-  start_date: 46181
+  start_date: '2026-06-08'
   end_date: ''
-  deadline: 46185
+  deadline: '2026-06-12'
   status: Completed
   priority: High
   definition_of_done: 'WebアプリのUAT項目書についてです。
@@ -381,9 +381,9 @@ records:
   title: 6月30日のリリース範囲とリリース可否条件を確定する
   description: 6月30日のリリース範囲とリリース可否条件を確定する
   owner: 片山 剛
-  start_date: 46183
+  start_date: '2026-06-10'
   end_date: ''
-  deadline: 46185
+  deadline: '2026-06-12'
   status: Completed
   priority: High
   definition_of_done: '6月30日のリリース範囲とリリース可否条件についてです。
@@ -398,9 +398,9 @@ records:
   title: APIの本番環境を準備する
   description: APIの本番環境を準備する
   owner: VTI_SAM
-  start_date: 46183
+  start_date: '2026-06-10'
   end_date: ''
-  deadline: 46185
+  deadline: '2026-06-12'
   status: Completed
   priority: High
   definition_of_done: 'stg→prd
@@ -415,9 +415,9 @@ records:
   title: 本番APIの簡易確認を実施する
   description: 本番APIの簡易確認を実施する
   owner: VTI_SAM
-  start_date: 46184
+  start_date: '2026-06-11'
   end_date: ''
-  deadline: 46185
+  deadline: '2026-06-12'
   status: Completed
   priority: High
   definition_of_done: 確認済み
@@ -430,9 +430,9 @@ records:
   title: MVE本番環境の設定を確認する
   description: MVE本番環境の設定を確認する
   owner: 野崎 祐也
-  start_date: 46185
+  start_date: '2026-06-12'
   end_date: ''
-  deadline: 46188
+  deadline: '2026-06-15'
   status: Completed
   priority: High
   definition_of_done: MVE本番がAPI/appと連携可能な状態
@@ -443,9 +443,9 @@ records:
   title: 本番環境向けSIP Phone設定を準備する
   description: 本番環境向けSIP Phone設定を準備する
   owner: 野崎 祐也
-  start_date: 46185
+  start_date: '2026-06-12'
   end_date: ''
-  deadline: 46190
+  deadline: '2026-06-17'
   status: Awaiting Customer
   priority: High
   definition_of_done: SIP account/電話番号/tenant/IP Group等が本番利用可能
@@ -456,9 +456,9 @@ records:
   title: Web ManualにSIP Phone設定手順を追加する
   description: Web ManualにSIP Phone設定手順を追加する
   owner: VTI_SAM
-  start_date: 46188
+  start_date: '2026-06-15'
   end_date: ''
-  deadline: 46190
+  deadline: '2026-06-17'
   status: Awaiting Customer
   priority: High
   definition_of_done: Tenant Admin向け登録・設定手順が確認可能
@@ -469,9 +469,9 @@ records:
   title: mobile app/API/MVEの結合確認を実施する
   description: mobile app/API/MVEの結合確認を実施する
   owner: VTI_SAM
-  start_date: 46189
+  start_date: '2026-06-16'
   end_date: ''
-  deadline: 46191
+  deadline: '2026-06-18'
   status: Awaiting Customer
   priority: High
   definition_of_done: 発信/着信/push/call/transfer/終話の主要フロー確認
@@ -482,9 +482,9 @@ records:
   title: 本番環境でSIP Phoneの動作確認を実施する
   description: 本番環境でSIP Phoneの動作確認を実施する
   owner: 野崎 祐也
-  start_date: 46190
+  start_date: '2026-06-17'
   end_date: ''
-  deadline: 46191
+  deadline: '2026-06-18'
   status: Awaiting Customer
   priority: High
   definition_of_done: SIP⇔mobile発着信、終話等が確認できている
@@ -496,9 +496,9 @@ records:
   title: UATで発生した不具合を修正し再確認する
   description: UATで発生した不具合を修正し再確認する
   owner: VTI_SAM
-  start_date: 46188
+  start_date: '2026-06-15'
   end_date: ''
-  deadline: 46191
+  deadline: '2026-06-18'
   status: In Progress
   priority: High
   definition_of_done: 重大不具合が解消、残課題はITEC了承済
@@ -515,9 +515,9 @@ records:
   title: App Store／Google Play提出情報を準備する
   description: App Store／Google Play提出情報を準備する
   owner: VTI_SAM
-  start_date: 46189
+  start_date: '2026-06-16'
   end_date: ''
-  deadline: 46191
+  deadline: '2026-06-18'
   status: In Progress
   priority: High
   definition_of_done: metadata/screenshot/privacy/review note/3アカウント準備
@@ -528,9 +528,9 @@ records:
   title: production接続用release candidateを作成する
   description: production接続用release candidateを作成する
   owner: VTI_SAM
-  start_date: 46191
+  start_date: '2026-06-18'
   end_date: ''
-  deadline: 46192
+  deadline: '2026-06-19'
   status: In Progress
   priority: High
   definition_of_done: iOS/Android build導入可、version/signing/prod接続確認
@@ -541,9 +541,9 @@ records:
   title: App Store／Google Playへ審査提出する
   description: App Store／Google Playへ審査提出する
   owner: VTI_SAM
-  start_date: 46192
+  start_date: '2026-06-19'
   end_date: ''
-  deadline: 46192
+  deadline: '2026-06-19'
   status: Open
   priority: High
   definition_of_done: アプリがストア審査に提出されている
@@ -554,9 +554,9 @@ records:
   title: 審査通過後、ユーザー向けにはまだ公開しない
   description: 審査通過後、ユーザー向けにはまだ公開しない
   owner: VTI_SAM
-  start_date: 46195
+  start_date: '2026-06-22'
   end_date: ''
-  deadline: 46199
+  deadline: '2026-06-26'
   status: Open
   priority: High
   definition_of_done: 審査通過し公開可能な状態
@@ -567,9 +567,9 @@ records:
   title: 6月30日に公開するか延期するか最終判断する
   description: 6月30日に公開するか延期するか最終判断する
   owner: 鈴木 克成
-  start_date: 46202
+  start_date: '2026-06-29'
   end_date: ''
-  deadline: 46202
+  deadline: '2026-06-29'
   status: Open
   priority: High
   definition_of_done: 公開実施または延期の判断が明確
@@ -580,9 +580,9 @@ records:
   title: ユーザー向けにアプリを正式公開する
   description: ユーザー向けにアプリを正式公開する
   owner: 鈴木 克成
-  start_date: 46203
+  start_date: '2026-06-30'
   end_date: ''
-  deadline: 46203
+  deadline: '2026-06-30'
   status: Open
   priority: High
   definition_of_done: ユーザーがStoreから取得・更新できる
@@ -593,9 +593,9 @@ records:
   title: リリース後監視
   description: 公開後の不具合・ログを監視する
   owner: VTI_SAM
-  start_date: 46203
+  start_date: '2026-06-30'
   end_date: ''
-  deadline: 46206
+  deadline: '2026-07-03'
   status: Open
   priority: High
   definition_of_done: 連絡・調査・hotfix方針が整理されている

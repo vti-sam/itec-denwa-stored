@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: jp.co.itec.denwa.it.VoipWebApiRegressionIT
+-------------------------------------------------------------------------------
+Tests run: 104, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.73 s -- in jp.co.itec.denwa.it.VoipWebApiRegressionIT

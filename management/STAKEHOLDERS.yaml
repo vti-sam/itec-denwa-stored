@@ -4,7 +4,7 @@ meta:
   sheet: Stakeholders / 関係者
   source_of_truth: google_sheets
   read_only_export: true
-  generated_at: '2026-06-17T12:26:22+09:00'
+  generated_at: '2026-06-21T09:06:01+09:00'
 records:
 - id: SH-001
   type: Stakeholder
