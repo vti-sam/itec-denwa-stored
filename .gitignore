@@ -1,9 +1,37 @@
-# Ignore everything at the root level
-/*
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
 
-# Allow only these folders and files
-!/knowledge/
-!/artifacts/
-!/management/
-!/AGENTS.md
-!/.gitignore
+# IDE / local tooling
+.idea/
+.vscode/
+.vs/
+.history/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+*.rej
+*.log
+
+# Local cache/index state
+scratch/
+.qdrant/
+.codegraph/
+.fastembed_cache/
+__pycache__/
+*.pyc
+
+# Office lock files
+~$*.doc
+~$*.docx
+~$*.xls
+~$*.xlsx
+~$*.ppt
+~$*.pptx
