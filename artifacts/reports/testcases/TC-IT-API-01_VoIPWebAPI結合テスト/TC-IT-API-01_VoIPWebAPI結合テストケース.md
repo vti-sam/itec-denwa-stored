@@ -1,19 +1,19 @@
-# テストケース — VoIP Web API結合テスト
+# TC-IT-API-01 テストケース — VoIPWebAPI結合テストケース
 
 ## @meta
 プロジェクト名: ITEC Denwa
 モジュール: VoIP Web API
-段階: API結合テスト
-作成者: VTI
+段階: 結合テスト
+作成者: VTI-SAM
 作成日: 2026/06/20
 作成日時: 2026/06/20 13:12
-環境: ローカル（Testcontainers／スタブ）
-ラウンド1名: Round 1 (Local Run 1)
-ラウンド2名: Round 2 (Local Run 2)
+環境: ローカル
+ラウンド1名: 第1回（ローカル）
+ラウンド2名: 第2回（ローカル）
 
-## テストケース {sheet=API_IT_TC}
-### API-001 システム管理者が正常にログインする（IPホワイトリスト）
-ID: API-001
+## テストケース {sheet=WebAPI結合テスト}
+### IT-API-001 システム管理者が正常にログインする（IPホワイトリスト）
+ID: IT-API-001
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-01
 中項目: システム管理者が正常にログインする（IPホワイトリスト）
@@ -33,21 +33,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-002 ログイン失敗：パスワード誤り
-ID: API-002
+### IT-API-002 ログイン失敗：パスワード誤り
+ID: IT-API-002
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-02
 中項目: ログイン失敗：パスワード誤り
@@ -68,21 +68,21 @@ ID: API-002
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-003 ログイン失敗：IPがホワイトリスト外（システム管理者・岡田電機管理者）
-ID: API-003
+### IT-API-003 ログイン失敗：IPがホワイトリスト外（システム管理者・岡田電機管理者）
+ID: IT-API-003
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-03
 中項目: ログイン失敗：IPがホワイトリスト外（システム管理者・岡田電機管理者）
@@ -102,21 +102,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-004 パスワード変更成功
-ID: API-004
+### IT-API-004 パスワード変更成功
+ID: IT-API-004
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-04
 中項目: パスワード変更成功
@@ -136,21 +136,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-005 パスワード変更失敗：新しいパスワードが条件を満たさない
-ID: API-005
+### IT-API-005 パスワード変更失敗：新しいパスワードが条件を満たさない
+ID: IT-API-005
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-05
 中項目: パスワード変更失敗：新しいパスワードが条件を満たさない
@@ -171,21 +171,21 @@ ID: API-005
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-006 メールOTPによるパスワード復旧
-ID: API-006
+### IT-API-006 メールOTPによるパスワード復旧
+ID: IT-API-006
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-06
 中項目: メールOTPによるパスワード復旧
@@ -205,21 +205,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-007 パスワード再設定時にOTPを5回連続で誤入力する
-ID: API-007
+### IT-API-007 パスワード再設定時にOTPを5回連続で誤入力する
+ID: IT-API-007
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-07
 中項目: パスワード再設定時にOTPを5回連続で誤入力する
@@ -240,21 +240,21 @@ ID: API-007
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-008 OTPを5回連続で誤入力した後、ロック時間内に再度パスワード再設定を行う
-ID: API-008
+### IT-API-008 OTPを5回連続で誤入力した後、ロック時間内に再度パスワード再設定を行う
+ID: IT-API-008
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-08
 中項目: OTPを5回連続で誤入力した後、ロック時間内に再度パスワード再設定を行う
@@ -274,21 +274,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-009 5回連続ログイン失敗
-ID: API-009
+### IT-API-009 5回連続ログイン失敗
+ID: IT-API-009
 画面/機能カテゴリ: システム管理者
 大項目: AUTH-09
 中項目: 5回連続ログイン失敗
@@ -308,21 +308,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-010 新規テナント作成 — 固定電話を利用するテナント
-ID: API-010
+### IT-API-010 新規テナント作成 — 固定電話を利用するテナント
+ID: IT-API-010
 画面/機能カテゴリ: システム管理者
 大項目: SA-T01
 中項目: 新規テナント作成 — 固定電話を利用するテナント
@@ -342,21 +342,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-011 新規テナント作成 — 固定電話を利用しない
-ID: API-011
+### IT-API-011 新規テナント作成 — 固定電話を利用しない
+ID: IT-API-011
 画面/機能カテゴリ: システム管理者
 大項目: SA-T02
 中項目: 新規テナント作成 — 固定電話を利用しない
@@ -376,21 +376,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-012 テナント作成失敗：テナント番号が範囲外（固定電話）
-ID: API-012
+### IT-API-012 テナント作成失敗：テナント番号が範囲外（固定電話）
+ID: IT-API-012
 画面/機能カテゴリ: システム管理者
 大項目: SA-T03
 中項目: テナント作成失敗：テナント番号が範囲外（固定電話）
@@ -411,21 +411,21 @@ ID: API-012
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-013 テナント作成失敗：テナント管理者不足
-ID: API-013
+### IT-API-013 テナント作成失敗：テナント管理者不足
+ID: IT-API-013
 画面/機能カテゴリ: システム管理者
 大項目: SA-T04
 中項目: テナント作成失敗：テナント管理者不足
@@ -446,21 +446,21 @@ ID: API-013
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-014 テナント名でテナントを検索
-ID: API-014
+### IT-API-014 テナント名でテナントを検索
+ID: IT-API-014
 画面/機能カテゴリ: システム管理者
 大項目: SA-T05
 中項目: テナント名でテナントを検索
@@ -480,21 +480,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-015 「登録待ち」状態でテナントを絞り込む
-ID: API-015
+### IT-API-015 「登録待ち」状態でテナントを絞り込む
+ID: IT-API-015
 画面/機能カテゴリ: システム管理者
 大項目: SA-T06
 中項目: 「登録待ち」状態でテナントを絞り込む
@@ -514,21 +514,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-016 テナント情報詳細を確認
-ID: API-016
+### IT-API-016 テナント情報詳細を確認
+ID: IT-API-016
 画面/機能カテゴリ: システム管理者
 大項目: SA-T07
 中項目: テナント情報詳細を確認
@@ -548,21 +548,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-017 一覧表示 ユーザー 内 テナント (ポップアップ ビュー)
-ID: API-017
+### IT-API-017 一覧表示 ユーザー 内 テナント (ポップアップ ビュー)
+ID: IT-API-017
 画面/機能カテゴリ: システム管理者
 大項目: SA-T08
 中項目: 一覧表示 ユーザー 内 テナント (ポップアップ ビュー)
@@ -582,21 +582,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-018 当月ユーザー数履歴を確認
-ID: API-018
+### IT-API-018 当月ユーザー数履歴を確認
+ID: IT-API-018
 画面/機能カテゴリ: システム管理者
 大項目: SA-T09
 中項目: 当月ユーザー数履歴を確認
@@ -616,21 +616,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-019 テナント契約情報を編集
-ID: API-019
+### IT-API-019 テナント契約情報を編集
+ID: IT-API-019
 画面/機能カテゴリ: システム管理者
 大項目: SA-T10
 中項目: テナント契約情報を編集
@@ -650,21 +650,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-020 テナント編集履歴を確認（テナント編集履歴）
-ID: API-020
+### IT-API-020 テナント編集履歴を確認（テナント編集履歴）
+ID: IT-API-020
 画面/機能カテゴリ: システム管理者
 大項目: SA-T11
 中項目: テナント編集履歴を確認（テナント編集履歴）
@@ -684,21 +684,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-021 「利用中」テナントを停止
-ID: API-021
+### IT-API-021 「利用中」テナントを停止
+ID: IT-API-021
 画面/機能カテゴリ: システム管理者
 大項目: SA-T12
 中項目: 「利用中」テナントを停止
@@ -718,21 +718,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-022 テナントが「停止」状態の場合に「停止する」ボタンが非表示であることを確認
-ID: API-022
+### IT-API-022 テナントが「停止」状態の場合に「停止する」ボタンが非表示であることを確認
+ID: IT-API-022
 画面/機能カテゴリ: システム管理者
 大項目: SA-T13
 中項目: テナントが「停止」状態の場合に「停止する」ボタンが非表示であることを確認
@@ -752,21 +752,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-023 「停止」状態のテナントを再有効化
-ID: API-023
+### IT-API-023 「停止」状態のテナントを再有効化
+ID: IT-API-023
 画面/機能カテゴリ: システム管理者
 大項目: SA-T14
 中項目: 「停止」状態のテナントを再有効化
@@ -786,21 +786,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-024 テナント削除
-ID: API-024
+### IT-API-024 テナント削除
+ID: IT-API-024
 画面/機能カテゴリ: システム管理者
 大項目: SA-T15
 中項目: テナント削除
@@ -820,21 +820,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-025 テナント管理者へログイン情報を送信
-ID: API-025
+### IT-API-025 テナント管理者へログイン情報を送信
+ID: IT-API-025
 画面/機能カテゴリ: システム管理者
 大項目: SA-T16
 中項目: テナント管理者へログイン情報を送信
@@ -854,21 +854,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-026 すでにメール受信済みのテナント管理者には再送信しない
-ID: API-026
+### IT-API-026 すでにメール受信済みのテナント管理者には再送信しない
+ID: IT-API-026
 画面/機能カテゴリ: システム管理者
 大項目: SA-T17
 中項目: すでにメール受信済みのテナント管理者には再送信しない
@@ -888,21 +888,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-027 テナント一覧をCSV出力
-ID: API-027
+### IT-API-027 テナント一覧をCSV出力
+ID: IT-API-027
 画面/機能カテゴリ: システム管理者
 大項目: SA-T18
 中項目: テナント一覧をCSV出力
@@ -922,21 +922,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-028 ユーザー状態同期の手動バッチを起動
-ID: API-028
+### IT-API-028 ユーザー状態同期の手動バッチを起動
+ID: IT-API-028
 画面/機能カテゴリ: システム管理者
 大項目: SA-T19
 中項目: ユーザー状態同期の手動バッチを起動
@@ -956,21 +956,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-029 「削除済み」ユーザーを自動バッチで確認
-ID: API-029
+### IT-API-029 「削除済み」ユーザーを自動バッチで確認
+ID: IT-API-029
 画面/機能カテゴリ: システム管理者
 大項目: SA-T20
 中項目: 「削除済み」ユーザーを自動バッチで確認
@@ -990,21 +990,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-030 ユーザーインポートCSVテンプレートをダウンロード
-ID: API-030
+### IT-API-030 ユーザーインポートCSVテンプレートをダウンロード
+ID: IT-API-030
 画面/機能カテゴリ: システム管理者
 大項目: SA-T21
 中項目: ユーザーインポートCSVテンプレートをダウンロード
@@ -1024,21 +1024,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-031 システム管理者ロールでインポートユーザー画面への遷移を確認
-ID: API-031
+### IT-API-031 システム管理者ロールでインポートユーザー画面への遷移を確認
+ID: IT-API-031
 画面/機能カテゴリ: システム管理者
 大項目: SA-I01
 中項目: システム管理者ロールでインポートユーザー画面への遷移を確認
@@ -1058,21 +1058,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-032 システム管理者ロールでインポートユーザー画面への遷移を確認
-ID: API-032
+### IT-API-032 システム管理者ロールでインポートユーザー画面への遷移を確認
+ID: IT-API-032
 画面/機能カテゴリ: システム管理者
 大項目: SA-I02
 中項目: システム管理者ロールでインポートユーザー画面への遷移を確認
@@ -1092,21 +1092,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-033 有効なCSVアップロード — すべてのユーザー作成成功
-ID: API-033
+### IT-API-033 有効なCSVアップロード — すべてのユーザー作成成功
+ID: IT-API-033
 画面/機能カテゴリ: システム管理者
 大項目: SA-I03
 中項目: 有効なCSVアップロード — すべてのユーザー作成成功
@@ -1126,21 +1126,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-034 アップロード失敗：ファイルがCSVではない
-ID: API-034
+### IT-API-034 アップロード失敗：ファイルがCSVではない
+ID: IT-API-034
 画面/機能カテゴリ: システム管理者
 大項目: SA-I04
 中項目: アップロード失敗：ファイルがCSVではない
@@ -1161,21 +1161,21 @@ ID: API-034
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-035 アップロード失敗：CSVヘッダーがテンプレートと異なる
-ID: API-035
+### IT-API-035 アップロード失敗：CSVヘッダーがテンプレートと異なる
+ID: IT-API-035
 画面/機能カテゴリ: システム管理者
 大項目: SA-I05
 中項目: アップロード失敗：CSVヘッダーがテンプレートと異なる
@@ -1196,21 +1196,21 @@ ID: API-035
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-036 アップロード失敗：CSVファイルが空
-ID: API-036
+### IT-API-036 アップロード失敗：CSVファイルが空
+ID: IT-API-036
 画面/機能カテゴリ: システム管理者
 大項目: SA-I06
 中項目: アップロード失敗：CSVファイルが空
@@ -1231,21 +1231,21 @@ ID: API-036
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-037 アップロード失敗：エラーデータあり（メールアドレス重複）
-ID: API-037
+### IT-API-037 アップロード失敗：エラーデータあり（メールアドレス重複）
+ID: IT-API-037
 画面/機能カテゴリ: システム管理者
 大項目: SA-I07
 中項目: アップロード失敗：エラーデータあり（メールアドレス重複）
@@ -1265,21 +1265,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-038 アップロード失敗：同一テナント内でSIP番号が重複
-ID: API-038
+### IT-API-038 アップロード失敗：同一テナント内でSIP番号が重複
+ID: IT-API-038
 画面/機能カテゴリ: システム管理者
 大項目: SA-I08
 中項目: アップロード失敗：同一テナント内でSIP番号が重複
@@ -1299,21 +1299,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-039 エラーファイル修正後に再アップロード
-ID: API-039
+### IT-API-039 エラーファイル修正後に再アップロード
+ID: IT-API-039
 画面/機能カテゴリ: システム管理者
 大項目: SA-I09
 中項目: エラーファイル修正後に再アップロード
@@ -1333,21 +1333,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-040 アップロード失敗：ファイルサイズが上限を超える
-ID: API-040
+### IT-API-040 アップロード失敗：ファイルサイズが上限を超える
+ID: IT-API-040
 画面/機能カテゴリ: システム管理者
 大項目: SA-I10
 中項目: アップロード失敗：ファイルサイズが上限を超える
@@ -1367,21 +1367,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-041 アップロード失敗：SIP番号が無効
-ID: API-041
+### IT-API-041 アップロード失敗：SIP番号が無効
+ID: IT-API-041
 画面/機能カテゴリ: システム管理者
 大項目: SA-I11
 中項目: アップロード失敗：SIP番号が無効
@@ -1401,21 +1401,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-042 アップロード失敗：SIP番号が無効
-ID: API-042
+### IT-API-042 アップロード失敗：SIP番号が無効
+ID: IT-API-042
 画面/機能カテゴリ: システム管理者
 大項目: SA-I12
 中項目: アップロード失敗：SIP番号が無効
@@ -1435,21 +1435,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-043 テナント管理者ログイン：OTP受信・入力成功
-ID: API-043
+### IT-API-043 テナント管理者ログイン：OTP受信・入力成功
+ID: IT-API-043
 画面/機能カテゴリ: テナント管理者
 大項目: AUTH-01
 中項目: テナント管理者ログイン：OTP受信・入力成功
@@ -1469,21 +1469,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-044 OTP期限切れ — OTP再送信成功
-ID: API-044
+### IT-API-044 OTP期限切れ — OTP再送信成功
+ID: IT-API-044
 画面/機能カテゴリ: テナント管理者
 大項目: AUTH-02
 中項目: OTP期限切れ — OTP再送信成功
@@ -1503,21 +1503,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-045 パスワード変更成功
-ID: API-045
+### IT-API-045 パスワード変更成功
+ID: IT-API-045
 画面/機能カテゴリ: テナント管理者
 大項目: AUTH-03
 中項目: パスワード変更成功
@@ -1537,21 +1537,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-046 パスワード変更失敗：新しいパスワードが条件を満たさない
-ID: API-046
+### IT-API-046 パスワード変更失敗：新しいパスワードが条件を満たさない
+ID: IT-API-046
 画面/機能カテゴリ: テナント管理者
 大項目: AUTH-04
 中項目: パスワード変更失敗：新しいパスワードが条件を満たさない
@@ -1572,21 +1572,21 @@ ID: API-046
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-047 メールOTPによるパスワード復旧
-ID: API-047
+### IT-API-047 メールOTPによるパスワード復旧
+ID: IT-API-047
 画面/機能カテゴリ: テナント管理者
 大項目: AUTH-05
 中項目: メールOTPによるパスワード復旧
@@ -1606,21 +1606,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-048 5回連続ログイン失敗
-ID: API-048
+### IT-API-048 5回連続ログイン失敗
+ID: IT-API-048
 画面/機能カテゴリ: テナント管理者
 大項目: AUTH-06
 中項目: 5回連続ログイン失敗
@@ -1640,21 +1640,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-049 Nhập sai mã OTP 5 lần liên tiếp
-ID: API-049
+### IT-API-049 Nhập sai mã OTP 5 lần liên tiếp
+ID: IT-API-049
 画面/機能カテゴリ: テナント管理者
 大項目: AUTH-10
 中項目: Nhập sai mã OTP 5 lần liên tiếp
@@ -1674,21 +1674,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-050 一覧表示 ユーザー 後 ログイン
-ID: API-050
+### IT-API-050 一覧表示 ユーザー 後 ログイン
+ID: IT-API-050
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U01
 中項目: 一覧表示 ユーザー 後 ログイン
@@ -1708,21 +1708,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-051 メールアドレスでユーザーを検索
-ID: API-051
+### IT-API-051 メールアドレスでユーザーを検索
+ID: IT-API-051
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U02
 中項目: メールアドレスでユーザーを検索
@@ -1742,21 +1742,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-052 氏名でユーザーを検索
-ID: API-052
+### IT-API-052 氏名でユーザーを検索
+ID: IT-API-052
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U03
 中項目: 氏名でユーザーを検索
@@ -1776,21 +1776,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-053 「利用中」状態でユーザーを絞り込む
-ID: API-053
+### IT-API-053 「利用中」状態でユーザーを絞り込む
+ID: IT-API-053
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U04
 中項目: 「利用中」状態でユーザーを絞り込む
@@ -1810,21 +1810,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-054 新規ユーザー追加成功（MVE API成功）
-ID: API-054
+### IT-API-054 新規ユーザー追加成功（MVE API成功）
+ID: IT-API-054
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U05
 中項目: 新規ユーザー追加成功（MVE API成功）
@@ -1844,21 +1844,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-055 ユーザー追加失敗：メールアドレスがシステム内に既に存在する
-ID: API-055
+### IT-API-055 ユーザー追加失敗：メールアドレスがシステム内に既に存在する
+ID: IT-API-055
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U06
 中項目: ユーザー追加失敗：メールアドレスがシステム内に既に存在する
@@ -1879,21 +1879,21 @@ ID: API-055
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-056 ユーザー追加失敗：SIP番号がテナント内で使用済み
-ID: API-056
+### IT-API-056 ユーザー追加失敗：SIP番号がテナント内で使用済み
+ID: IT-API-056
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U07
 中項目: ユーザー追加失敗：SIP番号がテナント内で使用済み
@@ -1914,21 +1914,21 @@ ID: API-056
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-057 ユーザー追加失敗：必須項目不足
-ID: API-057
+### IT-API-057 ユーザー追加失敗：必須項目不足
+ID: IT-API-057
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U08
 中項目: ユーザー追加失敗：必須項目不足
@@ -1949,21 +1949,21 @@ ID: API-057
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-058 テナント種別ごとのSIP範囲を確認
-ID: API-058
+### IT-API-058 テナント種別ごとのSIP範囲を確認
+ID: IT-API-058
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U09
 中項目: テナント種別ごとのSIP範囲を確認
@@ -1984,21 +1984,21 @@ ID: API-058
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-059 ユーザー情報詳細を確認
-ID: API-059
+### IT-API-059 ユーザー情報詳細を確認
+ID: IT-API-059
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U10
 中項目: ユーザー情報詳細を確認
@@ -2018,21 +2018,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-060 「削除済み」状態のユーザーで「編集」「削除」ボタンを確認
-ID: API-060
+### IT-API-060 「削除済み」状態のユーザーで「編集」「削除」ボタンを確認
+ID: IT-API-060
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U11
 中項目: 「削除済み」状態のユーザーで「編集」「削除」ボタンを確認
@@ -2052,21 +2052,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-061 ユーザー情報編集 — 氏名を更新
-ID: API-061
+### IT-API-061 ユーザー情報編集 — 氏名を更新
+ID: IT-API-061
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U12
 中項目: ユーザー情報編集 — 氏名を更新
@@ -2086,21 +2086,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-062 「登録済み」ユーザーへ有効化メールを送信
-ID: API-062
+### IT-API-062 「登録済み」ユーザーへ有効化メールを送信
+ID: IT-API-062
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U13
 中項目: 「登録済み」ユーザーへ有効化メールを送信
@@ -2120,21 +2120,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-063 「アクティブ待ち」ユーザーへ有効化メールを再送信
-ID: API-063
+### IT-API-063 「アクティブ待ち」ユーザーへ有効化メールを再送信
+ID: IT-API-063
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U14
 中項目: 「アクティブ待ち」ユーザーへ有効化メールを再送信
@@ -2154,21 +2154,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-064 「登録済み」「アクティブ待ち」以外の状態のユーザーには有効化メールを送信できない
-ID: API-064
+### IT-API-064 「登録済み」「アクティブ待ち」以外の状態のユーザーには有効化メールを送信できない
+ID: IT-API-064
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U15
 中項目: 「登録済み」「アクティブ待ち」以外の状態のユーザーには有効化メールを送信できない
@@ -2188,21 +2188,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-065 「戻る」ボタンでユーザー一覧へ戻る
-ID: API-065
+### IT-API-065 「戻る」ボタンでユーザー一覧へ戻る
+ID: IT-API-065
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U16
 中項目: 「戻る」ボタンでユーザー一覧へ戻る
@@ -2222,21 +2222,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-066 ダウンロード テンプレート CSV から 画面 ユーザー一覧
-ID: API-066
+### IT-API-066 ダウンロード テンプレート CSV から 画面 ユーザー一覧
+ID: IT-API-066
 画面/機能カテゴリ: テナント管理者
 大項目: TA-U17
 中項目: ダウンロード テンプレート CSV から 画面 ユーザー一覧
@@ -2256,21 +2256,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-067 有効なCSVアップロード — すべてのユーザーが作成される
-ID: API-067
+### IT-API-067 有効なCSVアップロード — すべてのユーザーが作成される
+ID: IT-API-067
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I01
 中項目: 有効なCSVアップロード — すべてのユーザーが作成される
@@ -2290,21 +2290,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-068 アップロード失敗：ファイル未選択
-ID: API-068
+### IT-API-068 アップロード失敗：ファイル未選択
+ID: IT-API-068
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I02
 中項目: アップロード失敗：ファイル未選択
@@ -2325,21 +2325,21 @@ ID: API-068
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-069 アップロード失敗：ヘッダーのみでデータなし
-ID: API-069
+### IT-API-069 アップロード失敗：ヘッダーのみでデータなし
+ID: IT-API-069
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I03
 中項目: アップロード失敗：ヘッダーのみでデータなし
@@ -2360,21 +2360,21 @@ ID: API-069
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-070 アップロード失敗：データのみでヘッダーなし
-ID: API-070
+### IT-API-070 アップロード失敗：データのみでヘッダーなし
+ID: IT-API-070
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I04
 中項目: アップロード失敗：データのみでヘッダーなし
@@ -2395,21 +2395,21 @@ ID: API-070
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-071 アップロード失敗：姓に使用できない文字を含む
-ID: API-071
+### IT-API-071 アップロード失敗：姓に使用できない文字を含む
+ID: IT-API-071
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I05
 中項目: アップロード失敗：姓に使用できない文字を含む
@@ -2429,21 +2429,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-072 アップロード失敗：姓カナにカタカナ以外を含む
-ID: API-072
+### IT-API-072 アップロード失敗：姓カナにカタカナ以外を含む
+ID: IT-API-072
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I06
 中項目: アップロード失敗：姓カナにカタカナ以外を含む
@@ -2463,21 +2463,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-073 アップロード失敗：SIP番号が4桁ではない（固定電話テナント）
-ID: API-073
+### IT-API-073 アップロード失敗：SIP番号が4桁ではない（固定電話テナント）
+ID: IT-API-073
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I07
 中項目: アップロード失敗：SIP番号が4桁ではない（固定電話テナント）
@@ -2497,21 +2497,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-074 アップロード失敗：SIP番号が無効
-ID: API-074
+### IT-API-074 アップロード失敗：SIP番号が無効
+ID: IT-API-074
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I08
 中項目: アップロード失敗：SIP番号が無効
@@ -2531,21 +2531,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-075 アップロード失敗：SIP番号が無効
-ID: API-075
+### IT-API-075 アップロード失敗：SIP番号が無効
+ID: IT-API-075
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I09
 中項目: アップロード失敗：SIP番号が無効
@@ -2565,21 +2565,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-076 アップロード失敗：同一CSVファイル内でメールアドレスが重複
-ID: API-076
+### IT-API-076 アップロード失敗：同一CSVファイル内でメールアドレスが重複
+ID: IT-API-076
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I10
 中項目: アップロード失敗：同一CSVファイル内でメールアドレスが重複
@@ -2599,21 +2599,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-077 メンテナンス中にインポートが無効化されることを確認
-ID: API-077
+### IT-API-077 メンテナンス中にインポートが無効化されることを確認
+ID: IT-API-077
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I11
 中項目: メンテナンス中にインポートが無効化されることを確認
@@ -2633,21 +2633,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-078 メンテナンス終了後にインポートが正常復旧する
-ID: API-078
+### IT-API-078 メンテナンス終了後にインポートが正常復旧する
+ID: IT-API-078
 画面/機能カテゴリ: テナント管理者
 大項目: TA-I12
 中項目: メンテナンス終了後にインポートが正常復旧する
@@ -2667,21 +2667,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-079 ユーザー削除成功
-ID: API-079
+### IT-API-079 ユーザー削除成功
+ID: IT-API-079
 画面/機能カテゴリ: テナント管理者
 大項目: TA-D01
 中項目: ユーザー削除成功
@@ -2701,21 +2701,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-080 「削除済み」ユーザーが一覧に表示され続けることを確認
-ID: API-080
+### IT-API-080 「削除済み」ユーザーが一覧に表示され続けることを確認
+ID: IT-API-080
 画面/機能カテゴリ: テナント管理者
 大項目: TA-D02
 中項目: 「削除済み」ユーザーが一覧に表示され続けることを確認
@@ -2735,21 +2735,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-081 岡田電機がメンテナンス実施後、SIPアカウントがMVEから削除される
-ID: API-081
+### IT-API-081 岡田電機がメンテナンス実施後、SIPアカウントがMVEから削除される
+ID: IT-API-081
 画面/機能カテゴリ: テナント管理者
 大項目: TA-D03
 中項目: 岡田電機がメンテナンス実施後、SIPアカウントがMVEから削除される
@@ -2769,21 +2769,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-082 岡田電機管理者が正常にログインする（IPホワイトリスト）
-ID: API-082
+### IT-API-082 岡田電機管理者が正常にログインする（IPホワイトリスト）
+ID: IT-API-082
 画面/機能カテゴリ: 岡田電機管理者
 大項目: AUTH-02
 中項目: 岡田電機管理者が正常にログインする（IPホワイトリスト）
@@ -2803,21 +2803,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-083 ログイン失敗：IPがホワイトリスト外（システム管理者・岡田電機管理者）
-ID: API-083
+### IT-API-083 ログイン失敗：IPがホワイトリスト外（システム管理者・岡田電機管理者）
+ID: IT-API-083
 画面/機能カテゴリ: 岡田電機管理者
 大項目: AUTH-05
 中項目: ログイン失敗：IPがホワイトリスト外（システム管理者・岡田電機管理者）
@@ -2837,21 +2837,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-084 テナントIDでテナントを検索
-ID: API-084
+### IT-API-084 テナントIDでテナントを検索
+ID: IT-API-084
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-T01
 中項目: テナントIDでテナントを検索
@@ -2871,21 +2871,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-085 IPGroup Nameでテナントを検索
-ID: API-085
+### IT-API-085 IPGroup Nameでテナントを検索
+ID: IT-API-085
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-T02
 中項目: IPGroup Nameでテナントを検索
@@ -2905,21 +2905,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-086 「登録待ち」テナントが一覧の先頭に優先表示されることを確認
-ID: API-086
+### IT-API-086 「登録待ち」テナントが一覧の先頭に優先表示されることを確認
+ID: IT-API-086
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-T03
 中項目: 「登録待ち」テナントが一覧の先頭に優先表示されることを確認
@@ -2939,21 +2939,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-087 「登録待ち」テナントのIPGroup Name作成完了を確認
-ID: API-087
+### IT-API-087 「登録待ち」テナントのIPGroup Name作成完了を確認
+ID: IT-API-087
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-T04
 中項目: 「登録待ち」テナントのIPGroup Name作成完了を確認
@@ -2973,21 +2973,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-088 IPGroup確認 — 「利用中」テナントではボタンが使用不可
-ID: API-088
+### IT-API-088 IPGroup確認 — 「利用中」テナントではボタンが使用不可
+ID: IT-API-088
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-T05
 中項目: IPGroup確認 — 「利用中」テナントではボタンが使用不可
@@ -3007,21 +3007,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-089 複数テナントのIPGroupを一括確認
-ID: API-089
+### IT-API-089 複数テナントのIPGroupを一括確認
+ID: IT-API-089
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-T06
 中項目: 複数テナントのIPGroupを一括確認
@@ -3041,21 +3041,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-090 ポップアップで「キャンセル」をクリックした場合にメンテナンスをキャンセル
-ID: API-090
+### IT-API-090 ポップアップで「キャンセル」をクリックした場合にメンテナンスをキャンセル
+ID: IT-API-090
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-M01
 中項目: ポップアップで「キャンセル」をクリックした場合にメンテナンスをキャンセル
@@ -3075,21 +3075,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-091 メンテナンス開始 成功
-ID: API-091
+### IT-API-091 メンテナンス開始 成功
+ID: IT-API-091
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-M02
 中項目: メンテナンス開始 成功
@@ -3109,21 +3109,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-092 メンテナンス中にアプリの通話/メッセージが無効化される
-ID: API-092
+### IT-API-092 メンテナンス中にアプリの通話/メッセージが無効化される
+ID: IT-API-092
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-M03
 中項目: メンテナンス中にアプリの通話/メッセージが無効化される
@@ -3143,21 +3143,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-093 メンテナンス終了 成功
-ID: API-093
+### IT-API-093 メンテナンス終了 成功
+ID: IT-API-093
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-M04
 中項目: メンテナンス終了 成功
@@ -3177,21 +3177,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-094 メンテナンス中にログアウト・再ログインしても状態は解除されない
-ID: API-094
+### IT-API-094 メンテナンス中にログアウト・再ログインしても状態は解除されない
+ID: IT-API-094
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-M06
 中項目: メンテナンス中にログアウト・再ログインしても状態は解除されない
@@ -3211,21 +3211,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-095 SIPアカウント一覧CSVを出力
-ID: API-095
+### IT-API-095 SIPアカウント一覧CSVを出力
+ID: IT-API-095
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-E01
 中項目: SIPアカウント一覧CSVを出力
@@ -3245,21 +3245,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-096 CSVファイルに有効状態のユーザーのみ含まれることを確認
-ID: API-096
+### IT-API-096 CSVファイルに有効状態のユーザーのみ含まれることを確認
+ID: IT-API-096
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-E02
 中項目: CSVファイルに有効状態のユーザーのみ含まれることを確認
@@ -3279,21 +3279,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-097 CSVファイル内のデータ形式を確認
-ID: API-097
+### IT-API-097 CSVファイル内のデータ形式を確認
+ID: IT-API-097
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-E03
 中項目: CSVファイル内のデータ形式を確認
@@ -3313,21 +3313,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-098 CSVファイルをMVEへインポートし、「削除済み」ユーザーがMVEから削除される
-ID: API-098
+### IT-API-098 CSVファイルをMVEへインポートし、「削除済み」ユーザーがMVEから削除される
+ID: IT-API-098
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-E05
 中項目: CSVファイルをMVEへインポートし、「削除済み」ユーザーがMVEから削除される
@@ -3347,21 +3347,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-099 ユーザー削除時の一連のメンテナンス処理：出力、メンテナンス、MVEインポート、終了
-ID: API-099
+### IT-API-099 ユーザー削除時の一連のメンテナンス処理：出力、メンテナンス、MVEインポート、終了
+ID: IT-API-099
 画面/機能カテゴリ: 岡田電機管理者
 大項目: OD-E06
 中項目: ユーザー削除時の一連のメンテナンス処理：出力、メンテナンス、MVEインポート、終了
@@ -3381,21 +3381,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-100 テナント作成、ユーザーアップロード、テナント管理者へのメール送信までの一連の確認
-ID: API-100
+### IT-API-100 テナント作成、ユーザーアップロード、テナント管理者へのメール送信までの一連の確認
+ID: IT-API-100
 画面/機能カテゴリ: オンボーディングフロー
 大項目: SA-OB01
 中項目: テナント作成、ユーザーアップロード、テナント管理者へのメール送信までの一連の確認
@@ -3415,21 +3415,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-101 テナント作成直後のユーザーアップロード手順をスキップ
-ID: API-101
+### IT-API-101 テナント作成直後のユーザーアップロード手順をスキップ
+ID: IT-API-101
 画面/機能カテゴリ: オンボーディングフロー
 大項目: SA-OB02
 中項目: テナント作成直後のユーザーアップロード手順をスキップ
@@ -3449,21 +3449,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-102 岡田電機がIPGroup確認後、ユーザー状態が「登録済み」になることを確認
-ID: API-102
+### IT-API-102 岡田電機がIPGroup確認後、ユーザー状態が「登録済み」になることを確認
+ID: IT-API-102
 画面/機能カテゴリ: オンボーディングフロー
 大項目: SA-OB03
 中項目: 岡田電機がIPGroup確認後、ユーザー状態が「登録済み」になることを確認
@@ -3483,21 +3483,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-103 ユーザーのアカウント有効化確認 — 状態「利用中」
-ID: API-103
+### IT-API-103 ユーザーのアカウント有効化確認 — 状態「利用中」
+ID: IT-API-103
 画面/機能カテゴリ: オンボーディングフロー
 大項目: SA-OB04
 中項目: ユーザーのアカウント有効化確認 — 状態「利用中」
@@ -3517,21 +3517,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 画面表示、ボタン状態、実メール、外部MVEやモバイル動作は本ケースの対象外とする。
 種別: B
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-104 メール受信後にテナント管理者がログインできることを確認
-ID: API-104
+### IT-API-104 メール受信後にテナント管理者がログインできることを確認
+ID: IT-API-104
 画面/機能カテゴリ: オンボーディングフロー
 大項目: SA-OB05
 中項目: メール受信後にテナント管理者がログインできることを確認
@@ -3551,21 +3551,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-105 システム管理者ログイン（IPホワイトリスト外）
-ID: API-105
+### IT-API-105 システム管理者ログイン（IPホワイトリスト外）
+ID: IT-API-105
 画面/機能カテゴリ: 認証/APIガード
 大項目: IPホワイトリスト
 中項目: システム管理者ログイン（IPホワイトリスト外）
@@ -3586,21 +3586,21 @@ ID: API-105
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-106 複数ロール管理者のマスターロール選択（IPホワイトリスト外）
-ID: API-106
+### IT-API-106 複数ロール管理者のマスターロール選択（IPホワイトリスト外）
+ID: IT-API-106
 画面/機能カテゴリ: 認証/APIガード
 大項目: IPホワイトリスト
 中項目: 複数ロール管理者のマスターロール選択（IPホワイトリスト外）
@@ -3621,21 +3621,21 @@ ID: API-106
 UI操作は行わず、APIの業務結果を確認する。
 種別: A
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-107 システム管理者ログイン（IPホワイトリスト内）
-ID: API-107
+### IT-API-107 システム管理者ログイン（IPホワイトリスト内）
+ID: IT-API-107
 画面/機能カテゴリ: 認証/APIガード
 大項目: ログイン
 中項目: システム管理者ログイン（IPホワイトリスト内）
@@ -3655,21 +3655,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-108 複数ロール管理者ログイン時のロール候補取得
-ID: API-108
+### IT-API-108 複数ロール管理者ログイン時のロール候補取得
+ID: IT-API-108
 画面/機能カテゴリ: 認証/APIガード
 大項目: ロール選択
 中項目: 複数ロール管理者ログイン時のロール候補取得
@@ -3689,21 +3689,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-109 複数ロール管理者のマスターロール選択
-ID: API-109
+### IT-API-109 複数ロール管理者のマスターロール選択
+ID: IT-API-109
 画面/機能カテゴリ: 認証/APIガード
 大項目: ロール選択
 中項目: 複数ロール管理者のマスターロール選択
@@ -3723,21 +3723,21 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
-### API-110 テナント管理者ロール選択とOTP前処理
-ID: API-110
+### IT-API-110 テナント管理者ロール選択とOTP前処理
+ID: IT-API-110
 画面/機能カテゴリ: 認証/APIガード
 大項目: ロール選択
 中項目: テナント管理者ロール選択とOTP前処理
@@ -3757,18 +3757,18 @@ APIが期待どおりのHTTPステータスを返すこと。
 UI操作は行わず、APIの業務結果を確認する。
 種別: N
 ラウンド1結果: Pass
-ラウンド1テスター: VTI
+ラウンド1テスター: VTI-SAM
 ラウンド1日付: 2026/06/20
 ラウンド1EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-01_第1回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-02_第1回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-01_第1回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-02_第1回Failsafeレポート
 ラウンド1メモ:
 ラウンド2結果: Pass
-ラウンド2テスター: VTI
+ラウンド2テスター: VTI-SAM
 ラウンド2日付: 2026/06/20
 ラウンド2EVD:
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-03_第2回Mavenログ.txt
-VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポート
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-03_第2回Mavenログ.txt
+../TC-IT-API-EVD-01_VoIPWebAPI結合テストエビデンス/TC-IT-API-EVD-04_第2回Failsafeレポート
 ラウンド2メモ:
 
 ## 基本情報
@@ -3776,15 +3776,16 @@ VoIPWebAPI結合テストエビデンス/TEST-IT-EVD-04_第2回Failsafeレポー
 | --- | --- |
 | プロジェクト名 | ITEC Denwa |
 | モジュール名 | VoIP Web API |
-| テスト段階 | API結合テスト |
-| 作成者 | VTI |
+| テスト段階 | 結合テスト |
+| 作成者 | VTI-SAM |
 | 作成日 | 2026/06/20 |
-| 環境 | ローカル（Testcontainers／スタブ） |
-| 入力元 | TEST-IT-02_VoIPWebAPI結合テストカバレッジ.md |
+| 環境 | ローカル |
+| 入力元 | TC-IT-API-02_VoIPWebAPI結合テストカバレッジ.md |
 | 件数 | 110件 |
 
+| 文書ID | TC-IT-API-01 |
 ## 更新履歴
 | バージョン | 依頼者 | 更新者 | 更新日時 | 変更理由 | シート名 | 更新内容 |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1.0.1 | - | VTI | 2026/06/20 14:36 | テスト実行結果記入 | API_IT_TC | 第1回 / 第2回 のローカルAPI結合テスト結果とEvidenceを記入 |
-| 1.0.0 | - | VTI | 2026/06/20 13:12 | 新規作成 | API_IT_TC | Markdownレポートから110件のAPI結合テストケースを作成 |
+| 1.0.1 | - | VTI-SAM | 2026/06/20 14:36 | テスト実行結果記入 | WebAPI結合テスト | 第1回 / 第2回 のローカルAPI結合テスト結果とエビデンスを記入 |
+| 1.0.0 | - | VTI-SAM | 2026/06/20 13:12 | 新規作成 | WebAPI結合テスト | Markdownレポートから110件のAPI結合テストケースを作成 |

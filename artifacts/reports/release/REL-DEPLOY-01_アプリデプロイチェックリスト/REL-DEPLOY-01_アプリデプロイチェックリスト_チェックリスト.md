@@ -1,4 +1,4 @@
-# Deploy app checklist chi tiết
+# REL-DEPLOY-01 アプリデプロイチェックリスト
 
 ## Thông tin cơ bản
 
@@ -8,14 +8,14 @@
 | Nguồn | REL-STORE-01_AndroidIOSストアリリース計画.md |
 | Phạm vi | Android/iOS production release cho ぷらっとCALL |
 | Version | 1.0.0 |
-| Người tạo | VTI SAM |
+| Người tạo | VTI-SAM |
 | Ngày tạo | 2026/06/19 |
 
 ## Lịch sử thay đổi
 
 | Version | Người yêu cầu | Người cập nhật | Ngày cập nhật | Lý do | Sheet | Nội dung thay đổi |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1.0.0 | ITEC | VTI SAM | 2026/06/19 | Tạo mới | Android, iOS | Tạo checklist release production và yêu cầu evidence |
+| 1.0.0 | ITEC | VTI-SAM | 2026/06/19 | Tạo mới | Android, iOS | Tạo checklist release production và yêu cầu evidence |
 
 ## Quy tắc ghi nhận
 

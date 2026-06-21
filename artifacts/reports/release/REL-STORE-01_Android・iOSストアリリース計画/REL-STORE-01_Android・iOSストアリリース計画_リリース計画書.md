@@ -1,4 +1,4 @@
-# Kế hoạch release Android/iOS lên store cho ぷらっとCALL
+# REL-STORE-01 Android・iOSストアリリース計画書
 
 Ngày cập nhật: 2026-06-16  
 Dự án: `itec-denwa` / Denwa / `ぷらっとCALL`  
@@ -59,21 +59,21 @@ Lưu ý:
 | ID | Nhóm | Nội dung | Owner chính | Deadline | Trạng thái hiện biết | Điều kiện hoàn tất |
 |---|---|---|---|---:|---|---|
 | DENWA-WBS-028 | Release planning | Xác định scope release và điều kiện go/no-go ngày 30/06 | 片山 剛 | 2026-06-12 | Completed | Scope và điều kiện release đã được tổng hợp xong; output: WBS |
-| DENWA-WBS-029 | API/infra | Chuẩn bị API production | VTI_SAM | 2026-06-12 | Completed | `stg` -> `prd`; chuẩn bị đã hoàn tất; output: Infra |
-| DENWA-WBS-030 | API/infra | Kiểm tra nhanh API production | VTI_SAM | 2026-06-12 | Completed | Đã xác nhận; output: Testcase |
+| DENWA-WBS-029 | API/infra | Chuẩn bị API production | VTI-SAM | 2026-06-12 | Completed | `stg` -> `prd`; chuẩn bị đã hoàn tất; output: Infra |
+| DENWA-WBS-030 | API/infra | Kiểm tra nhanh API production | VTI-SAM | 2026-06-12 | Completed | Đã xác nhận; output: Testcase |
 | DENWA-WBS-031 | MVE | Xác nhận MVE production | 野崎 祐也 | 2026-06-15 | Completed | MVE production liên kết được với API/app |
 | DENWA-WBS-032 | SIP Phone | Chuẩn bị SIP Phone production | 野崎 祐也 | 2026-06-17 | Awaiting Customer | SIP account, số điện thoại, tenant/SIPP tenant, IP Group sẵn sàng |
-| DENWA-WBS-033 | Document | Bổ sung hướng dẫn SIP Phone vào Web Manual | VTI_SAM | 2026-06-17 | Awaiting Customer | Tenant Admin có tài liệu đăng ký/cấu hình SIP Phone |
-| DENWA-WBS-034 | Integration | Kiểm tra tích hợp mobile app/API/MVE | VTI_SAM | 2026-06-18 | Awaiting Customer | Gọi đi/gọi đến/push/call/transfer/kết thúc cuộc gọi pass |
+| DENWA-WBS-033 | Document | Bổ sung hướng dẫn SIP Phone vào Web Manual | VTI-SAM | 2026-06-17 | Awaiting Customer | Tenant Admin có tài liệu đăng ký/cấu hình SIP Phone |
+| DENWA-WBS-034 | Integration | Kiểm tra tích hợp mobile app/API/MVE | VTI-SAM | 2026-06-18 | Awaiting Customer | Gọi đi/gọi đến/push/call/transfer/kết thúc cuộc gọi pass |
 | DENWA-WBS-035 | SIP Phone check | Kiểm tra SIP Phone trên production | 野崎 祐也 | 2026-06-18 | Awaiting Customer | SIP Phone <-> mobile call và kết thúc cuộc gọi pass |
-| DENWA-WBS-036 | UAT/bugfix | Sửa lỗi UAT và xác nhận lại | VTI_SAM | 2026-06-18 | In Progress | Lỗi nghiêm trọng đã xử lý, tồn đọng được ITEC chấp thuận; ghi chú hiện tại: hầu hết lỗi đã được giải quyết |
-| DENWA-WBS-037 | Store prep | Chuẩn bị App Store/Google Play submission info | VTI_SAM | 2026-06-18 | In Progress | Metadata, screenshot, privacy, review note, 3 account test sẵn sàng |
-| DENWA-WBS-038 | Mobile app | Tạo release candidate kết nối production | VTI_SAM | 2026-06-19 | In Progress | Android/iOS install được, version/signing/prod connection đã xác nhận |
-| DENWA-WBS-039 | Store review | Submit App Store/Google Play review | VTI_SAM | 2026-06-19 | Open | App ở trạng thái submitted/in review; ngày dự phòng 2026-06-22 |
-| DENWA-WBS-040 | Hold after approval | Sau approve, chưa public cho user | VTI_SAM | 2026-06-26 | Open | Store approve và app sẵn sàng public, không upload build mới |
+| DENWA-WBS-036 | UAT/bugfix | Sửa lỗi UAT và xác nhận lại | VTI-SAM | 2026-06-18 | In Progress | Lỗi nghiêm trọng đã xử lý, tồn đọng được ITEC chấp thuận; ghi chú hiện tại: hầu hết lỗi đã được giải quyết |
+| DENWA-WBS-037 | Store prep | Chuẩn bị App Store/Google Play submission info | VTI-SAM | 2026-06-18 | In Progress | Metadata, screenshot, privacy, review note, 3 account test sẵn sàng |
+| DENWA-WBS-038 | Mobile app | Tạo release candidate kết nối production | VTI-SAM | 2026-06-19 | In Progress | Android/iOS install được, version/signing/prod connection đã xác nhận |
+| DENWA-WBS-039 | Store review | Submit App Store/Google Play review | VTI-SAM | 2026-06-19 | Open | App ở trạng thái submitted/in review; ngày dự phòng 2026-06-22 |
+| DENWA-WBS-040 | Hold after approval | Sau approve, chưa public cho user | VTI-SAM | 2026-06-26 | Open | Store approve và app sẵn sàng public, không upload build mới |
 | DENWA-WBS-041 | Final decision | Quyết định public hoặc hoãn | 鈴木 克成 | 2026-06-29 | Open | Có quyết định rõ bằng văn bản; nếu còn lỗi nghiêm trọng thì không public |
 | DENWA-WBS-042 | Production release | Public app cho user | 鈴木 克成 | 2026-06-30 | Open | User tải/cập nhật được từ store; sau public kiểm tra nhanh production |
-| DENWA-WBS-043 | Monitoring | Theo dõi sau release | VTI_SAM | 2026-07-03 | Open | Có log monitor, hướng xử lý issue/hotfix; MVE/SIP cần Okada standby |
+| DENWA-WBS-043 | Monitoring | Theo dõi sau release | VTI-SAM | 2026-07-03 | Open | Có log monitor, hướng xử lý issue/hotfix; MVE/SIP cần Okada standby |
 
 ## 4. Checklist release tổng thể
 

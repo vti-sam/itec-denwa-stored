@@ -1,8 +1,8 @@
-# UAT VoIP API IT Test Cases
+# TC-IT-API-02 VoIPWebAPI結合テストカバレッジ
 
 - Source testcase gốc: `UAT_VoIP電話ウェブ側テストケース.xlsx`
-- Bản render testcase gốc: `project-store/artifacts/reports/testcase/VoIPWebテストケース/TEST-UAT-01_VoIPWebテストケース.md`
-- Bản phân loại automation ban đầu: `project-store/artifacts/reports/testcase/VoIPWebAPI自動化判定/TEST-AUTO-01_VoIPWebAPI自動化判定.md`
+- Bản render testcase gốc: `project-store/artifacts/reports/testcases/TC-UAT-WEB-01_VoIPWeb受入テストケース/TC-UAT-WEB-01_VoIPWeb受入テストケース.md`
+- Bản phân loại automation ban đầu: `project-store/artifacts/reports/testcases/TC-IT-API-03_VoIPWebAPI自動化判定/TC-IT-API-03_VoIPWebAPI自動化判定.md`
 - Code test đã chạy:
   - `sources/denwa-api/src/test/java/jp/co/itec/denwa/it/VoipWebApiRegressionIT.java`
   - `sources/denwa-api/src/test/java/jp/co/itec/denwa/it/AuthApiIT.java`

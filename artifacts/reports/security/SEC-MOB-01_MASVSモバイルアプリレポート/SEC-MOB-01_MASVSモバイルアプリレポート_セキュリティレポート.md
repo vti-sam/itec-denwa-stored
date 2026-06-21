@@ -343,24 +343,24 @@ NSLog("\(self) accessToken: [MASKED]")
 #### A. Android 検証エビデンス (ITEC_DENWA_APP-200)
 
 1. **Release ビルド成功ログ:**
-   ![Android Release Build](../セキュリティエビデンス/SEC-EVD-ANDROID-01_リリースビルド.png)
+   ![Android Release Build](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-ANDROID-01_リリースビルド.png)
 
 2. **アプリの基本機能動作テスト動画:**
-   - [ログインおよびアプリ起動フロー (flow-login.mp4)](../セキュリティエビデンス/SEC-EVD-ANDROID-03_ログインフロー.mp4)
-   - [通話機能動作フロー (Call_flow.mov)](../セキュリティエビデンス/SEC-EVD-ANDROID-02_通話フロー.mov)
-   - [メッセージ送受信フロー (message_flow.mov)](../セキュリティエビデンス/SEC-EVD-ANDROID-04_メッセージフロー.mov)
+   - [ログインおよびアプリ起動フロー (flow-login.mp4)](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-ANDROID-03_ログインフロー.mp4)
+   - [通話機能動作フロー (Call_flow.mov)](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-ANDROID-02_通話フロー.mov)
+   - [メッセージ送受信フロー (message_flow.mov)](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-ANDROID-04_メッセージフロー.mov)
 
 #### B. iOS 検証エビデンス (ITEC_DENWA_APP-201)
 
 1. **APNS/VoIP トークン登録ログ (生トークン出力なし):**
-   ![iOS APNS & VoIP Registration](../セキュリティエビデンス/SEC-EVD-IOS-01_APNS登録.png)
+   ![iOS APNS & VoIP Registration](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-IOS-01_APNS登録.png)
 
 2. **Xcode Keychain Sharing 設定 (Capability):**
-   ![iOS Xcode Keychain Sharing Capability](../セキュリティエビデンス/SEC-EVD-IOS-03_Keychain共有.png)
+   ![iOS Xcode Keychain Sharing Capability](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-IOS-03_Keychain共有.png)
 
 3. **アプリの基本機能動作テスト動画:**
-   - [Release/Production ビルドフロー (build_pro.mov)](../セキュリティエビデンス/SEC-EVD-IOS-02_リリースビルド.mov)
-   - [アプリ起動・ログインフロー (app_login.mov)](../セキュリティエビデンス/SEC-EVD-IOS-04_ログインフロー.mov)
+   - [Release/Production ビルドフロー (build_pro.mov)](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-IOS-02_リリースビルド.mov)
+   - [アプリ起動・ログインフロー (app_login.mov)](../SEC-EVD-01_セキュリティエビデンス/SEC-EVD-IOS-04_ログインフロー.mov)
 
 ## 5. 残確認事項
 
