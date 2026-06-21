@@ -7,9 +7,11 @@
 作成者: VTI-SAM
 作成日: 2026/06/20
 作成日時: 2026/06/20 13:33
-環境: ローカル
+環境: DEV / PRD
 分類列名: 優先度
 分類値: H,M,L
+ラウンド1名: 第1回（DEV）
+ラウンド2名: 第2回（PRD）
 
 ## テストケース {sheet=VoIPWeb受入テスト}
 ### UAT-WEB-001 システム管理者が正常にログインする（IPホワイトリスト）
@@ -20,8 +22,8 @@ ID: UAT-WEB-001
 前提条件:
 有効なシステム管理者アカウント。IPはホワイトリスト登録済み。
 実行手順:
-① 第1回（ローカル）: https://dev.apl.purattocall.com/admin/login にアクセスする
-   第2回（ローカル）: https://apl.purattocall.com/admin/login にアクセスする
+① 第1回（DEV）: https://dev.apl.purattocall.com/admin/login にアクセスする
+   第2回（PRD）: https://apl.purattocall.com/admin/login にアクセスする
 ② メールアドレスと有効なパスワードを入力する
 ③ 「ログイン」をクリックする
 期待される結果:
@@ -707,8 +709,8 @@ ID: UAT-WEB-043
 前提条件:
 有効なテナント管理者アカウント
 実行手順:
-① 第1回（ローカル）: https://dev.apl.purattocall.com/admin/login にアクセスする
-   第2回（ローカル）: https://apl.purattocall.com/admin/login にアクセスする
+① 第1回（DEV）: https://dev.apl.purattocall.com/admin/login にアクセスする
+   第2回（PRD）: https://apl.purattocall.com/admin/login にアクセスする
 ② メールアドレスと有効なパスワードを入力する
 ③ 「ログイン」をクリックする
 ④ メールで6桁のOTPコードを受信したことを確認する
@@ -1700,7 +1702,7 @@ ID: UAT-WEB-104
 | テスト段階 | 受入テスト |
 | 作成者 | VTI-SAM |
 | 作成日 | 2026/06/20 |
-| 環境 | ローカル |
+| 環境 | DEV / PRD |
 | 入力元 | UAT_VoIP電話ウェブ側テストケース.xlsx |
 | 件数 | 104件 |
 
@@ -1708,4 +1710,5 @@ ID: UAT-WEB-104
 ## 更新履歴
 | バージョン | 依頼者 | 更新者 | 更新日時 | 変更理由 | シート名 | 更新内容 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 1.0.1 | - | VTI-SAM | 2026/06/21 | 環境表記修正 | VoIPWeb受入テスト | 第1回をDEV、第2回をPRDとして表記修正 |
 | 1.0.0 | - | VTI-SAM | 2026/06/20 13:33 | 新規作成 | VoIPWeb受入テスト | UAT元テストケースから104件を正規化 |

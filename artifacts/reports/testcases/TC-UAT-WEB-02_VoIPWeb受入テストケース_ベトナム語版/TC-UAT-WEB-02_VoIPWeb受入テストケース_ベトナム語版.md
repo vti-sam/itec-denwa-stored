@@ -7,9 +7,11 @@
 作成者: VTI-SAM
 作成日: 2026/06/20
 作成日時: 2026/06/20 13:33
-環境: ローカル
+環境: DEV / PRD
 分類列名: 優先度
 分類値: H,M,L
+ラウンド1名: 第1回（DEV）
+ラウンド2名: 第2回（PRD）
 
 ## テストケース {sheet=VoIPWeb受入テスト越語版}
 ### UAT-WEB-001 Quản trị viên hệ thống đăng nhập thành công (IP whitelist)
@@ -20,8 +22,8 @@ ID: UAT-WEB-001
 前提条件:
 Tài khoản quản trị viên hệ thống hợp lệ. IP đã được đăng ký trong whitelist.
 実行手順:
-① 第1回（ローカル）: truy cập https://dev.apl.purattocall.com/admin/login
-   第2回（ローカル）: truy cập https://apl.purattocall.com/admin/login
+① 第1回（DEV）: truy cập https://dev.apl.purattocall.com/admin/login
+   第2回（PRD）: truy cập https://apl.purattocall.com/admin/login
 ② Nhập email và mật khẩu hợp lệ
 ③ Nhấn "ログイン"
 期待される結果:
@@ -705,8 +707,8 @@ ID: UAT-WEB-043
 前提条件:
 Tài khoản quản trị viên tenant hợp lệ.
 実行手順:
-① 第1回（ローカル）: truy cập https://dev.apl.purattocall.com/admin/login
-   第2回（ローカル）: truy cập https://apl.purattocall.com/admin/login
+① 第1回（DEV）: truy cập https://dev.apl.purattocall.com/admin/login
+   第2回（PRD）: truy cập https://apl.purattocall.com/admin/login
 ② Nhập email và mật khẩu hợp lệ
 ③ Nhấn "ログイン"
 ④ Kiểm tra đã nhận mã OTP 6 chữ số qua email
@@ -1698,7 +1700,7 @@ Quản trị viên tenant đã nhận email đăng nhập từ quản trị viê
 | テスト段階 | 受入テスト |
 | 作成者 | VTI-SAM |
 | 作成日 | 2026/06/20 |
-| 環境 | ローカル |
+| 環境 | DEV / PRD |
 | 入力元 | UAT_VoIP電話ウェブ側テストケース.xlsx |
 | 件数 | 104件 |
 
@@ -1706,4 +1708,5 @@ Quản trị viên tenant đã nhận email đăng nhập từ quản trị viê
 ## 更新履歴
 | バージョン | 依頼者 | 更新者 | 更新日時 | 変更理由 | シート名 | 更新内容 |
 | --- | --- | --- | --- | --- | --- | --- |
+| 1.0.1 | - | VTI-SAM | 2026/06/21 | 環境表記修正 | VoIPWeb受入テスト越語版 | 第1回をDEV、第2回をPRDとして表記修正 |
 | 1.0.0 | - | VTI-SAM | 2026/06/20 13:33 | 新規作成 | VoIPWeb受入テスト越語版 | UAT元テストケースから104件を正規化 |
