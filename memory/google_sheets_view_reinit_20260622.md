@@ -43,3 +43,10 @@ Correction from later verification on 2026-06-22:
 - WBS style clone must also copy Gantt timeline header view values for rows 2-4; otherwise conditional formats can use the SMJ timeline start date while the visible day header still shows the old ITEC timeline.
 - Do not run the legacy `update_today_line.py` after cloning WBS style from SMJ unless it has been updated to understand the cloned timeline. The old implementation calculates the ITEC data-derived timeline and can place the red today border on the wrong column.
 - Verified after clone: `WBS / WBS` matched SMJ at `rows=200`, `cols=104`, `frozenRows=4`, `filter=no`, `merges=3168`, `conditionalFormats=26`, and `R4C50=05/18`. Management data dry-runs still returned `No changes`.
+
+Follow-up fix from 2026-06-22:
+
+- The fast default workflow is now `manage.py init-sheets` -> `clear-filters` -> `today-line`. This keeps style generation deterministic and lets WBS/Gantt use project data dynamically.
+- `manage.py` now forwards utility options correctly, so `manage.py init-sheets --dry-run` works.
+- `update_today_line.py` now reads the visible Gantt date headers directly from Google Sheets and only moves the red today border; it no longer rebuilds the timeline from YAML or clears all Gantt left borders.
+- `clone_sheet_style.py` remains a fallback/bootstrap tool for reconciling with an actual reference spreadsheet. It should not be used for every normal view refresh because it is much slower and can hit Google Sheets write quota.
