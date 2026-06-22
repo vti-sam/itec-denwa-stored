@@ -35,3 +35,11 @@ Verification from 2026-06-22:
 - Clear filters removed Basic Filter from 7 sheets, including legacy `WBS_JP / WBS_日本語`.
 - Today line updated for `WBS / WBS` and `WBS_JP / WBS_日本語`.
 - Data dry-run for WBS, Risks, Decisions, Stakeholders and Communications returned `No changes`.
+
+Correction from later verification on 2026-06-22:
+
+- Re-running `init_project_sheets.py` is not enough when the user expects the view to match the actual `smj-ks-pos` Google Sheet style. The config and script can be identical while the live view still differs.
+- Use `skills/management-sync/scripts/clone_sheet_style.py` to clone actual style from `smj-ks-pos` to `itec-denwa` without overwriting management record values.
+- WBS style clone must also copy Gantt timeline header view values for rows 2-4; otherwise conditional formats can use the SMJ timeline start date while the visible day header still shows the old ITEC timeline.
+- Do not run the legacy `update_today_line.py` after cloning WBS style from SMJ unless it has been updated to understand the cloned timeline. The old implementation calculates the ITEC data-derived timeline and can place the red today border on the wrong column.
+- Verified after clone: `WBS / WBS` matched SMJ at `rows=200`, `cols=104`, `frozenRows=4`, `filter=no`, `merges=3168`, `conditionalFormats=26`, and `R4C50=05/18`. Management data dry-runs still returned `No changes`.
