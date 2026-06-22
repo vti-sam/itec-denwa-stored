@@ -436,6 +436,8 @@ Quản trị viên tenant đã nhận email đăng nhập 1 lần.
 実行手順:
 ① Chọn checkbox của tenant mục tiêu
 ② Nhấn "ログイン情報通知"
+③ Tại popup xác nhận gửi mail "メール送信の確認", nhấn nút "OK"
+④ Tại popup "ログイン情報送信確認", nhấn nút "キャンセル"
 期待される結果:
 Quản trị viên tenant đã từng nhận email đăng nhập được loại khỏi đối tượng gửi và email không được gửi lại.
 種別: N
