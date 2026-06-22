@@ -4,7 +4,7 @@ meta:
   sheet: WBS / WBS
   source_of_truth: google_sheets
   read_only_export: true
-  generated_at: '2026-06-22T10:19:23+09:00'
+  generated_at: '2026-06-22T10:23:11+09:00'
 records:
 - id: DENWA-WBS-001
   vti_backlog_id: ITEC_DENWA_APP-138
