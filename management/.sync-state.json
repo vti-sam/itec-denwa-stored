@@ -1,9 +1,18 @@
 {
   "spreadsheet_id": "1uoLLirn3DUk3uVDGZvnLUo2tN1dqFv5P30nSEe9rd84",
-  "last_synced_at": "2026-06-21T09:06:01+09:00",
+  "last_synced_at": "2026-06-22T10:19:23+09:00",
   "change_detection": "full_fetch",
   "last_modified_time": null,
   "change_history": [
+    {
+      "timestamp": "2026-06-22T10:19:14+09:00",
+      "changes": [
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-029 (Trường: notes)",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-030 (Trường: notes)",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-036 (Trường: notes)",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-038 (Trường: notes)"
+      ]
+    },
     {
       "timestamp": "2026-06-21T09:06:01+09:00",
       "changes": [

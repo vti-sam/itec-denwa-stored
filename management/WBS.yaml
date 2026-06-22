@@ -4,7 +4,7 @@ meta:
   sheet: WBS / WBS
   source_of_truth: google_sheets
   read_only_export: true
-  generated_at: '2026-06-21T09:06:01+09:00'
+  generated_at: '2026-06-22T10:19:23+09:00'
 records:
 - id: DENWA-WBS-001
   vti_backlog_id: ITEC_DENWA_APP-138
@@ -408,7 +408,10 @@ records:
     準備は完了しています'
   notes: '成果物:
 
-    Infra'
+    Infra
+
+
+    2026-06-22更新: dev→prdマージ済み。API PRD pipeline 707796成功、Front PRD pipeline 707795成功。Front dev CI修正後のpipeline 707804も成功。'
   notes_vi: Chuẩn bị môi trường Production cho API
 - id: DENWA-WBS-030
   type: タスク
@@ -423,7 +426,10 @@ records:
   definition_of_done: 確認済み
   notes: '成果物:
 
-    Testcase'
+    Testcase
+
+
+    2026-06-22更新: PRD Front smoke確認済み。API認証系endpointはアプリ仕様通り401応答を確認し、5xx/CORS ではないことを確認済み。'
   notes_vi: Thực hiện xác nhận sơ bộ API trên Production
 - id: DENWA-WBS-031
   type: タスク
@@ -505,7 +511,10 @@ records:
   notes: 'UAT_VoIP電話アプリテストケース.xlsx
 
 
-    不具合はほぼすべて解消しました。'
+    不具合はほぼすべて解消しました。
+
+
+    2026-06-22更新: UAT関連のAPI/Front修正をPRDへ反映済み。API/Front CI/CDはいずれも成功し、PRD簡易確認済み。'
   notes_vi: 'UAT_VoIP電話アプリテストケース.xlsx
 
 
@@ -534,7 +543,10 @@ records:
   status: In Progress
   priority: High
   definition_of_done: iOS/Android build導入可、version/signing/prod接続確認
-  notes: iOSはTestFlight確認済
+  notes: 'iOSはTestFlight確認済
+
+
+    2026-06-22更新: Web/Backendのproduction deploy経路は確認済み。API/FrontのPRD deploy成功を確認。Mobile store/release candidate項目は別途確認継続。'
   notes_vi: Tạo bản build Release Candidate kết nối môi trường Production
 - id: DENWA-WBS-039
   type: タスク
