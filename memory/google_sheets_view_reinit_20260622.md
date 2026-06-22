@@ -50,3 +50,11 @@ Follow-up fix from 2026-06-22:
 - `manage.py` now forwards utility options correctly, so `manage.py init-sheets --dry-run` works.
 - `update_today_line.py` now reads the visible Gantt date headers directly from Google Sheets and only moves the red today border; it no longer rebuilds the timeline from YAML or clears all Gantt left borders.
 - `clone_sheet_style.py` remains a fallback/bootstrap tool for reconciling with an actual reference spreadsheet. It should not be used for every normal view refresh because it is much slower and can hit Google Sheets write quota.
+
+Gantt formula/style correction from 2026-06-22:
+
+- WBS Gantt must be dynamic from min/max WBS dates, not static-cloned from SMJ. For the current WBS, the visible timeline spans 2026-05-25 through 2026-07-03, so months 2026-05, 2026-06 and 2026-07 are all visible.
+- Row 2 is merged month headers; row 4 stores real date values but displays only `dd` to keep daily columns compact.
+- Daily Gantt columns are 18 px. Body cells use formula overlap logic based on start date and end date/deadline, similar to the reference workbook formula, and return symbols (`■`, `◇`, `◆`) instead of painting bars only by background.
+- Conditional format uses the status palette as main symbol color and a lightened version as the bar background. Gantt body borders are white.
+- `init_project_sheets.py` unmerges old ranges before shrinking the grid; otherwise a prior static/clone timeline with more columns can fail with an out-of-grid `unmergeCells` error.
