@@ -63,3 +63,4 @@ Status/Gantt color correction from 2026-06-22:
 
 - `project-data.yaml` is ignored local config, so status display palette changes must live in tracked script logic if they need to survive normal repo merges.
 - `init_project_sheets.py` now overrides known status display colors with a stronger palette, sets contrast text color for status cells, and uses a less aggressive lightening ratio for Gantt backgrounds. Read-back verified `Completed` as main `#16A34A` with white status text, and Gantt body uses the same main color for symbols with a stronger light background.
+- Later on 2026-06-22, the user requested Material colors. `STATUS_DISPLAY_COLORS` now uses Material palette values, including `Completed: #2E7D32`, `In Progress: #2196F3`, `At Risk: #F44336`, `Awaiting Customer: #FFC107`, and `Confirmed: #4CAF50`. Read-back verified `Completed` as Material Green 800 with white status text and the same main color on Gantt symbols.
