@@ -53,8 +53,13 @@ Follow-up fix from 2026-06-22:
 
 Gantt formula/style correction from 2026-06-22:
 
-- WBS Gantt must be dynamic from min/max WBS dates, not static-cloned from SMJ. For the current WBS, the visible timeline spans 2026-05-25 through 2026-07-03, so months 2026-05, 2026-06 and 2026-07 are all visible.
+- WBS Gantt must be dynamic from min/max WBS dates, not static-cloned from SMJ. It must not pad to the start/end of week; for the current WBS, the visible timeline spans 2026-05-26 through 2026-07-03, so months 2026-05 and 2026-07 remain only because records currently touch those months.
 - Row 2 is merged month headers; row 4 stores real date values but displays only `dd` to keep daily columns compact.
 - Daily Gantt columns are 18 px. Body cells use formula overlap logic based on start date and end date/deadline, similar to the reference workbook formula, and return symbols (`■`, `◇`, `◆`) instead of painting bars only by background.
 - Conditional format uses the status palette as main symbol color and a lightened version as the bar background. Gantt body borders are white.
 - `init_project_sheets.py` unmerges old ranges before shrinking the grid; otherwise a prior static/clone timeline with more columns can fail with an out-of-grid `unmergeCells` error.
+
+Status/Gantt color correction from 2026-06-22:
+
+- `project-data.yaml` is ignored local config, so status display palette changes must live in tracked script logic if they need to survive normal repo merges.
+- `init_project_sheets.py` now overrides known status display colors with a stronger palette, sets contrast text color for status cells, and uses a less aggressive lightening ratio for Gantt backgrounds. Read-back verified `Completed` as main `#16A34A` with white status text, and Gantt body uses the same main color for symbols with a stronger light background.
