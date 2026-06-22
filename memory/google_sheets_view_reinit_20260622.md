@@ -55,6 +55,7 @@ Gantt formula/style correction from 2026-06-22:
 
 - WBS Gantt must be dynamic from min/max WBS dates, not static-cloned from SMJ. It must not pad to the start/end of week; for the current WBS, the visible timeline spans 2026-05-26 through 2026-07-03, so months 2026-05 and 2026-07 remain only because records currently touch those months.
 - Row 2 is merged month headers; row 4 stores real date values but displays only `dd` to keep daily columns compact.
+- Row 2 month headers need visible white separation between merged month segments. `init_project_sheets.py` applies `SOLID_MEDIUM` white left/right borders to each month segment so `2026-05`, `2026-06`, and `2026-07` remain visually distinct.
 - Daily Gantt columns are 18 px. Body cells use formula overlap logic based on start date and end date/deadline, similar to the reference workbook formula, and return symbols (`■`, `◇`, `◆`) instead of painting bars only by background.
 - Conditional format uses the status palette as main symbol color and a lightened version as the bar background. Gantt body borders are white.
 - `init_project_sheets.py` unmerges old ranges before shrinking the grid; otherwise a prior static/clone timeline with more columns can fail with an out-of-grid `unmergeCells` error.
