@@ -13,5 +13,7 @@
 - Code phase testcase chuẩn: `UT` = 単体テスト, `IT` = 結合テスト, `ST` = システムテスト, `UAT` = 受入テスト. Trong testcase, `IT` luôn nghĩa là 結合テスト, không dùng để chỉ Information Technology.
 - Code domain chuẩn phải là ASCII uppercase ổn định và có nghĩa nghiệp vụ/kỹ thuật rõ, ví dụ `INFRA`, `STORE`, `DEPLOY`, `WEB`, `API`, `MOB`.
 - Các bản xuất cùng nội dung nhưng khác định dạng phải giữ cùng basename và chỉ khác extension; nếu cần gom theo định dạng, dùng subfolder như `excel/`.
+- Trong report bundle, artifact chính thức phải nằm cạnh tài liệu chính ở folder bundle parent và giữ cùng basename khi cùng nội dung. `output/` chỉ dùng cho file trung gian hoặc tạm như YAML, QA JSON, preview/export nháp và bản review chưa promote; không coi file trong `output/` là deliverable chính thức gửi khách hàng.
+- Với diagram/report render, `.drawio`, `.svg`, `.png`, `.xlsx`, `.md` chính thức phải đặt ở folder bundle parent, trừ khi User yêu cầu rõ một vị trí khác. Nếu cần render thử trong `output/`, phải copy/promote bản đạt QA ra parent và cập nhật link nội bộ về bản parent. Với Excel, ưu tiên nhúng PNG để tránh lỗi tương thích khi mở workbook.
 - Không dùng tên class, component, agent, workaround hoặc mô tả tiếng Anh làm title chính của filename/folder nếu đã có tên tài liệu tiếng Nhật tương ứng.
 - Khi di chuyển hoặc đổi tên report artifact, cập nhật link nội bộ trong `project-store/` trỏ tới đường dẫn hoặc filename cũ.
