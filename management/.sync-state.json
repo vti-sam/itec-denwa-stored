@@ -1,9 +1,26 @@
 {
   "spreadsheet_id": "1uoLLirn3DUk3uVDGZvnLUo2tN1dqFv5P30nSEe9rd84",
-  "last_synced_at": "2026-06-22T10:23:17+09:00",
+  "last_synced_at": "2026-06-29T10:55:36+09:00",
   "change_detection": "full_fetch",
   "last_modified_time": null,
   "change_history": [
+    {
+      "timestamp": "2026-06-29T10:55:17+09:00",
+      "changes": [
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-032 (Trường: status ('Awaiting Customer' -> 'At Risk'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-033 (Trường: status ('Awaiting Customer' -> 'At Risk'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-034 (Trường: status ('Awaiting Customer' -> 'At Risk'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-035 (Trường: status ('Awaiting Customer' -> 'At Risk'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-036 (Trường: status ('In Progress' -> 'Completed'), notes_vi ('UAT_VoIP電話アプリテストケース.xlsx\n\n不具合はほぼすべて解消しました。' -> 'UAT_VoIP電話アプリテストケース.xlsx\n\nGoogle Play Done'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-037 (Trường: status ('In Progress' -> 'Completed'), notes_vi ('Chuẩn bị thông tin submit lên App Store / Google Play' -> 'Google Play Done\n\n'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-038 (Trường: title ('production接続用release candidateを作成する' -> 'production接続用release noteを作成する'), description ('production接続用release candidateを作成する' -> 'production接続用release noteを作成する'), status ('In Progress' -> 'Completed'), notes_vi ('Tạo bản build Release Candidate kết nối môi trường Production' -> 'Google Play Done\n\n'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-039 (Trường: status ('Open' -> 'Completed'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-040 (Trường: status ('Open' -> 'Completed'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-041 (Trường: owner ('鈴木 克成' -> '片山 剛'), status ('Open' -> 'In Progress'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-042 (Trường: owner ('鈴木 克成' -> '片山 剛'), status ('Open' -> 'In Progress'))",
+        "[Danh sách công việc / WBS] Cập nhật record: DENWA-WBS-043 (Trường: status ('Open' -> 'In Progress'))"
+      ]
+    },
     {
       "timestamp": "2026-06-22T10:19:14+09:00",
       "changes": [

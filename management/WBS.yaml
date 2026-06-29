@@ -4,7 +4,7 @@ meta:
   sheet: WBS / WBS
   source_of_truth: google_sheets
   read_only_export: true
-  generated_at: '2026-06-22T10:23:11+09:00'
+  generated_at: '2026-06-29T10:55:17+09:00'
 records:
 - id: DENWA-WBS-001
   vti_backlog_id: ITEC_DENWA_APP-138
@@ -452,7 +452,7 @@ records:
   start_date: '2026-06-12'
   end_date: ''
   deadline: '2026-06-17'
-  status: Awaiting Customer
+  status: At Risk
   priority: High
   definition_of_done: SIP account/電話番号/tenant/IP Group等が本番利用可能
   notes: 実機確認は岡田/ITEC側
@@ -465,7 +465,7 @@ records:
   start_date: '2026-06-15'
   end_date: ''
   deadline: '2026-06-17'
-  status: Awaiting Customer
+  status: At Risk
   priority: High
   definition_of_done: Tenant Admin向け登録・設定手順が確認可能
   notes: 既存Manual更新に関連
@@ -478,7 +478,7 @@ records:
   start_date: '2026-06-16'
   end_date: ''
   deadline: '2026-06-18'
-  status: Awaiting Customer
+  status: At Risk
   priority: High
   definition_of_done: 発信/着信/push/call/transfer/終話の主要フロー確認
   notes: VTIはapp/API範囲
@@ -491,7 +491,7 @@ records:
   start_date: '2026-06-17'
   end_date: ''
   deadline: '2026-06-18'
-  status: Awaiting Customer
+  status: At Risk
   priority: High
   definition_of_done: SIP⇔mobile発着信、終話等が確認できている
   notes: VTIはlog/API/app調査支援
@@ -505,7 +505,7 @@ records:
   start_date: '2026-06-15'
   end_date: ''
   deadline: '2026-06-18'
-  status: In Progress
+  status: Completed
   priority: High
   definition_of_done: 重大不具合が解消、残課題はITEC了承済
   notes: 'UAT_VoIP電話アプリテストケース.xlsx
@@ -518,7 +518,7 @@ records:
   notes_vi: 'UAT_VoIP電話アプリテストケース.xlsx
 
 
-    不具合はほぼすべて解消しました。'
+    Google Play Done'
 - id: DENWA-WBS-037
   type: 成果物
   title: App Store／Google Play提出情報を準備する
@@ -527,27 +527,33 @@ records:
   start_date: '2026-06-16'
   end_date: ''
   deadline: '2026-06-18'
-  status: In Progress
+  status: Completed
   priority: High
   definition_of_done: metadata/screenshot/privacy/review note/3アカウント準備
   notes: reviewerログイン情報明記
-  notes_vi: Chuẩn bị thông tin submit lên App Store / Google Play
+  notes_vi: 'Google Play Done
+
+
+    '
 - id: DENWA-WBS-038
   type: 成果物
-  title: production接続用release candidateを作成する
-  description: production接続用release candidateを作成する
+  title: production接続用release noteを作成する
+  description: production接続用release noteを作成する
   owner: VTI_SAM
   start_date: '2026-06-18'
   end_date: ''
   deadline: '2026-06-19'
-  status: In Progress
+  status: Completed
   priority: High
   definition_of_done: iOS/Android build導入可、version/signing/prod接続確認
   notes: 'iOSはTestFlight確認済
 
 
     2026-06-22更新: Web/Backendのproduction deploy経路は確認済み。API/FrontのPRD deploy成功を確認。Mobile store/release candidate項目は別途確認継続。'
-  notes_vi: Tạo bản build Release Candidate kết nối môi trường Production
+  notes_vi: 'Google Play Done
+
+
+    '
 - id: DENWA-WBS-039
   type: タスク
   title: App Store／Google Playへ審査提出する
@@ -556,7 +562,7 @@ records:
   start_date: '2026-06-19'
   end_date: ''
   deadline: '2026-06-19'
-  status: Open
+  status: Completed
   priority: High
   definition_of_done: アプリがストア審査に提出されている
   notes: 予備日6/22(月)
@@ -569,7 +575,7 @@ records:
   start_date: '2026-06-22'
   end_date: ''
   deadline: '2026-06-26'
-  status: Open
+  status: Completed
   priority: High
   definition_of_done: 審査通過し公開可能な状態
   notes: 再審査不要(新build不可)
@@ -578,11 +584,11 @@ records:
   type: タスク
   title: 6月30日に公開するか延期するか最終判断する
   description: 6月30日に公開するか延期するか最終判断する
-  owner: 鈴木 克成
+  owner: 片山 剛
   start_date: '2026-06-29'
   end_date: ''
   deadline: '2026-06-29'
-  status: Open
+  status: In Progress
   priority: High
   definition_of_done: 公開実施または延期の判断が明確
   notes: 重大未解決なら公開しない
@@ -591,11 +597,11 @@ records:
   type: タスク
   title: ユーザー向けにアプリを正式公開する
   description: ユーザー向けにアプリを正式公開する
-  owner: 鈴木 克成
+  owner: 片山 剛
   start_date: '2026-06-30'
   end_date: ''
   deadline: '2026-06-30'
-  status: Open
+  status: In Progress
   priority: High
   definition_of_done: ユーザーがStoreから取得・更新できる
   notes: 公開後prod簡易確認
@@ -608,7 +614,7 @@ records:
   start_date: '2026-06-30'
   end_date: ''
   deadline: '2026-07-03'
-  status: Open
+  status: In Progress
   priority: High
   definition_of_done: 連絡・調査・hotfix方針が整理されている
   notes: MVE/SIP is 岡田standby
