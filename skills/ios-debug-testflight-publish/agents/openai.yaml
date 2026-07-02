@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Debug TestFlight Publish"
+  short_description: "Build iOS debug and upload TestFlight"
+  default_prompt: "Use $ios-debug-testflight-publish to fetch iOS code, build DevRelease, and upload it to TestFlight."
