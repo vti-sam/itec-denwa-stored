@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS Store Production Release"
+  short_description: "Build and submit iOS production"
+  default_prompt: "Use $ios-store-production-release to build and submit the iOS production release."
