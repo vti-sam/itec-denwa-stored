@@ -34,7 +34,7 @@ Use this project-store skill for the `itec-denwa` iOS production App Store workf
 ## Workflow
 
 1. Confirm the requested marketing version and next App Store Connect build number; never reuse a build number for the same version train.
-2. Fetch `prd` and create or refresh a clean scratch worktree from the exact release ref.
+2. Fetch the newest remote `prd` with `--no-tags` into `refs/remotes/origin/prd`, verify the fetched SHA, and create or refresh a clean scratch worktree from that exact remote ref. Do not build from a stale local branch.
 3. Run `pod install` under `Denwa` when CocoaPods files may be stale.
 4. Update `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` for both the app and notification extension.
 5. Archive `Release` for generic iOS device and export/upload to App Store Connect.
@@ -56,8 +56,10 @@ Use this project-store skill for the `itec-denwa` iOS production App Store workf
 
 ## Verification
 
+- Before version bump/archive, record `refs/remotes/origin/prd` SHA after fetch and confirm the scratch worktree `HEAD` equals it.
 - `git log -1` in the scratch worktree shows the release commit.
 - `git ls-remote` or remote web UI confirms `prd` and the release tag were pushed.
+- After push, confirm `origin/prd` and the release tag dereference to the release commit.
 - Export/upload log contains upload success and export success.
 - App Store Connect shows the intended version and build selected.
 - Build row does not show `Missing Compliance`.

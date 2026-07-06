@@ -81,10 +81,13 @@ if ! command -v rtk >/dev/null 2>&1; then
   exit 1
 fi
 
-git_helper_dir="/Library/Developer/CommandLineTools/usr/libexec/git-core"
-if [[ -d "$git_helper_dir" ]]; then
-  export PATH="${git_helper_dir}:${PATH}"
-fi
+for helper_dir in \
+  "/Library/Developer/CommandLineTools/usr/libexec/git-core" \
+  "/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core"; do
+  if [[ -d "$helper_dir" ]]; then
+    export PATH="${helper_dir}:${PATH}"
+  fi
+done
 
 java_home="${DENWA_ANDROID_JAVA_HOME:-}"
 if [[ -z "$java_home" && -d "/Library/Java/JavaVirtualMachines/microsoft-21.jdk/Contents/Home" ]]; then
@@ -119,7 +122,10 @@ echo "JAVA_HOME: ${java_home}"
 run rtk python "$codegraph_script" ensure "$android_dir"
 
 if [[ "$skip_pull" -eq 0 ]]; then
-  run rtk git -C "$android_dir" pull --ff-only
+  run rtk git -C "$android_dir" fetch --no-tags origin prd:refs/remotes/origin/prd
+  remote_prd_sha="$(rtk git -C "$android_dir" rev-parse refs/remotes/origin/prd)"
+  echo "Remote prd after fetch: ${remote_prd_sha}"
+  run rtk git -C "$android_dir" merge --ff-only refs/remotes/origin/prd
   run rtk python "$codegraph_script" ensure "$android_dir"
 else
   echo "Skipping git pull by request."

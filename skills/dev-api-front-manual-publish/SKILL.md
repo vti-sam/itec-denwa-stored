@@ -66,7 +66,7 @@ rtk bash project-store/skills/dev-api-front-manual-publish/scripts/manual_publis
 ## Workflow
 
 1. Confirm the target MR is merged or the intended `origin/dev` commit is known.
-2. Fetch `origin dev` for the selected repo(s).
+2. Fetch the newest remote `dev` for the selected repo(s) with `--no-tags` into `refs/remotes/origin/dev`. Do not build from stale local tracking refs.
 3. Ensure CodeGraph for the selected source repo(s).
 4. Check GitLab pipeline status for the exact commit. If CI is pending/stuck due runner, continue manual publish; do not block on CI completion.
 5. Run `scripts/manual_publish_dev.sh` with the selected component.
@@ -88,6 +88,7 @@ rtk bash project-store/skills/dev-api-front-manual-publish/scripts/manual_publis
 - loads AWS credentials from the project registry when environment credentials are absent;
 - reads GitLab credentials through `git credential fill`;
 - resolves the selected ref to an exact commit;
+- fetches `origin/dev` explicitly with `--no-tags` before resolving the default `origin/dev` ref;
 - discovers the GitLab pipeline IID for that commit/ref, unless explicitly provided;
 - reports GitLab pipeline/job status and runner assignment when the pipeline can be found;
 - creates a clean archive snapshot under `scratch/manual-publish-dev-*`;

@@ -541,11 +541,17 @@ fi
 run aws ecr get-login-password --region "$region" | docker login --username AWS --password-stdin "$ecr_uri" >/dev/null
 
 if [[ "$needs_api" -eq 1 ]]; then
-  run rtk git -C "$api_src" fetch origin dev
+  run rtk git -C "$api_src" fetch --no-tags origin dev:refs/remotes/origin/dev
+  api_remote_dev_sha="$(rtk git -C "$api_src" rev-parse refs/remotes/origin/dev)"
+  echo "API remote dev after fetch: ${api_remote_dev_sha}"
+  record_summary "api_remote_dev=${api_remote_dev_sha}"
   run rtk python "$codegraph_script" ensure "$api_src"
 fi
 if [[ "$needs_front" -eq 1 ]]; then
-  run rtk git -C "$front_src" fetch origin dev
+  run rtk git -C "$front_src" fetch --no-tags origin dev:refs/remotes/origin/dev
+  front_remote_dev_sha="$(rtk git -C "$front_src" rev-parse refs/remotes/origin/dev)"
+  echo "Front remote dev after fetch: ${front_remote_dev_sha}"
+  record_summary "front_remote_dev=${front_remote_dev_sha}"
   run rtk python "$codegraph_script" ensure "$front_src"
 fi
 

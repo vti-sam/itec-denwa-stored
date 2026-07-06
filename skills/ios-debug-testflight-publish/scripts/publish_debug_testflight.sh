@@ -229,7 +229,10 @@ echo "Branch: ${branch}"
 run rtk python "$codegraph_script" ensure "$ios_dir"
 
 if [[ "$skip_pull" -eq 0 ]]; then
-  run rtk git -C "$ios_dir" pull --ff-only
+  run rtk git -C "$ios_dir" fetch --no-tags origin prd:refs/remotes/origin/prd
+  remote_prd_sha="$(rtk git -C "$ios_dir" rev-parse refs/remotes/origin/prd)"
+  echo "Remote prd after fetch: ${remote_prd_sha}"
+  run rtk git -C "$ios_dir" merge --ff-only refs/remotes/origin/prd
   run rtk python "$codegraph_script" ensure "$ios_dir"
 else
   echo "Skipping git pull by request."

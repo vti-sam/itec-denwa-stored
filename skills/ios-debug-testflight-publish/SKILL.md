@@ -54,13 +54,13 @@ Use `--skip-pull` only when the user explicitly confirms using the current local
 
 1. Confirm no uncommitted changes exist in `sources/denwa-ios`. If the iOS worktree is dirty, stop and ask the user how to proceed.
 2. Ensure CodeGraph for `sources/denwa-ios`.
-3. Pull `prd` with `git pull --ff-only`. The helper script prepends common macOS Git helper paths so `git-credential-osxkeychain` can be found.
+3. Fetch the newest remote `prd` explicitly with `--no-tags`, then fast-forward the local `prd` branch to `refs/remotes/origin/prd`. Do not publish from a stale local branch. The helper script prepends common macOS Git helper paths so `git-credential-osxkeychain` can be found.
 4. Ensure CodeGraph again after pull.
 5. Run `pod install` under `sources/denwa-ios/Denwa`; `DevRelease` can fail if CocoaPods project files are stale.
 6. Update `MARKETING_VERSION` and `CURRENT_PROJECT_VERSION` for both `Denwa` and `MVWebRTCNotificationServiceExtension`.
 7. Archive `DevRelease` for generic iOS device.
 8. Export/upload with App Store Connect TestFlight settings.
-9. Report commit, version/build, archive path, upload log path, and whether the log contains `Upload succeeded` and `EXPORT SUCCEEDED`.
+9. Report the final source commit after fetch/fast-forward, version/build, archive path, upload log path, and whether the log contains `Upload succeeded` and `EXPORT SUCCEEDED`.
 10. If the run produced a useful deployment fact or gotcha, save a memory note under `project-store/memory/` and sync Qdrant per root rules.
 
 ## Preconditions

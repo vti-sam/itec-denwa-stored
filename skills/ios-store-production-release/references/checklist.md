@@ -14,9 +14,14 @@
 Use a scratch worktree to avoid disturbing the user's checkout:
 
 ```bash
-rtk git -C sources/denwa-ios fetch origin prd
-rtk git -C sources/denwa-ios worktree add scratch/release-ios-<version>-b<build> origin/prd
+PATH="/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core:/Library/Developer/CommandLineTools/usr/libexec/git-core:$PATH" \
+  rtk git -C sources/denwa-ios fetch --no-tags origin prd:refs/remotes/origin/prd
+release_base="$(rtk git -C sources/denwa-ios rev-parse refs/remotes/origin/prd)"
+rtk git -C sources/denwa-ios worktree add scratch/release-ios-<version>-b<build> refs/remotes/origin/prd
+test "$(rtk git -C scratch/release-ios-<version>-b<build> rev-parse HEAD)" = "$release_base"
 ```
+
+Use `--no-tags` for the fetch because old local release tags may differ from remote tags and can otherwise fail the fetch before `prd` is refreshed.
 
 In the scratch worktree:
 
@@ -31,7 +36,7 @@ In the scratch worktree:
 - Commit only the version bump.
 - Push the commit to remote `prd`.
 - Create and push tag `denwa-v<marketing_version>-build<build_number>(Release)`.
-- Verify remote `prd` and tag point to the intended commit.
+- Verify remote `prd` and tag point to the intended commit. Use tag dereference, for example `refs/tags/<tag>^{}`, because annotated tags have their own tag object SHA.
 
 ## App Store Connect
 

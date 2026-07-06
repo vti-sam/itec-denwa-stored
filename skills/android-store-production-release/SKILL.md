@@ -31,7 +31,7 @@ Use this project-store skill for the `itec-denwa` Android production Google Play
 ## Workflow
 
 1. Confirm the requested release version and next `VERSION_CODE`; never reuse a Play Store version code.
-2. Fetch `prd` and create or refresh a clean scratch worktree from the exact release ref.
+2. Fetch the newest remote `prd` with `--no-tags` into `refs/remotes/origin/prd`, verify the fetched SHA, and create or refresh a clean scratch worktree from that exact remote ref. Do not build from a stale local branch.
 3. Update `DenwaVersion.kt` in the scratch worktree only.
 4. Build the production release AAB with JDK 21.
 5. Commit the version bump in the scratch worktree, push to remote `prd`, and push the release tag.
@@ -50,8 +50,10 @@ Use this project-store skill for the `itec-denwa` Android production Google Play
 
 ## Verification
 
+- Before version bump/build, record `refs/remotes/origin/prd` SHA after fetch and confirm the scratch worktree `HEAD` equals it.
 - `git log -1` in the scratch worktree shows the release commit.
 - `git ls-remote` or remote web UI confirms `prd` and the release tag were pushed.
+- After push, confirm `origin/prd` and the release tag dereference to the release commit.
 - The AAB exists under `app/build/outputs/bundle/release/`.
 - Google Play Console production release includes the intended version code/name.
 - Publishing overview no longer lists the production release as a draft change after submission.

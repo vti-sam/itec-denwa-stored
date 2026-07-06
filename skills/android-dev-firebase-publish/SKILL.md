@@ -43,11 +43,11 @@ Use `--skip-pull` only when the user explicitly confirms using the current local
 
 1. Confirm no uncommitted changes exist in `sources/denwa-android`. If the Android worktree is dirty, stop and ask the user how to proceed.
 2. Ensure CodeGraph for `sources/denwa-android`.
-3. Pull `prd` with `git pull --ff-only`. The helper script prepends `/Library/Developer/CommandLineTools/usr/libexec/git-core` to `PATH` so `git-credential-osxkeychain` can be found on macOS.
+3. Fetch the newest remote `prd` explicitly with `--no-tags`, then fast-forward the local `prd` branch to `refs/remotes/origin/prd`. Do not publish from a stale local branch. The helper script prepends common macOS Git helper paths so `git-credential-osxkeychain` can be found.
 4. Ensure CodeGraph again after pull.
 5. Use JDK 21. Gradle/Kotlin may fail under newer Java versions.
 6. Run `appDistributionDebug.sh` with `ITEC_PROJECT_DIR` set to `sources/denwa-android`.
-7. Report the final commit, version suffix, Firebase release id, Firebase Console link, and whether Gradle ended with `BUILD SUCCESSFUL`.
+7. Report the final source commit after fetch/fast-forward, version suffix, Firebase release id, Firebase Console link, and whether Gradle ended with `BUILD SUCCESSFUL`.
 8. If the run produced a useful deployment fact or gotcha, save a memory note under `project-store/memory/` and sync Qdrant per root rules.
 
 ## Preconditions
