@@ -4,7 +4,7 @@ meta:
   sheet: WBS / WBS
   source_of_truth: google_sheets
   read_only_export: true
-  generated_at: '2026-06-29T10:55:17+09:00'
+  generated_at: '2026-07-06T12:53:29+09:00'
 records:
 - id: DENWA-WBS-001
   vti_backlog_id: ITEC_DENWA_APP-138
@@ -449,10 +449,10 @@ records:
   title: 本番環境向けSIP Phone設定を準備する
   description: 本番環境向けSIP Phone設定を準備する
   owner: 野崎 祐也
-  start_date: '2026-06-12'
+  start_date: '2026-07-06'
   end_date: ''
-  deadline: '2026-06-17'
-  status: At Risk
+  deadline: '2026-07-10'
+  status: In Progress
   priority: High
   definition_of_done: SIP account/電話番号/tenant/IP Group等が本番利用可能
   notes: 実機確認は岡田/ITEC側
@@ -462,10 +462,10 @@ records:
   title: Web ManualにSIP Phone設定手順を追加する
   description: Web ManualにSIP Phone設定手順を追加する
   owner: VTI_SAM
-  start_date: '2026-06-15'
+  start_date: '2026-07-06'
   end_date: ''
-  deadline: '2026-06-17'
-  status: At Risk
+  deadline: '2026-07-10'
+  status: In Progress
   priority: High
   definition_of_done: Tenant Admin向け登録・設定手順が確認可能
   notes: 既存Manual更新に関連
@@ -475,10 +475,10 @@ records:
   title: mobile app/API/MVEの結合確認を実施する
   description: mobile app/API/MVEの結合確認を実施する
   owner: VTI_SAM
-  start_date: '2026-06-16'
+  start_date: '2026-07-06'
   end_date: ''
-  deadline: '2026-06-18'
-  status: At Risk
+  deadline: '2026-07-10'
+  status: In Progress
   priority: High
   definition_of_done: 発信/着信/push/call/transfer/終話の主要フロー確認
   notes: VTIはapp/API範囲
@@ -488,10 +488,10 @@ records:
   title: 本番環境でSIP Phoneの動作確認を実施する
   description: 本番環境でSIP Phoneの動作確認を実施する
   owner: 野崎 祐也
-  start_date: '2026-06-17'
+  start_date: '2026-07-06'
   end_date: ''
-  deadline: '2026-06-18'
-  status: At Risk
+  deadline: '2026-07-10'
+  status: In Progress
   priority: High
   definition_of_done: SIP⇔mobile発着信、終話等が確認できている
   notes: VTIはlog/API/app調査支援
@@ -588,7 +588,7 @@ records:
   start_date: '2026-06-29'
   end_date: ''
   deadline: '2026-06-29'
-  status: In Progress
+  status: Completed
   priority: High
   definition_of_done: 公開実施または延期の判断が明確
   notes: 重大未解決なら公開しない
@@ -601,7 +601,7 @@ records:
   start_date: '2026-06-30'
   end_date: ''
   deadline: '2026-06-30'
-  status: In Progress
+  status: Completed
   priority: High
   definition_of_done: ユーザーがStoreから取得・更新できる
   notes: 公開後prod簡易確認
@@ -614,7 +614,7 @@ records:
   start_date: '2026-06-30'
   end_date: ''
   deadline: '2026-07-03'
-  status: In Progress
+  status: Completed
   priority: High
   definition_of_done: 連絡・調査・hotfix方針が整理されている
   notes: MVE/SIP is 岡田standby
