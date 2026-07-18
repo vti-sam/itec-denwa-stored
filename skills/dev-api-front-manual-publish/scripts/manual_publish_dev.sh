@@ -155,8 +155,8 @@ fi
 
 api_src="${workspace_root}/sources/denwa-api"
 front_src="${workspace_root}/sources/denwa-front"
-registry_aws_csv="${workspace_root}/registry/keystore/projects/itec-denwa/infra/shared/aws-access-keys.csv"
-codegraph_script="${workspace_root}/skills/codegraph-local/scripts/codegraph_project.py"
+project_aws_csv="${workspace_root}/project-store/config/keystore.local/infra/shared/aws-access-keys.csv"
+codegraph_script="${workspace_root}/skills/knowledge-code/codegraph-local/scripts/codegraph_project.py"
 
 require_cmd rtk
 require_cmd git
@@ -167,7 +167,7 @@ require_cmd curl
 
 [[ -d "$api_src" ]] || { echo "ERROR: Missing API source: $api_src" >&2; exit 1; }
 [[ -d "$front_src" ]] || { echo "ERROR: Missing Front source: $front_src" >&2; exit 1; }
-[[ -f "$registry_aws_csv" ]] || { echo "ERROR: Missing AWS registry credential CSV." >&2; exit 1; }
+[[ -f "$project_aws_csv" ]] || { echo "ERROR: Missing project-local AWS credential CSV." >&2; exit 1; }
 
 git_helper_dir="/Library/Developer/CommandLineTools/usr/libexec/git-core"
 if [[ -d "$git_helper_dir" ]]; then
@@ -176,7 +176,7 @@ fi
 
 if [[ -z "${AWS_ACCESS_KEY_ID:-}" || -z "${AWS_SECRET_ACCESS_KEY:-}" ]]; then
   eval "$(
-    rtk python - "$registry_aws_csv" <<'PY'
+    rtk python - "$project_aws_csv" <<'PY'
 import csv
 import shlex
 import sys
@@ -188,7 +188,7 @@ with path.open(encoding="utf-8-sig", newline="") as file:
 access = row.get("Access key ID") or row.get("aws_access_key_id") or row.get("AWS_ACCESS_KEY_ID")
 secret = row.get("Secret access key") or row.get("aws_secret_access_key") or row.get("AWS_SECRET_ACCESS_KEY")
 if not access or not secret:
-    raise SystemExit("Missing AWS credentials in registry CSV")
+    raise SystemExit("Missing AWS credentials in project-local CSV")
 for key, value in {
     "AWS_ACCESS_KEY_ID": access,
     "AWS_SECRET_ACCESS_KEY": secret,

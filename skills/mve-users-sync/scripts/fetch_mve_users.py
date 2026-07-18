@@ -36,11 +36,11 @@ def find_repo_root() -> Path:
 REPO_ROOT = find_repo_root()
 DB_CONFIG_PATH = (
     REPO_ROOT
-    / "registry/keystore/projects/itec-denwa/infra/shared/database-connections.yaml"
+    / "project-store/config/keystore.local/infra/shared/database-connections.yaml"
 )
 MVE_AUTH_CONFIG_PATH = (
     REPO_ROOT
-    / "registry/keystore/projects/itec-denwa/infra/staging/application.properties"
+    / "project-store/config/keystore.local/infra/staging/application.properties"
 )
 
 ENVIRONMENTS = {

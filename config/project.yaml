@@ -1,0 +1,53 @@
+schema_version: 1
+
+project:
+  id: itec-denwa
+  display_name: ITEC Denwa
+  folder: itec-denwa
+  aliases: []
+  portable_folders:
+    - config
+    - knowledge
+    - memory
+    - artifacts
+    - management
+    - skills
+
+google:
+  service_account:
+    email: project-sheets-bot@sharp-smj-sheets.iam.gserviceaccount.com
+    key_path: project-store/config/keystore.local/google/sheets-service-account.json
+    credentials_env: GOOGLE_APPLICATION_CREDENTIALS
+    mcp_credentials_env: SERVICE_ACCOUNT_PATH
+  resources:
+    spreadsheet_id: 1uoLLirn3DUk3uVDGZvnLUo2tN1dqFv5P30nSEe9rd84
+    spreadsheet_url: https://docs.google.com/spreadsheets/d/1uoLLirn3DUk3uVDGZvnLUo2tN1dqFv5P30nSEe9rd84/edit?gid=0#gid=0
+    drive_folder_id: 180qn9_ruaXA703CDd9VDlbpgPJnNONkP
+
+backlog:
+  role_aliases:
+    customer: backlogCus
+    cus: backlogCus
+    backlogCus: backlogCus
+    internal: backlogMe
+    me: backlogMe
+    backlogMe: backlogMe
+  bindings:
+    backlogCus:
+      connection: backlog-customer-itec
+      project_key: VOIP_APL
+    backlogMe:
+      connection: backlog-itec-vti
+      project_key: ITEC_DENWA_APP
+  connections:
+    backlog-customer-itec:
+      name: Backlog KH ITEC
+      base_url: https://itechh.backlog.jp
+      api_key_env: BACKLOG_CUSTOMER_ITEC_API_KEY
+    backlog-itec-vti:
+      name: Backlog VTI ITEC
+      base_url: https://vti-corp.backlog.com
+      api_key_env: BACKLOG_VTI_ITEC_API_KEY
+
+local_paths:
+  keystore: project-store/config/keystore.local

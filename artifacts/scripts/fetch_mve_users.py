@@ -10,21 +10,20 @@ from pathlib import Path
 
 
 def find_properties_file() -> Path:
-    # Vị trí mặc định tương đối từ vị trí script:
-    # project-store/artifacts/scripts/fetch_mve_users.py -> registry/keystore/projects/itec-denwa/infra/staging/application.properties
+    # Resolve the project-local credential file from the portable artifact path.
     script_dir = Path(__file__).resolve().parent
     default_path = (
         script_dir
-        / "../../../registry/keystore/projects/itec-denwa/infra/staging/application.properties"
+        / "../../config/keystore.local/infra/staging/application.properties"
     )
     if default_path.exists():
         return default_path.resolve()
 
-    # Tìm kiếm từ workspace root
+    # Fall back to an explicit path from the workspace root.
     workspace_root = script_dir.parents[2]
     alt_path = (
         workspace_root
-        / "itec-denwa/registry/keystore/projects/itec-denwa/infra/staging/application.properties"
+        / "project-store/config/keystore.local/infra/staging/application.properties"
     )
     if alt_path.exists():
         return alt_path.resolve()

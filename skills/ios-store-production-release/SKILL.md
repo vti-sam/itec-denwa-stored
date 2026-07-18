@@ -26,7 +26,7 @@ Use this project-store skill for the `itec-denwa` iOS production App Store workf
 ## Required Context
 
 - Read root `AGENTS.md`, `project-store/AGENTS.md`, and `sources/AGENTS.md` before touching files or source workflow.
-- Use `skills/source-code-intel/` rules for anything under `sources/`.
+- Use `skills/knowledge-code/source-code-intel/` rules for anything under `sources/`.
 - Run CodeGraph before source workflow actions and again after fetching the release snapshot.
 - If the user's `sources/denwa-ios` checkout is dirty, do not overwrite it. Prefer a scratch worktree under `scratch/release-ios-<version>-b<build>`.
 - Treat App Store Connect credentials, signing identities, provisioning details, keychain state, and browser session state as secrets. Do not print secret contents.

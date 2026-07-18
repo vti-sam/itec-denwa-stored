@@ -23,7 +23,7 @@ Use this project-store skill for the `itec-denwa` Android production Google Play
 ## Required Context
 
 - Read root `AGENTS.md`, `project-store/AGENTS.md`, and `sources/AGENTS.md` before touching files or source workflow.
-- Use `skills/source-code-intel/` rules for anything under `sources/`.
+- Use `skills/knowledge-code/source-code-intel/` rules for anything under `sources/`.
 - Run CodeGraph before source workflow actions and again after fetching the release snapshot.
 - If the user's `sources/denwa-android` checkout is dirty, do not overwrite it. Prefer a scratch worktree under `scratch/release-android-<version>-r<code>`.
 - Treat keystore files, Play Console credentials, service account JSON, and browser session state as secrets. Do not print secret contents.
@@ -57,6 +57,18 @@ Use this project-store skill for the `itec-denwa` Android production Google Play
 - The AAB exists under `app/build/outputs/bundle/release/`.
 - Google Play Console production release includes the intended version code/name.
 - Publishing overview no longer lists the production release as a draft change after submission.
+
+## Failure Handling
+
+- If remote `prd` changes after the release snapshot is created, stop and rebuild from a newly verified remote SHA; do not push the stale scratch commit.
+- If version validation or the AAB build fails, keep the previous Play release untouched and fix the scratch worktree before retrying.
+- If commit/tag push partially succeeds, read back remote `prd` and tag SHAs before any retry; do not create a second tag or force push.
+- If Play upload or submission status is ambiguous, use read-only Console verification first. Do not upload the same version code again or click final submission repeatedly.
+- If credentials, signing material, or User authorization is missing, report the blocked gate without printing secrets or expanding the release scope.
+
+## Completion Criterion
+
+Complete only when the remote commit/tag, AAB version, production track, rollout percentage and Publishing overview state all match the approved release request with no unresolved draft or ambiguous submission.
 
 ## Resources
 

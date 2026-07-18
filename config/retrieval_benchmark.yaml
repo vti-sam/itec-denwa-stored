@@ -1,0 +1,105 @@
+cases:
+  - id: vi-auth-role-model
+    category: vi
+    scope: knowledge
+    query: "Mô hình role master tenant account_type và phân quyền Denwa"
+    expected_paths:
+      - project-store/knowledge/denwa-api/architecture/auth-role-model.md
+
+  - id: vi-local-api-autotest
+    category: vi
+    scope: knowledge
+    query: "Chạy API integration test local denwa-api bằng Testcontainers"
+    expected_paths:
+      - project-store/knowledge/denwa-api/runbooks/local-autotest.md
+
+  - id: vi-admin-account-sync
+    category: vi
+    scope: knowledge
+    query: "Đồng bộ account quản trị DEV STG PRD và SSH tunnel database"
+    expected_paths:
+      - project-store/knowledge/denwa-api/runbooks/admin-account-db-sync.md
+
+  - id: ja-auth-role-model
+    category: ja
+    scope: knowledge
+    query: "Denwaのマスター・テナント権限とアカウント種別の設計"
+    expected_paths:
+      - project-store/knowledge/denwa-api/architecture/auth-role-model.md
+
+  - id: ja-local-autotest
+    category: ja
+    scope: knowledge
+    query: "denwa-apiのローカル結合テストとTestcontainersの実行手順"
+    expected_paths:
+      - project-store/knowledge/denwa-api/runbooks/local-autotest.md
+
+  - id: memory-android-play-r00062
+    category: memory
+    scope: memory
+    query: "Android production release r00062 Google Play review pushed"
+    expected_paths:
+      - project-store/memory/android_prd_release_r00062_play_review_pushed_20260709.md
+
+  - id: memory-ios-store-build39
+    category: memory
+    scope: memory
+    query: "iOS production store version 1.0.3 build 39"
+    expected_paths:
+      - project-store/memory/ios_production_store_1_0_3_b39_20260716.md
+
+  - id: memory-ios-jwt-refresh
+    category: identifier
+    scope: memory
+    query: "iOS concurrent JWT refresh fix"
+    expected_paths:
+      - project-store/memory/ios_concurrent_jwt_refresh_fix_20260716.md
+
+  - id: memory-android-bluetooth-v64
+    category: identifier
+    scope: memory
+    query: "Android Firebase v64 Bluetooth permission"
+    expected_paths:
+      - project-store/memory/android_dev_firebase_v64_bluetooth_permission_20260717.md
+
+  - id: memory-mve-users-sync
+    category: memory
+    scope: memory
+    query: "MVE users sync DEV PRD SIP registrations"
+    expected_paths:
+      - project-store/memory/mve_users_sync_skill_20260630.md
+
+  - id: memory-masvs-194
+    category: identifier
+    scope: memory
+    query: "VOIP_APL-194 MASVS report review numbered items"
+    expected_paths:
+      - project-store/memory/voip_apl_194_masvs_review_request.md
+
+  - id: memory-manual-deploy-runner
+    category: memory
+    scope: memory
+    query: "DEV API Front manual deploy GitLab runner offline"
+    expected_paths:
+      - project-store/memory/dev_manual_deploy_runner_offline_20260701.md
+
+  - id: memory-spoken-it-vocabulary
+    category: cross_language
+    scope: memory
+    query: "Báo cáo tiếng Nhật dùng từ vựng IT và câu nói tự nhiên"
+    expected_paths:
+      - project-store/memory/japanese_tech_report_spoken_it_vocab_rule_20260630.md
+
+  - id: memory-stored-config-migration
+    category: memory
+    scope: memory
+    query: "ITEC stored project config migration registry keystore"
+    expected_paths:
+      - project-store/memory/itec_stored_project_config_migration_20260718.md
+
+  - id: memory-admin-csv-upload
+    category: memory
+    scope: memory
+    query: "production admin CSV user upload fix"
+    expected_paths:
+      - project-store/memory/prd_user_csv_upload_fix_20260622.md

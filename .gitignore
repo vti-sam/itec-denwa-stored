@@ -28,6 +28,10 @@ scratch/
 __pycache__/
 *.pyc
 
+# Project-local secrets and keystore
+config/secrets.local.yaml
+config/keystore.local/
+
 # Office lock files
 ~$*.doc
 ~$*.docx

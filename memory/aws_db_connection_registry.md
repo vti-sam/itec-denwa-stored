@@ -16,7 +16,7 @@ validity: historical_context
 promote_to_knowledge: false
 ---
 
-Full PostgreSQL connection details for dev and prd are stored locally at `registry/keystore/projects/itec-denwa/infra/shared/database-connections.yaml` with file mode `600`.
+Full PostgreSQL connection details for dev and prd are stored locally at `project-store/config/keystore.local/infra/shared/database-connections.yaml` with file mode `600`.
 
 - Dev currently uses Secrets Manager secret `/denwa/stg/all`; `/denwa/dev/all` does not exist.
 - PRD uses Secrets Manager secret `/denwa/prd/all`.

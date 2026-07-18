@@ -66,7 +66,7 @@ if [[ -z "$workspace_root" ]]; then
 fi
 
 android_dir="${workspace_root}/sources/denwa-android"
-codegraph_script="${workspace_root}/skills/codegraph-local/scripts/codegraph_project.py"
+codegraph_script="${workspace_root}/skills/knowledge-code/codegraph-local/scripts/codegraph_project.py"
 distribution_key="${android_dir}/env/distribution/itec-denwa-distribution-dev-key.json"
 
 require_dir "$workspace_root" "workspace root"

@@ -26,9 +26,9 @@ Use this project-store skill to publish `denwa-api` and/or `denwa-front` to DEV 
 ## Required Context
 
 - Read root `AGENTS.md`, `sources/AGENTS.md`, and this skill before using the workflow.
-- Use `skills/source-code-intel/` rules before operating on source under `sources/`.
-- Use `skills/aws-ops-check/` for AWS authentication and verification context.
-- Treat registry AWS credentials and GitLab tokens as secrets. Do not print secret values.
+- Use `skills/knowledge-code/source-code-intel/` rules before operating on source under `sources/`.
+- Use `skills/project-ops/aws-ops-check/` for AWS authentication and verification context.
+- Treat project-local AWS credentials and GitLab tokens as secrets. Do not print secret values.
 - Use local snapshots under `scratch/`; do not switch the user's working branches just to deploy.
 
 ## Quick Command
@@ -85,7 +85,7 @@ rtk bash project-store/skills/dev-api-front-manual-publish/scripts/manual_publis
 
 `scripts/manual_publish_dev.sh`:
 
-- loads AWS credentials from the project registry when environment credentials are absent;
+- loads AWS credentials from `project-store/config/keystore.local/` when environment credentials are absent;
 - reads GitLab credentials through `git credential fill`;
 - resolves the selected ref to an exact commit;
 - fetches `origin/dev` explicitly with `--no-tags` before resolving the default `origin/dev` ref;

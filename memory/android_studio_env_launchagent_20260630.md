@@ -23,8 +23,8 @@ promote_to_knowledge: false
 
 The LaunchAgent runs at login and sets:
 
-- `DENWA_ANDROID_ENV_SECRET_DIR=/Users/vti-sam/pm-control/itec-denwa/registry/keystore/projects/itec-denwa/android/env`
-- `DENWA_ANDROID_KEYSTORE_DIR=/Users/vti-sam/pm-control/itec-denwa/registry/keystore/projects/itec-denwa/android/signing`
+- `DENWA_ANDROID_ENV_SECRET_DIR=/Users/vti-sam/pm-control/itec-denwa/project-store/config/keystore.local/android/env`
+- `DENWA_ANDROID_KEYSTORE_DIR=/Users/vti-sam/pm-control/itec-denwa/project-store/config/keystore.local/android/signing`
 
 Immediate session values were also set with `launchctl setenv`, and read-back with `launchctl getenv` returned both expected paths.
 

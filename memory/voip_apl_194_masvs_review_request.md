@@ -1,7 +1,7 @@
 ---
 title: VOIP_APL-194 MASVS report review request
 project: itec-denwa
-type: analysis
+type: requirement
 status: archived
 source:
   - Backlog issue VOIP_APL-194

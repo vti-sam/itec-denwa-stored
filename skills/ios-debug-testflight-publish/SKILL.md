@@ -25,7 +25,7 @@ Use this project-store skill for the `itec-denwa` iOS DEV TestFlight workflow. I
 ## Required Context
 
 - Read root `AGENTS.md`, `project-store/AGENTS.md`, and `sources/AGENTS.md` before running the workflow.
-- Use `skills/source-code-intel/` rules for anything under `sources/`.
+- Use `skills/knowledge-code/source-code-intel/` rules for anything under `sources/`.
 - Run CodeGraph before source workflow actions and again after pulling code so the local index matches the checked-out iOS tree.
 - Do not print App Store Connect credentials, Apple account state, provisioning profile contents, or keychain details.
 

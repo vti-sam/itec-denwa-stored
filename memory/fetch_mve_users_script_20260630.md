@@ -26,7 +26,7 @@ This memory documents the script added to retrieve and parse the SIP users table
 
 ## Implementation Detail
 We created the [fetch_mve_users.py](file:///Users/vti-sam/pm-control/itec-denwa/project-store/artifacts/scripts/fetch_mve_users.py) script which:
-1. Dynamically loads credentials from [application.properties](file:///Users/vti-sam/pm-control/itec-denwa/registry/keystore/projects/itec-denwa/infra/staging/application.properties) (`mve.file.ini`, `mve.username`, `mve.password`).
+1. Dynamically loads credentials from [application.properties](file:///Users/vti-sam/pm-control/itec-denwa/project-store/config/keystore.local/infra/staging/application.properties) (`mve.file.ini`, `mve.username`, `mve.password`).
 2. Pulls the `.ini` config from the server.
 3. Parses and outputs the parsed SIP users.
 
