@@ -45,3 +45,11 @@ Ngày 2026-07-13, tám ticket phía KH đã được đồng bộ sang dự án 
 Không đồng bộ `VOIP_APL-205` về SIP Phone vì phía VTI đã có ticket tương ứng.
 
 `ITEC_DENWA_APP-256` ghi nhận kết luận mới nhất: KH đã chốt vô hiệu hóa chức năng tự động chuyển tiếp cuộc gọi. Phạm vi đối ứng nội bộ là loại bỏ màn hình và điểm truy cập liên quan trên Android/iOS, thay vì tiếp tục sửa luồng lưu cũ.
+
+Ngày 2026-07-17, đã kiểm tra và chuẩn hóa liên kết giữa hai Backlog:
+
+- Title của `ITEC_DENWA_APP-252` đến `ITEC_DENWA_APP-259` giữ mã ticket KH theo format `[KH: VOIP_APL-xxx]`.
+- Description của từng task VTI đã được bổ sung URL trực tiếp tới ticket KH tương ứng `VOIP_APL-197` đến `VOIP_APL-204` trong mục `Nguồn`.
+- Đã read-back đủ tám task sau khi cập nhật; title, URL và nội dung UTF-8 đều đúng.
+- Đã tạo milestone nội bộ `PRD-BUG-07/2026` không có ngày bắt đầu/kết thúc và gắn vào đủ tám task VTI.
+- Đã verify bằng bộ lọc milestone; kết quả chỉ gồm `ITEC_DENWA_APP-252` đến `ITEC_DENWA_APP-259`.
