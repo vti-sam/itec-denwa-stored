@@ -22,7 +22,6 @@ temp/
 
 # Local cache/index state
 scratch/
-.qdrant/
 .codegraph/
 .fastembed_cache/
 __pycache__/

@@ -82,6 +82,7 @@ cases:
     query: "DEV API Front manual deploy GitLab runner offline"
     expected_paths:
       - project-store/memory/dev_manual_deploy_runner_offline_20260701.md
+      - project-store/memory/dev_manual_deploy_api_front_runner_stuck_20260703.md
 
   - id: memory-spoken-it-vocabulary
     category: cross_language
@@ -103,3 +104,4 @@ cases:
     query: "production admin CSV user upload fix"
     expected_paths:
       - project-store/memory/prd_user_csv_upload_fix_20260622.md
+      - project-store/memory/frontend_admin_csv_upload_back_button_20260622.md

@@ -48,7 +48,7 @@ Use `--skip-pull` only when the user explicitly confirms using the current local
 5. Use JDK 21. Gradle/Kotlin may fail under newer Java versions.
 6. Run `appDistributionDebug.sh` with `ITEC_PROJECT_DIR` set to `sources/denwa-android`.
 7. Report the final source commit after fetch/fast-forward, version suffix, Firebase release id, Firebase Console link, and whether Gradle ended with `BUILD SUCCESSFUL`.
-8. If the run produced a useful deployment fact or gotcha, save a memory note under `project-store/memory/` and sync Qdrant per root rules.
+8. If the run produced a useful deployment fact or gotcha, save a memory note under `project-store/memory/` and sync FalkorDB per root rules.
 
 ## Preconditions
 

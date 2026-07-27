@@ -44,7 +44,7 @@ Use this project-store skill for the `itec-denwa` iOS production App Store workf
 9. Adjust country availability only when explicitly requested. For Japan/Vietnam-only release, set availability to Japan and Vietnam and answer France availability as `No` in export compliance.
 10. Submit the version for App Review and verify the status reaches `Waiting for Review`, `In Review`, or another explicit App Store Connect state.
 11. Report commit, tag, archive path, upload log path, selected build, availability scope, and App Review status.
-12. Save useful deployment facts or gotchas in `project-store/memory/` and sync Qdrant per root rules.
+12. Save useful deployment facts or gotchas in `project-store/memory/` and sync FalkorDB per root rules.
 
 ## Browser And Store Rules
 

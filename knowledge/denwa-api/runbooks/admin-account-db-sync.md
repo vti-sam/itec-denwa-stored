@@ -2,7 +2,7 @@
 title: Runbook đồng bộ account quản trị DEV, STG và PRD
 project: itec-denwa
 type: runbook
-status: confirmed
+status: active
 verified_at: 2026-06-19
 stale_after: 2026-09-19
 source:
@@ -18,6 +18,8 @@ tags:
   - dev
   - stg
   - prd
+scope: durable
+updated_at: 2026-07-27
 ---
 
 # Runbook đồng bộ account quản trị DEV, STG và PRD

@@ -13,6 +13,10 @@ project:
     - management
     - skills
 
+knowledge_memory:
+  backend: falkordb
+  graph: pm_control_itec_denwa_knowledge_memory_v1
+
 google:
   service_account:
     email: project-sheets-bot@sharp-smj-sheets.iam.gserviceaccount.com
@@ -39,6 +43,7 @@ backlog:
     backlogMe:
       connection: backlog-itec-vti
       project_key: ITEC_DENWA_APP
+      language: vi
   connections:
     backlog-customer-itec:
       name: Backlog KH ITEC

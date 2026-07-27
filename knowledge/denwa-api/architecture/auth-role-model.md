@@ -2,7 +2,7 @@
 title: Mô hình role và lưu trữ account của Denwa
 project: itec-denwa
 type: architecture
-status: confirmed
+status: active
 verified_at: 2026-06-19
 stale_after: 2026-09-19
 source:
@@ -22,6 +22,8 @@ tags:
   - account-mapping
   - mve-admin
   - database
+scope: durable
+updated_at: 2026-07-27
 ---
 
 # Mô hình role và account

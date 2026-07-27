@@ -79,7 +79,7 @@ rtk bash project-store/skills/dev-api-front-manual-publish/scripts/manual_publis
    - running task digest matching ECR,
    - DEV smoke test success.
 7. If the terminal is interrupted or the command appears to run too long, run the same component with `--verify-only` and report direct ECS/ECR/smoke state.
-8. Record merge/deploy evidence in `project-store/memory/` and sync Qdrant when the run creates useful historical context.
+8. Record merge/deploy evidence in `project-store/memory/` and sync FalkorDB when the run creates useful historical context.
 
 ## Script Behavior
 

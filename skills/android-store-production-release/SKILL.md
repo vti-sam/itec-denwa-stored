@@ -39,7 +39,7 @@ Use this project-store skill for the `itec-denwa` Android production Google Play
 7. Set rollout to 100% unless the user explicitly asks for staged rollout.
 8. Submit changes for review and verify Publishing overview shows the release is under review or otherwise accepted by Play Console.
 9. Report commit, tag, AAB path, Play release name, rollout percentage, and review/publishing status.
-10. Save useful deployment facts or gotchas in `project-store/memory/` and sync Qdrant per root rules.
+10. Save useful deployment facts or gotchas in `project-store/memory/` and sync FalkorDB per root rules.
 
 ## Browser And Store Rules
 

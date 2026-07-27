@@ -61,7 +61,7 @@ Use `--skip-pull` only when the user explicitly confirms using the current local
 7. Archive `DevRelease` for generic iOS device.
 8. Export/upload with App Store Connect TestFlight settings.
 9. Report the final source commit after fetch/fast-forward, version/build, archive path, upload log path, and whether the log contains `Upload succeeded` and `EXPORT SUCCEEDED`.
-10. If the run produced a useful deployment fact or gotcha, save a memory note under `project-store/memory/` and sync Qdrant per root rules.
+10. If the run produced a useful deployment fact or gotcha, save a memory note under `project-store/memory/` and sync FalkorDB per root rules.
 
 ## Preconditions
 

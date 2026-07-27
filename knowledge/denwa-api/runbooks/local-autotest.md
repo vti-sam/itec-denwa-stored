@@ -2,7 +2,7 @@
 title: Runbook chạy autotest local cho denwa-api
 project: denwa-api
 type: runbook
-status: confirmed
+status: active
 source:
   - User request 2026-06-20
   - Local verification commit 48bdeb50 on sources/denwa-api dev
@@ -12,6 +12,8 @@ tags:
   - api-it
   - testcontainers
   - local-dev
+scope: durable
+updated_at: 2026-07-27
 ---
 
 # Runbook chạy autotest local cho denwa-api
