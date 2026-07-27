@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verified Case Learning"
+  short_description: "Tạo và kiểm chứng verified case của dự án"
+  default_prompt: "Use $verified-case-learning để phân tích conversation đã chọn, kiểm chứng evidence và chỉ lưu case đã xác minh."
