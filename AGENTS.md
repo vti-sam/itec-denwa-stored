@@ -123,6 +123,17 @@ updated_at: <YYYY-MM-DD>
 - Không dùng memory làm changelog cho skill/tool/rule chung, benchmark,
   evaluator hoặc log verify không tạo project outcome.
 - Nội dung bền phải promote sang `knowledge/` với evidence chain.
+- Trước khi tạo file mới, tìm theo project anchor, identifier và chủ đề để
+  update memory hiện có khi cùng một outcome; không tách nhiều file chỉ vì task
+  kéo dài qua nhiều lượt.
+- Body memory phải tách rõ `Outcome`, `Evidence`, `Unresolved` và
+  `Retrieval keys`. `Evidence` chỉ ghi kết quả đã read-back hoặc source trực
+  tiếp; correction của User là trigger để kiểm tra lại, không tự trở thành fact
+  nghiệp vụ duy nhất. Nếu còn mâu thuẫn quan trọng chưa giải quyết, dùng
+  `status: stale` và nêu điều kiện cần verify lại.
+- Không dump transcript, secret hoặc token. Chỉ tổng hợp context cần truy vết
+  và giữ các identifier, environment, source path đủ để task sau tìm lại đúng
+  entity.
 - Markdown memory phải bắt đầu bằng frontmatter:
 
 ```yaml
