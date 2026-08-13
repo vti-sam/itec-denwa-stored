@@ -1,0 +1,4 @@
+interface:
+  display_name: "MVE Users Sync"
+  short_description: "Fetch DEV/PRD MVE SIP users"
+  default_prompt: "Use $mve-users-sync to fetch the current DEV and PRD MVE SIP registrations."

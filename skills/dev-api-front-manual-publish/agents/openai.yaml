@@ -1,0 +1,4 @@
+interface:
+  display_name: "DEV API/Front Manual Publish"
+  short_description: "Publish or verify DEV API/Front without CI"
+  default_prompt: "Use $dev-api-front-manual-publish to manually publish or verify API or Front on DEV infra when GitLab CI runner is unavailable."

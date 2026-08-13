@@ -15,4 +15,4 @@ validity: historical_context
 promote_to_knowledge: false
 ---
 
-Commit `417511d` từng track nhầm dữ liệu portable của `project-store` vào repo cha. Cleanup commit `b306e8d` khôi phục boundary: repo cha ignore toàn bộ `project-store/`, còn `project-store/.git` quản lý repo stored độc lập theo `registry/projects.yaml`. Rider phải giữ mapping riêng cho `$PROJECT_DIR$/project-store`. Repo stored hiện có thay đổi chưa commit tại `artifacts/notes/release_wbs_draft_jp_2026-06-10.md`.
+Commit `417511d` từng track nhầm dữ liệu portable của `project-store` vào repo cha. Cleanup commit `b306e8d` khôi phục boundary: repo cha ignore toàn bộ `project-store/`, còn `project-store/.git` quản lý repo stored độc lập. Cấu hình dự án hiện thuộc `project-store/config/project.yaml`, không thuộc registry chung. Rider phải giữ mapping riêng cho `$PROJECT_DIR$/project-store`. Repo stored hiện có thay đổi chưa commit tại `artifacts/notes/release_wbs_draft_jp_2026-06-10.md`.

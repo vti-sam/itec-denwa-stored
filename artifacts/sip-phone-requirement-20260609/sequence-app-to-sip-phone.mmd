@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant U as User<br/>tenant 500
+    participant A as Mobile app
+    participant W as Web/API<br/>account + export
+    participant M as MVE
+    participant S as Sip-phone
+
+    U->>A: Nhập 51001
+    A->>A: Prefix tenant login 500
+    A->>M: Gọi 50051001
+    W-->>M: Export IPGroup theo phoneType=4<br/>range 51001-99899
+    M->>M: Nhận diện 50051001 là Sip-phone
+    M->>S: Route tới Sip-phone 51001
+    S-->>U: Sip-phone đổ chuông / thiết lập cuộc gọi

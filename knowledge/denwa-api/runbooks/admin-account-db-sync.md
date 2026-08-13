@@ -2,13 +2,13 @@
 title: Runbook đồng bộ account quản trị DEV, STG và PRD
 project: itec-denwa
 type: runbook
-status: confirmed
+status: active
 verified_at: 2026-06-19
 stale_after: 2026-09-19
 source:
   - Live DEV, STG and PRD database verification on 2026-06-19
   - project-store/knowledge/denwa-api/architecture/auth-role-model.md
-  - registry/keystore/projects/itec-denwa/infra/shared/database-connections.yaml
+  - project-store/config/keystore.local/infra/shared/database-connections.yaml
   - ECS task definition denwa-backend-stg:164
 tags:
   - database
@@ -18,6 +18,8 @@ tags:
   - dev
   - stg
   - prd
+scope: durable
+updated_at: 2026-07-27
 ---
 
 # Runbook đồng bộ account quản trị DEV, STG và PRD
@@ -77,7 +79,7 @@ Chạy từ repo root.
 
 ```bash
 rtk ssh \
-  -i registry/keystore/projects/itec-denwa/infra/shared/ec2-keypair-denwa-vti.pem \
+  -i project-store/config/keystore.local/infra/shared/ec2-keypair-denwa-vti.pem \
   -o ExitOnForwardFailure=yes \
   -o ServerAliveInterval=30 \
   -f -N \
@@ -89,7 +91,7 @@ rtk ssh \
 
 ```bash
 rtk ssh \
-  -i registry/keystore/projects/itec-denwa/infra/shared/ec2-keypair-denwa-vti.pem \
+  -i project-store/config/keystore.local/infra/shared/ec2-keypair-denwa-vti.pem \
   -o ExitOnForwardFailure=yes \
   -o ServerAliveInterval=30 \
   -f -N \
@@ -101,7 +103,7 @@ rtk ssh \
 
 ```bash
 rtk ssh \
-  -i registry/keystore/projects/itec-denwa/infra/shared/ec2-keypair-denwa-vti.pem \
+  -i project-store/config/keystore.local/infra/shared/ec2-keypair-denwa-vti.pem \
   -o ExitOnForwardFailure=yes \
   -o ServerAliveInterval=30 \
   -f -N \
@@ -125,7 +127,7 @@ import yaml
 
 
 CONFIG_PATH = (
-    "registry/keystore/projects/itec-denwa/"
+    "project-store/config/keystore.local/"
     "infra/shared/database-connections.yaml"
 )
 

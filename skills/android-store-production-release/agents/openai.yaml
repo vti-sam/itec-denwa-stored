@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android Store Production Release"
+  short_description: "Build and publish Android production"
+  default_prompt: "Use $android-store-production-release to build and submit the Android production release."

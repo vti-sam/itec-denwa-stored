@@ -1,0 +1,4 @@
+interface:
+  display_name: "Android Dev Firebase Publish"
+  short_description: "Build Android debug and publish to Firebase dev"
+  default_prompt: "Use $android-dev-firebase-publish to fetch Android code, build debug, and publish it to Firebase dev."
